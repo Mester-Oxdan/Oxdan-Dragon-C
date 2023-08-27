@@ -1,0 +1,309 @@
+﻿  Accounts.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Accounts.cpp': No such file or directory
+  arkanoid_Ball.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'arkanoid_Ball.cpp': No such file or directory
+  arkanoid_Brick.h
+c1xx : fatal  error C1083: Cannot open source file: 'arkanoid_Brick.h': No such file or directory
+  arkanoid_resource.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'arkanoid_resource.cpp': No such file or directory
+  arkanoid_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'arkanoid_start.cpp': No such file or directory
+  ascii_code_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ascii_code_start.cpp': No such file or directory
+  author_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'author_start.cpp': No such file or directory
+  auto_clicker_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'auto_clicker_start.cpp': No such file or directory
+  battle_city_start_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'battle_city_start_battle_city.cpp': No such file or directory
+  calculator_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'calculator_start.cpp': No such file or directory
+  calendar_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'calendar_start.cpp': No such file or directory
+  car_racing_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'car_racing_start.cpp': No such file or directory
+  checkers_2_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'checkers_2_start.cpp': No such file or directory
+  checkers_ai_start_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'checkers_ai_start_checkers.cpp': No such file or directory
+  check_start_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'check_start_start.cpp': No such file or directory
+  chess_2_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'chess_2_start.cpp': No such file or directory
+  chess_ai_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'chess_ai_start.cpp': No such file or directory
+  color_back_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'color_back_start.cpp': No such file or directory
+  color_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'color_start.cpp': No such file or directory
+  Commands.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Commands.cpp': No such file or directory
+  Compiling...
+  commands_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'commands_start.cpp': No such file or directory
+  con_wifi_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'con_wifi_start.cpp': No such file or directory
+  cor_desk_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'cor_desk_start.cpp': No such file or directory
+  cuaser_cipher_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'cuaser_cipher_start.cpp': No such file or directory
+  cur_conv_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'cur_conv_start.cpp': No such file or directory
+  del_account_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'del_account_start.cpp': No such file or directory
+  dictaphone_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'dictaphone_start.cpp': No such file or directory
+  donators_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'donators_start.cpp': No such file or directory
+  Elses.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Elses.cpp': No such file or directory
+  energy_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'energy_start.cpp': No such file or directory
+  firsts_tart.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'firsts_tart.cpp': No such file or directory
+  flappy_bird_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'flappy_bird_start.cpp': No such file or directory
+  Games.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Games.cpp': No such file or directory
+  game_tetris.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'game_tetris.cpp': No such file or directory
+  gdi_virus_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'gdi_virus_start.cpp': No such file or directory
+  gotoxy.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'gotoxy.cpp': No such file or directory
+  guess_number_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'guess_number_start.cpp': No such file or directory
+  Hacker_Stuffs.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Hacker_Stuffs.cpp': No such file or directory
+  hangman_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'hangman_start.cpp': No such file or directory
+  helpers_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'helpers_start.cpp': No such file or directory
+  Compiling...
+  hideCursor.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'hideCursor.cpp': No such file or directory
+  Application_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Application_battle_city.cpp': No such file or directory
+  Base_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Base_battle_city.cpp': No such file or directory
+  Bullet_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Bullet_battle_city.cpp': No such file or directory
+  Enemy_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Enemy_battle_city.cpp': No such file or directory
+  Map_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Map_battle_city.cpp': No such file or directory
+  Message_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Message_battle_city.cpp': No such file or directory
+  Player_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Player_battle_city.cpp': No such file or directory
+  Tank_battle_city.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\battle_city\source\Tank_battle_city.cpp': No such file or directory
+  Checker.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_2\Checker.cpp': No such file or directory
+  Highlight.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_2\Highlight.cpp': No such file or directory
+  Square.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_2\Square.cpp': No such file or directory
+  AI_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\AI_checkers.cpp': No such file or directory
+  ApplicationStateManager_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\ApplicationStateManager_checkers.cpp': No such file or directory
+  ApplicationState_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\ApplicationState_checkers.cpp': No such file or directory
+  Application_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\Application_checkers.cpp': No such file or directory
+  Button_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\Button_checkers.cpp': No such file or directory
+  CheckersBoard_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\CheckersBoard_checkers.cpp': No such file or directory
+  GameOverState_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\GameOverState_checkers.cpp': No such file or directory
+  GameState_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\GameState_checkers.cpp': No such file or directory
+  Compiling...
+  MenuState_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\MenuState_checkers.cpp': No such file or directory
+  Piece_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\Piece_checkers.cpp': No such file or directory
+  Player_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\Player_checkers.cpp': No such file or directory
+  RealPlayer_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\RealPlayer_checkers.cpp': No such file or directory
+  Texture_checkers.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\checkers\checkers_ai\Texture_checkers.cpp': No such file or directory
+  Bishop.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\Bishop.cpp': No such file or directory
+  chess.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\chess.cpp': No such file or directory
+  gui_sfml.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\gui_sfml.cpp': No such file or directory
+  King.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\King.cpp': No such file or directory
+  Knight.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\Knight.cpp': No such file or directory
+  Pawn.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\Pawn.cpp': No such file or directory
+  Queen.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\Queen.cpp': No such file or directory
+  Rook.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\Rook.cpp': No such file or directory
+  Space.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_2\Space.cpp': No such file or directory
+  board_chess_ai.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_ai\board_chess_ai.cpp': No such file or directory
+  eval_chess_ai.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_ai\eval_chess_ai.cpp': No such file or directory
+  gui_chess_ai.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_ai\gui_chess_ai.cpp': No such file or directory
+  piece_chess_chess_ai.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_ai\piece_chess_chess_ai.cpp': No such file or directory
+  search_chess_ai.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_ai\search_chess_ai.cpp': No such file or directory
+  tile_chess_ai.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\chess\chess_ai\tile_chess_ai.cpp': No such file or directory
+  Compiling...
+  Blocks.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\Blocks.cpp': No such file or directory
+  Enemies.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\Enemies.cpp': No such file or directory
+  GameEngine.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\GameEngine.cpp': No such file or directory
+  Geometry.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\Geometry.cpp': No such file or directory
+  Items.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\Items.cpp': No such file or directory
+  Mario.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\Mario.cpp': No such file or directory
+  Pickups.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\Pickups.cpp': No such file or directory
+  SuperMarioGame.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'includes\mario\SuperMarioGame.cpp': No such file or directory
+  injector_prog_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'injector_prog_start.cpp': No such file or directory
+  installs_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'installs_start.cpp': No such file or directory
+  instructions.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'instructions.cpp': No such file or directory
+  instructions_rules.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'instructions_rules.cpp': No such file or directory
+  ip_search_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ip_search_start.cpp': No such file or directory
+  ip_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ip_start.cpp': No such file or directory
+  joke_all_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'joke_all_start.cpp': No such file or directory
+  joke_au_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'joke_au_start.cpp': No such file or directory
+  joke_ph_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'joke_ph_start.cpp': No such file or directory
+  joke_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'joke_start.cpp': No such file or directory
+  joke_v_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'joke_v_start.cpp': No such file or directory
+  links_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'links_start.cpp': No such file or directory
+  Compiling...
+  login.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'login.cpp': No such file or directory
+  Main_commands.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Main_commands.cpp': No such file or directory
+  main_start_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'main_start_start.cpp': No such file or directory
+  mario_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'mario_start.cpp': No such file or directory
+  math_game_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'math_game_start.cpp': No such file or directory
+  matrix_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'matrix_start.cpp': No such file or directory
+  memory_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'memory_start.cpp': No such file or directory
+  morse_code_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'morse_code_start.cpp': No such file or directory
+  my_location_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'my_location_start.cpp': No such file or directory
+  my_volume_level.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'my_volume_level.cpp': No such file or directory
+  notepad_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'notepad_start.cpp': No such file or directory
+  open_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'open_start.cpp': No such file or directory
+  Own.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Own.cpp': No such file or directory
+  pacman_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'pacman_start.cpp': No such file or directory
+  pas_gen_nw_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'pas_gen_nw_start.cpp': No such file or directory
+  pas_gen_n_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'pas_gen_n_start.cpp': No such file or directory
+  pas_gen_u_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'pas_gen_u_start.cpp': No such file or directory
+  pas_gen_w_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'pas_gen_w_start.cpp': No such file or directory
+  Pictures.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Pictures.cpp': No such file or directory
+  ping_pong_1_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ping_pong_1_start.cpp': No such file or directory
+  Compiling...
+  ping_pong_2_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ping_pong_2_start.cpp': No such file or directory
+  ping_pong_ai_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ping_pong_ai_start.cpp': No such file or directory
+  Pranks.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Pranks.cpp': No such file or directory
+  prank_buttom_no76.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'prank_buttom_no76.cpp': No such file or directory
+  prank_melt_screen_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'prank_melt_screen_start.cpp': No such file or directory
+  registration.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'registration.cpp': No such file or directory
+  screen_recorder.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'screen_recorder.cpp': No such file or directory
+  send_ph_message_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'send_ph_message_start.cpp': No such file or directory
+  Serious.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'Serious.cpp': No such file or directory
+  SetWindow.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'SetWindow.cpp': No such file or directory
+  set_volume_level_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'set_volume_level_start.cpp': No such file or directory
+  show_messagebox778.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'show_messagebox778.cpp': No such file or directory
+  snake_1_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'snake_1_start.cpp': No such file or directory
+  snake_2_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'snake_2_start.cpp': No such file or directory
+  snake_ai_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'snake_ai_start.cpp': No such file or directory
+  space_shooter_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'space_shooter_start.cpp': No such file or directory
+  start_2048_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'start_2048_start.cpp': No such file or directory
+  start_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'start_start.cpp': No such file or directory
+  stopwatch_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'stopwatch_start.cpp': No such file or directory
+  system_info_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'system_info_start.cpp': No such file or directory
+  Compiling...
+  tetris_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'tetris_start.cpp': No such file or directory
+  tic_tac_toe_2_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'tic_tac_toe_2_start.cpp': No such file or directory
+  tic_tac_toe_ai_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'tic_tac_toe_ai_start.cpp': No such file or directory
+  timer_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'timer_start.cpp': No such file or directory
+  time_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'time_start.cpp': No such file or directory
+  tips_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'tips_start.cpp': No such file or directory
+  typing_tutor_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'typing_tutor_start.cpp': No such file or directory
+  ukaraine_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'ukaraine_start.cpp': No such file or directory
+  my_wifi_pas_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'my_wifi_pas_start.cpp': No such file or directory
+  video_recorder_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'video_recorder_start.cpp': No such file or directory
+  wifi_hack_start.cpp
+c1xx : fatal  error C1083: Cannot open source file: 'wifi_hack_start.cpp': No such file or directory
