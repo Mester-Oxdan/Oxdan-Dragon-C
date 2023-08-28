@@ -1,6 +1,6 @@
 #include "chess.h"
 
-int main_2()
+int main()
 {
 	Chess chess;
 	chess.game();

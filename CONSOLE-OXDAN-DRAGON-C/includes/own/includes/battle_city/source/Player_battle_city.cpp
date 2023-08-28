@@ -7,9 +7,9 @@ using sf::Keyboard;
 extern bool sliding_8;
 
 Player::Player()
-    : Tank(244, 600, 39, 39, "includes/own/includes/battle_city/media/playerSprites.png") {
+    : Tank(244, 600, 39, 39, "includes/battle_city/media/playerSprites.png") {
 
-    buffer_dead_5.loadFromFile("includes/own/includes/battle_city/media/fire.wav");
+    buffer_dead_5.loadFromFile("includes/battle_city/media/fire.wav");
 
     // Create an instance of sf::Sound and set its buffer to the loaded sound buffer
 

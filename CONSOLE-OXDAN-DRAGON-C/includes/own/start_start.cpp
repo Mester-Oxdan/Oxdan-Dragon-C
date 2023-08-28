@@ -36,7 +36,7 @@ void start_start(bool willstart)
 	string text_yes_no;
 
 	// Read from the text file
-	ifstream txt_yes_no(oxdan_dragon_c + "includes\\own\\resuorces\\all_txt\\txt_yes_no.txt");
+	ifstream txt_yes_no("includes\\own\\resuorces\\all_txt\\txt_yes_no.txt");
 
 	while (txt_yes_no >> text_yes_no)
 	{
@@ -88,7 +88,7 @@ void start_start(bool willstart)
 			Pranks(); // (+) middle
 			Commands(); // (+) small
 
-			if (x == "" || x == "tetris" || x == "tic_tac_toe" || x == "2048" || x == "del_account") // nothing (+)
+			if (x == "" || x == "tetris" || x == "tic_tac_toe" || x == "2048" || x == "del_account" || x == "go_to") // nothing (+)
 			{
 				start_start(true);
 			}
@@ -130,7 +130,7 @@ void start_start(bool willstart)
 			Pranks(); // (+) middle
 			Commands(); // (+) small
 
-			if (x == "" || x == "tetris" || x == "tic_tac_toe" || x == "2048" || x == "del_account") // nothing (+)
+			if (x == "" || x == "tetris" || x == "tic_tac_toe" || x == "2048" || x == "del_account" || x == "go_to") // nothing (+)
 			{
 				start_start(false);
 			}

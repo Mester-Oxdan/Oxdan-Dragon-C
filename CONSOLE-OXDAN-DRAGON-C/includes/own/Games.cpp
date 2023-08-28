@@ -25,7 +25,7 @@ void Games()
 	{
 		try
 		{
-			system("start includes/own/test_python_py_doom.py");
+			system("start test_python_py_doom.py");
 			check_start_start();
 		}
 

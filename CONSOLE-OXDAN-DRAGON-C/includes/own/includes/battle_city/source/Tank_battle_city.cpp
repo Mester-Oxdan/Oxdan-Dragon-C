@@ -16,7 +16,7 @@ Tank::Tank(const float& x, const float& y, const float& width, const float& heig
     mSprite.setTextureRect(sf::IntRect(78, 39, mWidth, mHeight));
     mSprite.setPosition(x, y);
 
-    if (!buffer_explosion.loadFromFile("includes/own/includes/battle_city/media/explosion.wav")) {
+    if (!buffer_explosion.loadFromFile("includes/battle_city/media/explosion.wav")) {
         // Handle error: Unable to load sound file
     }
 

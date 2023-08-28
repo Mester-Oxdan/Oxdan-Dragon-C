@@ -26,7 +26,7 @@ void main_question_no(string enter_question, string enter_response_yes)
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 
-    Image icon = LoadImage("dragon_jpg-transformed.png");  // Load an image for the icon
+    Image icon = LoadImage("C:\\Users\\bogda\\source\\repos\\c++hothing\\x64\\Debug\\dragon_jpg-transformed.png");  // Load an image for the icon
     SetWindowIcon(icon);
 
     // Main game loop

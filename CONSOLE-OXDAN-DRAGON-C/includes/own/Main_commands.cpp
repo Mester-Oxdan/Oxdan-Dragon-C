@@ -63,6 +63,8 @@ void Main_Commands()
 				string cd = tokens[1];
 				SetCurrentDirectoryA((LPCSTR)cd.c_str());
 				GetCurrentDirectoryA(255, buf);
+
+				check_start_start();
 			}
 
 			catch (...)
