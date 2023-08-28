@@ -36,7 +36,7 @@ void start_start(bool willstart)
 	string text_yes_no;
 
 	// Read from the text file
-	ifstream txt_yes_no("C:\\Users\\bogda\\source\\repos\\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\resuorces\\all_txt\\txt_yes_no.txt");
+	ifstream txt_yes_no(oxdan_dragon_c + "includes\\own\\resuorces\\all_txt\\txt_yes_no.txt");
 
 	while (txt_yes_no >> text_yes_no)
 	{

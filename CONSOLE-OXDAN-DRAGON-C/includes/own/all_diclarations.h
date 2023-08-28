@@ -16,6 +16,14 @@ void SetWindow(int xc, int yc);
 void gotoxy(int x, int y);
 void instructions();
 
+#if defined OXIDAN_MAIN
+string oxdan_dragon_c;
+#else
+extern string oxdan_dragon_c;
+#endif
+
+
+
 // for Games:
 
 void pacman_start();
