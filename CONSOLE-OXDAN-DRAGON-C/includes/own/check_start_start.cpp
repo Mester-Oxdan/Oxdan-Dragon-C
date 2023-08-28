@@ -8,7 +8,7 @@ void check_start_start()
 	string text_yes_no;
 
 	// Read from the text file
-	ifstream txt_yes_no("C:\\Users\\bogda\\source\\repos\\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\resuorces\\all_txt\\txt_yes_no.txt");
+	ifstream txt_yes_no("includes\\own\\resuorces\\all_txt\\txt_yes_no.txt");
 
 	// Use a while loop together with the getline() function to read the file line by line
 	while (txt_yes_no >> text_yes_no)

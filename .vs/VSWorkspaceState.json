@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CONSOLE-OXDAN-DRAGON-C",
+    "\\CONSOLE-OXDAN-DRAGON-C\\includes",
+    "\\CONSOLE-OXDAN-DRAGON-C\\includes\\own"
   ],
+  "SelectedNode": "\\CONSOLE-OXDAN-DRAGON-C\\includes\\own\\arkanoid_Ball.cpp",
   "PreviewInSolutionExplorer": false
 }

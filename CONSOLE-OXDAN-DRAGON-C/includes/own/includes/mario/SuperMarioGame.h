@@ -5,7 +5,7 @@
 #include "Mario.h"
 #include <SDL.h>
 
-const std::string  MARIO_RES_PATH = "res/";
+const std::string  MARIO_RES_PATH = "includes/own/res/";
 
 class CMario;
 class CMarioGameScene;

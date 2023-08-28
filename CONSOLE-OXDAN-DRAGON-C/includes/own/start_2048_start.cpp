@@ -639,7 +639,7 @@ void display_2048()
         //check_start_start();
 
         //glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-        //system("start C:\\Users\\bogda\\source\\repos\\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\CONSOLE-OXDAN-DRAGON-C++.exe");
+        //system("start includes\\own\\CONSOLE-OXDAN-DRAGON-C++.exe");
         //exit(0);
 
         glutKeyboardFunc(keyboard76);
@@ -667,7 +667,7 @@ void display_2048()
         //check_start_start();
 
         //glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-        //system("start C:\\Users\\bogda\\source\\repos\\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\CONSOLE-OXDAN-DRAGON-C++.exe");
+        //system("start includes\\own\\CONSOLE-OXDAN-DRAGON-C++.exe");
         //exit(0);
         glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
         glutKeyboardFunc(keyboard76);

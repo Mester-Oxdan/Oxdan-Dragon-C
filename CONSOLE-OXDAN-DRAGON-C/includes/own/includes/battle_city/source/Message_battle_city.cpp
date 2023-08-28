@@ -4,7 +4,7 @@
 Message::Message(const float &x, const float &y, const sf::String &str)
     : mX(x), mY(y) {
     
-    mFont.loadFromFile("includes/battle_city/media/PressStart2P.ttf");
+    mFont.loadFromFile("includes/own/includes/battle_city/media/PressStart2P.ttf");
     mStr.setFont(mFont);
     mStr.setString(str);
     mStr.setPosition(mX, mY);

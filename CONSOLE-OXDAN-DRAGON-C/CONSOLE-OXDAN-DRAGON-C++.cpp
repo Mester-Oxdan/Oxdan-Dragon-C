@@ -18,7 +18,7 @@ int main()
 {
 	int nlen = GetCurrentDirectoryA(255, buf_87);
 	SetEnvironmentVariableA("OXDAN-DRAGON-C", buf_87);
-	oxdan_dragon_c = "test";//std::getenv("OXDAN-DRAGON-C");
+	oxdan_dragon_c = "";//std::getenv("OXDAN-DRAGON-C");
 	//printf(oxdan_dragon_c.c_str());
 	//getch();
 	std::fstream txt_yes_no(oxdan_dragon_c + "includes\\own\\resuorces\\all_txt\\txt_yes_no.txt", ios::out | ios::trunc); //open in constructor
