@@ -18,6 +18,7 @@ void color_start(string name)
 	else if (name == "g" || name == "G") // Green (+)
 	{
 		printf(" \033[0;32m");
+		//system("color a");
 		check_start_start();
 	}
 	else if (name == "y" || name == "Y") // Yellow (+)

@@ -8,5 +8,5 @@ using namespace std;
 
 void wifi_hack_start()
 {
-	system("start test_python_py_wifi_hack.py");
+	system("start includes/own/test_python_py_wifi_hack.py");
 }

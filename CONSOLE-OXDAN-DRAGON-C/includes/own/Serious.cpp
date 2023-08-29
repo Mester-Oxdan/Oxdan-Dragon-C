@@ -57,7 +57,7 @@ void Serious()
 	{
 		try
 		{
-			system("start test_python_py_translator.py");
+			system("start includes/own/test_python_py_translator.py");
 			check_start_start();
 		}
 
