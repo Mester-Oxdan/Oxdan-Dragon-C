@@ -27,6 +27,8 @@ void commands_start()
 		Sleep(1);
 		printf("conda - using conda commands \n"); // conda (+)
 		Sleep(1);
+		printf("cmd - using cmd commands \n"); // cmd (+)
+		Sleep(1);
 		printf("cls \033[0;36mor \033[0;37mclear - clear your screen \n"); // cls (+)
 		Sleep(1);
 		printf("go_to - go to entered directory \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m\n"); // go_to (+)

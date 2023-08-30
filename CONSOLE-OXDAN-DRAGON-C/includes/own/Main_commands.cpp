@@ -140,6 +140,75 @@ void Main_Commands()
 		}
 	}
 
+	else if (boost::starts_with(writex, "cmd")) // cmd (+)
+	{
+		try
+		{
+			
+				cout << " " << endl;
+				// Split the input into a vector of strings
+
+				vector<string> command;
+				string word;
+				for (char c : writex) {
+					if (c == ' ') {
+						command.push_back(word);
+						word = "";
+					}
+					else {
+						word += c;
+					}
+				}
+				if (!word.empty()) {
+					command.push_back(word);
+				}
+
+				// Remove "cmd" from the command vector
+				command.erase(remove(command.begin(), command.end(), "cmd"), command.end());
+
+				string separator = " ";
+				string right_command = "";
+				for (const string& cmd : command) {
+					right_command += separator + cmd;
+				}
+
+				if (right_command == "cmd") {
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					printf("(!We're so sorry about that, only cmd command can't be run!)\n");
+				}
+				else {
+					system(right_command.c_str());
+					cout << " " << endl;
+				}
+
+				cout << " " << endl;
+
+			
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Check your system. (should be Windows)!)\n");
+			printf("\033[0;37m");
+
+			check_start_start();
+		}
+	}
+
 	else if (boost::starts_with(writex, "git")) // git (+)
 	{
 		try
