@@ -50,7 +50,7 @@ void author_start()
 	printf("\n");
 
 	sf::SoundBuffer buffer;
-	!buffer.loadFromFile("undertale.wav");
+	!buffer.loadFromFile("includes/own/undertale.wav");
 	sf::Sound sound;
 	sound.setBuffer(buffer);
 	sound.play();
