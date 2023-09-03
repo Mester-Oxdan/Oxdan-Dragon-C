@@ -2,6 +2,7 @@
 #include "Map_battle_city.h"
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Audio.hpp>
+#include "../../../all_diclarations.h"
 using sf::Keyboard;
 
 bool sliding_8 = false;
@@ -16,7 +17,7 @@ Tank::Tank(const float& x, const float& y, const float& width, const float& heig
     mSprite.setTextureRect(sf::IntRect(78, 39, mWidth, mHeight));
     mSprite.setPosition(x, y);
 
-    if (!buffer_explosion.loadFromFile("includes/battle_city/media/explosion.wav")) {
+    if (!buffer_explosion.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/explosion.wav")) {
         // Handle error: Unable to load sound file
     }
 

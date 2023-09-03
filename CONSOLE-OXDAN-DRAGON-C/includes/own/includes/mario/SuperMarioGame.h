@@ -4,8 +4,17 @@
 #include "GameEngine.h"
 #include "Mario.h"
 #include <SDL.h>
+#include "../../all_diclarations.h"
+//#include <windows.h>
+#include <string>
+//#include <processenv.h>
 
-const std::string  MARIO_RES_PATH = "res/";
+//char buf22[256];
+
+//int nchar_67 = GetEnvironmentVariableA("OXDAN-DRAGON-C", buf22, 256);
+//string test_path = buf22;
+
+const std::string  MARIO_RES_PATH = "includes\\own\\res\\";
 
 class CMario;
 class CMarioGameScene;

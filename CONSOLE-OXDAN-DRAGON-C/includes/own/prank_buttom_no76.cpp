@@ -7,6 +7,7 @@
 #include <string.h>
 #include <iostream>
 #include "show_messagebox778.h"
+#include "all_diclarations.h"
 
 using namespace std;
 
@@ -25,8 +26,8 @@ void main_question_no(string enter_question, string enter_response_yes)
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
-
-    Image icon = LoadImage("C:\\Users\\bogda\\source\\repos\\c++hothing\\x64\\Debug\\dragon_jpg-transformed.png");  // Load an image for the icon
+    string string_no_1 = oxdan_dragon_c + "/my_dragon_ico.jpg";
+    Image icon = LoadImage(string_no_1.c_str());  // Load an image for the icon
     SetWindowIcon(icon);
 
     // Main game loop
@@ -170,8 +171,8 @@ void main_question_yes(string enter_question, string enter_response_yes)
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
-
-    Image icon = LoadImage("C:\\Users\\bogda\\source\\repos\\c++hothing\\x64\\Debug\\my_dragon_ico_transformed.png");  // Load an image for the icon
+    string string_yes_1 = oxdan_dragon_c + "/my_dragon_ico.jpg";
+    Image icon = LoadImage(string_yes_1.c_str());  // Load an image for the icon
     SetWindowIcon(icon);
 
     // Main game loop

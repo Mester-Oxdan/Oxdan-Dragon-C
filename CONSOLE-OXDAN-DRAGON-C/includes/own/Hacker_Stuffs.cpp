@@ -156,7 +156,7 @@ void Hacker_Stuffs()
 				printf("\033[0;37m");
 				printf(" = ");
 				printf("\033[0;32m");
-				printf("(!Site did not found!)\n");
+				printf("(!Site not found!)\n");
 				printf("\033[0;37m");
 				check_start_start();
 				
@@ -177,7 +177,7 @@ void Hacker_Stuffs()
 			printf("\033[0;37m");
 			printf(" = ");
 			printf("\033[0;32m");
-			printf("(!Site did not found!)\n");
+			printf("(!Site not found!)\n");
 			printf("\033[0;37m");
 			check_start_start();
 		}

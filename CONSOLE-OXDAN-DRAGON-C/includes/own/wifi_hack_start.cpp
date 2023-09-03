@@ -8,5 +8,7 @@ using namespace std;
 
 void wifi_hack_start()
 {
-	system("start includes/own/test_python_py_wifi_hack.py");
+	string cmd_2 = "/includes/own/test_python_py_wifi_hack.py";
+	string cmd_22 = "start " + oxdan_dragon_c + cmd_2;
+	system(cmd_22.c_str());
 }

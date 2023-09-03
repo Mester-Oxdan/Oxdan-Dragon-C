@@ -1,10 +1,11 @@
 #include "Bullet_battle_city.h"
 #include "Map_battle_city.h"
+#include "../../../all_diclarations.h"
 
 Bullet::Bullet(const float &x, const float &y)
     : present(false), mX(x), mY(y), mDir(0), mDx(0.f), mDy(0.f), timeBeforeShot(0.f) {
 
-    mTexture.loadFromFile("includes/battle_city/media/bulletSprite.png");
+    mTexture.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/bulletSprite.png");
     mSprite.setTexture(mTexture);
     mSprite.setTextureRect(sf::IntRect(0, 0, 9, 12));
     mSprite.setPosition(x, y);

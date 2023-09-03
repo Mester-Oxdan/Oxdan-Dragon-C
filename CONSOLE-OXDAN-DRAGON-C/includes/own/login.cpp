@@ -67,7 +67,7 @@ void ask()
 					try
 					{
 						string u, p;
-						ifstream input("includes\\own\\resuorces\\all_txt\\email_data_base.txt");
+						ifstream input(oxdan_dragon_c +  "\\includes\\own\\resuorces\\all_txt\\email_data_base.txt");
 
 						bool emali = true;
 
@@ -100,7 +100,7 @@ void ask()
 
 						if (emali == true)
 						{
-							ofstream reg("includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
+							ofstream reg(oxdan_dragon_c +  "\\includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
 							reg << keyemail << ' ' << endl;
 							gotoxy(47, 14);
 							cout << "\033[0;32m!EMAIL SUCESSFUL!\033[0;37m";
@@ -111,7 +111,7 @@ void ask()
 
 					catch (...)
 					{
-						ofstream reg("includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
+						ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
 						reg << keyemail << ' ' << endl;
 						gotoxy(47, 14);
 						cout << "\033[0;32m!EMAIL SUCESSFUL!\033[0;37m";
@@ -119,7 +119,7 @@ void ask()
 						ask();
 					}
 
-					ofstream reg("includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
+					ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
 					reg << keyemail << ' ' << endl;
 					gotoxy(47, 14);
 					cout << "\033[0;32m!EMAIL SUCESSFUL!\033[0;37m";
@@ -147,7 +147,7 @@ void ask()
 					try
 					{
 						string u, p4;
-						ifstream input("includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt");
+						ifstream input(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt");
 
 						bool phona = true;
 
@@ -180,7 +180,7 @@ void ask()
 
 						if (phona == true)
 						{
-							ofstream reg("includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
+							ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
 							reg << keyphonenumber << ' ' << endl;
 							gotoxy(45, 14);
 							cout << "\033[0;32m!PHONE NUMBER SUCESSFUL!\033[0;37m";
@@ -191,7 +191,7 @@ void ask()
 
 					catch (...)
 					{
-						ofstream reg("includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
+						ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
 						reg << keyphonenumber << ' ' << endl;
 						gotoxy(45, 14);
 						cout << "\033[0;32m!PHONE NUMBER SUCESSFUL!\033[0;37m";
@@ -199,7 +199,7 @@ void ask()
 						ask();
 					}
 
-					ofstream reg("includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
+					ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
 					reg << keyphonenumber << ' ' << endl;
 					gotoxy(45, 14);
 					cout << "\033[0;32m!PHONE NUMBER SUCESSFUL!\033[0;37m";
@@ -300,7 +300,7 @@ void login()
 		first_start();
 	}
 
-	ifstream input("includes\\own\\resuorces\\all_txt\\login_data_base.txt");
+	ifstream input(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\login_data_base.txt");
 	while (input >> u >> p)
 	{
 

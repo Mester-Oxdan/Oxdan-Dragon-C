@@ -16,7 +16,7 @@ Application::Application()
     msgLost(260, 350, "You lose"), msgWon(265, 350, "You win"), frags(0)
 {
     sf::Image icon;
-    icon.loadFromFile("my_dragon_ico.jpg");
+    icon.loadFromFile(oxdan_dragon_c + "/my_dragon_ico.jpg");
 
     // Set the window's icon
     mWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
@@ -25,7 +25,7 @@ Application::Application()
 
     packOfEnemies = new Enemy_1[4]{ Enemy_1(52,31), Enemy_1(147,391), Enemy_1(532,391), Enemy_1(628,31) };
 
-    buffer_start.loadFromFile("includes/battle_city/media/Battle_City_start_game.wav");
+    buffer_start.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/Battle_City_start_game.wav");
 
     // Create an instance of sf::Sound and set its buffer to the loaded sound buffer
     
@@ -33,7 +33,7 @@ Application::Application()
 
     sound_start.setVolume(80);
 
-    buffer_over.loadFromFile("includes/battle_city/media/Battle_City_over_game.wav");
+    buffer_over.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/Battle_City_over_game.wav");
 
     // Create an instance of sf::Sound and set its buffer to the loaded sound buffer
     

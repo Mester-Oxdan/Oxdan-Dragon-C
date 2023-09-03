@@ -57,7 +57,9 @@ void Serious()
 	{
 		try
 		{
-			system("start includes/own/test_python_py_translator.py");
+			string cmd_1 = "/includes/own/test_python_py_translator.py";
+			string cmd_11 = "start " + oxdan_dragon_c + cmd_1;
+			system(cmd_11.c_str());
 			check_start_start();
 		}
 

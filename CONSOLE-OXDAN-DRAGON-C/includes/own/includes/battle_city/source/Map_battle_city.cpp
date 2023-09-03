@@ -5,116 +5,116 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics.hpp>
 #include "Application_battle_city.h"
-
+#include "../../../all_diclarations.h"
 extern int level_batl_city;
 
 Map::Map() : tank(0, 0, 0, 0, "") {
     std::string mapFile;
 
     if (level_batl_city == 1) {
-        mapFile = "includes/battle_city/media/map_1.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_1.txt";
     }
     else if (level_batl_city == 2) {
-        mapFile = "includes/battle_city/media/map_2.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_2.txt";
     }
     else if (level_batl_city == 3) {
-        mapFile = "includes/battle_city/media/map_3.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_3.txt";
     }
     else if (level_batl_city == 4) {
-        mapFile = "includes/battle_city/media/map_4.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_4.txt";
     }
     else if (level_batl_city == 5) {
-        mapFile = "includes/battle_city/media/map_5.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_5.txt";
     }
     else if (level_batl_city == 6) {
-        mapFile = "includes/battle_city/media/map_6.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_6.txt";
     }
     else if (level_batl_city == 7) {
-        mapFile = "includes/battle_city/media/map_7.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_7.txt";
     }
     else if (level_batl_city == 8) {
-        mapFile = "includes/battle_city/media/map_8.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_8.txt";
     }
     else if (level_batl_city == 9) {
-        mapFile = "includes/battle_city/media/map_9.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_9.txt";
     }
     else if (level_batl_city == 10) {
-        mapFile = "includes/battle_city/media/map_10.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_10.txt";
     }
     else if (level_batl_city == 11) {
-        mapFile = "includes/battle_city/media/map_11.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_11.txt";
     }
     else if (level_batl_city == 12) {
-        mapFile = "includes/battle_city/media/map_12.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_12.txt";
     }
     else if (level_batl_city == 13) {
-        mapFile = "includes/battle_city/media/map_13.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_13.txt";
     }
     else if (level_batl_city == 14) {
-        mapFile = "includes/battle_city/media/map_14.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_14.txt";
     }
     else if (level_batl_city == 15) {
-        mapFile = "includes/battle_city/media/map_15.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_15.txt";
     }
     else if (level_batl_city == 16) {
-        mapFile = "includes/battle_city/media/map_16.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_16.txt";
     }
     else if (level_batl_city == 17) {
-        mapFile = "includes/battle_city/media/map_17.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_17.txt";
     }
     else if (level_batl_city == 18) {
-        mapFile = "includes/battle_city/media/map_18.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_18.txt";
     }
     else if (level_batl_city == 19) {
-        mapFile = "includes/battle_city/media/map_19.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_19.txt";
     }
     else if (level_batl_city == 20) {
-        mapFile = "includes/battle_city/media/map_20.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_20.txt";
     }
     else if (level_batl_city == 21) {
-        mapFile = "includes/battle_city/media/map_21.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_21.txt";
     }
     else if (level_batl_city == 22) {
-        mapFile = "includes/battle_city/media/map_22.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_22.txt";
     }
     else if (level_batl_city == 23) {
-        mapFile = "includes/battle_city/media/map_23.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_23.txt";
     }
     else if (level_batl_city == 24) {
-        mapFile = "includes/battle_city/media/map_24.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_24.txt";
     }
     else if (level_batl_city == 25) {
-        mapFile = "includes/battle_city/media/map_25.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_25.txt";
     }
     else if (level_batl_city == 26) {
-        mapFile = "includes/battle_city/media/map_26.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_26.txt";
     }
     else if (level_batl_city == 27) {
-        mapFile = "includes/battle_city/media/map_27.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_27.txt";
     }
     else if (level_batl_city == 28) {
-        mapFile = "includes/battle_city/media/map_28.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_28.txt";
     }
     else if (level_batl_city == 29) {
-        mapFile = "includes/battle_city/media/map_29.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_29.txt";
     }
     else if (level_batl_city == 30) {
-        mapFile = "includes/battle_city/media/map_30.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_30.txt";
     }
     else if (level_batl_city == 31) {
-        mapFile = "includes/battle_city/media/map_31.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_31.txt";
     }
     else if (level_batl_city == 32) {
-        mapFile = "includes/battle_city/media/map_32.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_32.txt";
     }
     else if (level_batl_city == 33) {
-        mapFile = "includes/battle_city/media/map_33.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_33.txt";
     }
     else if (level_batl_city == 34) {
-        mapFile = "includes/battle_city/media/map_34.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_34.txt";
     }
     else if (level_batl_city == 35) {
-        mapFile = "includes/battle_city/media/map_35.txt";
+        mapFile = oxdan_dragon_c + "/includes/own/includes/battle_city/media/map_35.txt";
     }
 
     std::ifstream file(mapFile);
@@ -131,19 +131,19 @@ Map::Map() : tank(0, 0, 0, 0, "") {
         file.close();
     }
 
-    mTexture.loadFromFile("includes/battle_city/media/groundSprites.png");
+    mTexture.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/groundSprites.png");
     mTexture.setSmooth(true);
     mSprite.setTexture(mTexture);
 
-    mTexture_bush.loadFromFile("includes/battle_city/media/bush.png");
+    mTexture_bush.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/bush.png");
     mTexture_bush.setSmooth(true);
     mSprite_bush.setTexture(mTexture_bush);
 
-    mTexture_ice.loadFromFile("includes/battle_city/media/ice.png");
+    mTexture_ice.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/ice.png");
     mTexture_ice.setSmooth(true);
     mSprite_ice.setTexture(mTexture_ice);
 
-    mTexture_water.loadFromFile("includes/battle_city/media/water.png");
+    mTexture_water.loadFromFile(oxdan_dragon_c + "/includes/own/includes/battle_city/media/water.png");
     mTexture_water.setSmooth(true);
     mSprite_water.setTexture(mTexture_water);
 

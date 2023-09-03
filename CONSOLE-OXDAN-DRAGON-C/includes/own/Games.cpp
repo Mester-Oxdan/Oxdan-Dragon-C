@@ -25,7 +25,9 @@ void Games()
 	{
 		try
 		{
-			system("start test_python_py_doom.py");
+			string cmd_3 = "/includes/own/test_python_py_doom.py";
+			string cmd_33 = "start " + oxdan_dragon_c + cmd_3;
+			system(cmd_33.c_str());
 			check_start_start();
 		}
 

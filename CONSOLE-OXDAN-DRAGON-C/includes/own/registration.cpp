@@ -49,7 +49,7 @@ void registration()
 	try
 	{
 		string u, p;
-		ifstream input("resuorces\\all_txt\\login_data_base.txt");
+		ifstream input(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\login_data_base.txt");
 		while (input >> u >> p)
 		{
 			for (int i = 0; i < p.length(); i++)
@@ -95,7 +95,7 @@ void registration()
 	}
 	catch (...)
 	{
-		ofstream reg("resuorces\\all_txt\\login_data_base.txt", ios::app);
+		ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\login_data_base.txt", ios::app);
 		reg << reguser << ' ' << keyregpass << endl;
 
 		gotoxy(50, 14);
@@ -105,7 +105,7 @@ void registration()
 		first_start();
 	}
 
-	ofstream reg("resuorces\\all_txt\\login_data_base.txt", ios::app);
+	ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\login_data_base.txt", ios::app);
 	reg << reguser << ' ' << keyregpass << endl;
 
 	gotoxy(45, 14);
