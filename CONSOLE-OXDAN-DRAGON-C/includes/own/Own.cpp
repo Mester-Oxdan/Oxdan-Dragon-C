@@ -726,42 +726,4 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		check_start_start();
 	}
 
-	else if (x == "joke") // joke (+)
-	{
-		if (tokens.size() < 2)
-		{
-			printf("\033[0;31m");
-			printf("\n");
-			printf("(!ERROR!)");
-			printf("\033[0;37m");
-			printf(" = ");
-			printf("\033[0;32m");
-			printf("(!Enter joke option!)\n");
-			printf("\033[0;37m");
-		}
-		else
-		{
-			try
-			{
-				char buf[256];
-				string name = tokens[1];
-
-				joke_start(name);
-			}
-
-			catch (...)
-			{
-				printf("\033[0;31m");
-				printf("\n");
-				printf("(!ERROR!)");
-				printf("\033[0;37m");
-				printf(" = ");
-				printf("\033[0;32m");
-				printf("(!Enter joke option!)\n");
-				printf("\033[0;37m");
-			}
-		}
-
-		check_start_start();
-	}
 }

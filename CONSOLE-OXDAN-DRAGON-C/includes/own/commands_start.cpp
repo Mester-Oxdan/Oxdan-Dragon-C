@@ -209,8 +209,6 @@ void commands_start()
 		printf("color_back - set color background console \033[0;33m("); // color_back (+)
 		printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
 		Sleep(1);
-		printf("joke - shows random jokes \033[0;33m(\033[0;37m all, ph, v, au \033[0;33m)\033[0;37m\n"); // joke (+)
-		Sleep(1);
 		printf("i? - shows you are admin or user \n"); // i? (+)
 		Sleep(1);
 		printf("administrator \033[0;36mor \033[0;37madmin \033[0;36mor \033[0;37msuperuser - open Dragon console as administrator \n"); // administrator (+)
