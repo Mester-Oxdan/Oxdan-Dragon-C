@@ -41,7 +41,7 @@ void commands_start()
 		Sleep(1);
 		printf("del \033[0;36mor \033[0;37mdelete - delete entered file \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
-		printf("install - install entered option \033[0;33m(\033[0;37m 7-zip,\n                                   google_chrome, git, desktop_git, miniconda, opencv, python-2.7,\n                                   python-3.10.6, torrent, virtualbox, visual_studio, vlc, vscode,\n                                   winsdk, wireshark, zeal, zoom, blue_stacks, steam, unity, epic_games,\n                                   mechvibes, custom_cursor, skype, viber, lively_wallpaper, telegram,\n                                   tor_browser, npm \033[0;33m)\033[0;37m\n"); // install (+)
+		printf("install - install entered option \033[0;33m(\033[0;37m 7-zip, google_chrome, git, miniconda, python-3.10.6, torrent, virtualbox,\n                                   visual_studio, vlc, vscode, winsdk, wireshark, zeal, zoom, blue_stacks,\n                                   steam, unity, epic_games, custom_cursor, skype, viber, telegram, npm \033[0;33m)\n"); // install (+)
 		Sleep(1);
 		printf("\033[0;37mupdate - update Dragon console to last version\n"); // update (+)
 		Sleep(1);

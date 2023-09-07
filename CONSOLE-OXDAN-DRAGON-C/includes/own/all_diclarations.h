@@ -15,6 +15,7 @@ void hideCursor();
 void SetWindow(int xc, int yc);
 void gotoxy(int x, int y);
 void instructions();
+bool containsSpaces_2(const string& str);
 
 #ifdef OXIDAN_MAIN
 string oxdan_dragon_c;

@@ -15,6 +15,7 @@ Application::Application()
     msgStart(90, 330, "Press \'Enter\' to start\n\n       Level " + std::to_string(level_batl_city)), msgOver(250, 300, "Game over"),
     msgLost(260, 350, "You lose"), msgWon(265, 350, "You win"), frags(0)
 {
+
     sf::Image icon;
     icon.loadFromFile(oxdan_dragon_c + "/my_dragon_ico.jpg");
 

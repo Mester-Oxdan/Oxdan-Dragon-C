@@ -538,13 +538,13 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 	{
 		try
 		{
-			char buf143[256];
-			SetCurrentDirectoryA("..");
-			GetCurrentDirectoryA(255, buf143);
+			//char buf143[256];
+			//SetCurrentDirectoryA("..");
+			//GetCurrentDirectoryA(255, buf143);
 			//printf(buf1);
 			string cmd;
-			cmd += buf143;
-			cmd += "\\x64\\Release\\CONSOLE-OXDAN-DRAGON-C++.exe";
+			//cmd += buf143;
+			cmd += oxdan_dragon_c + "CONSOLE-OXDAN-DRAGON-C++.exe";
 			const char* ref = cmd.c_str();
 
 			ShellExecuteA(NULL, "runas", ref, NULL, NULL, SW_SHOW);
