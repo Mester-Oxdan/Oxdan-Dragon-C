@@ -637,13 +637,13 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 			// C:\Users\bogda\source\repos\CONSOLE-OXDAN-DRAGON-C++\x64\Debug\CONSOLE-OXDAN-DRAGON-C++.exe
 			//ShellExecute(NULL, NULL, L"C:\\Users\\bogda\\source\\repos\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\CONSOLE-OXDAN-DRAGON-C++.exe", NULL, NULL, SW_SHOW);
 			//system("start C:\\Users\\bogda\\source\\repos\\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\CONSOLE-OXDAN-DRAGON-C++.exe");
-			char buf143[256];
-			SetCurrentDirectoryA("..");
-			GetCurrentDirectoryA(255, buf143);
+			//char buf143[256];
+			//SetCurrentDirectoryA("..");
+			//GetCurrentDirectoryA(255, buf143);
 			//printf(buf1);
 			string cmd = "start ";
-			cmd += buf143;
-			cmd += "\\x64\\Release\\CONSOLE-OXDAN-DRAGON-C++.exe";
+			cmd += oxdan_dragon_c;
+			cmd += "\\CONSOLE-OXDAN-DRAGON-C++.exe";
 
 			system(cmd.c_str());
 			SetCurrentDirectoryA("CONSOLE-OXDAN-DRAGON-C++");

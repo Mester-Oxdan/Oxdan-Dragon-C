@@ -421,11 +421,12 @@ void Main_Commands()
 			std::string compileCommand = "g++ program.cpp -o program";
 			system(compileCommand.c_str());
 			*/
-			system("git pull");
+			//system("git pull");
 
-			std::cout << "\nProgram updated \033[0;32msuccessfully.\033[0;37m\n Please restart the program." << std::endl;
-			cout << "We try to update all files, but if you still have notification about update," << endl;
+			//std::cout << "\nProgram updated \033[0;32msuccessfully.\033[0;37m\n Please restart the program." << std::endl;
+			//cout << "We try to update all files, but if you still have notification about update," << endl;
 			cout << "Please go on my github, delete your old console, and download new one.\n";
+			cout << "Thanks.\n";
 
 			check_start_start();
 
