@@ -64,6 +64,10 @@ void Commands()
 		Sleep(1);
 		printf("ip_search - searching location by entered network ip address (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // ip_search (+)
 		Sleep(1);
+		printf("mimikatz - open mimikatz prog \n"); // mimikatz (+)
+		Sleep(1);
+		printf("john_the_ripper - open john the ripper prog \n"); // john_the_ripper (+)
+		Sleep(1);
 		printf("con_wifi - doing connection to entered wifi \n"); // con_wifi (+)
 		Sleep(1);
 		printf("wifi_hack - shows tool for hack wifi password \n"); // wifi_hack (+)

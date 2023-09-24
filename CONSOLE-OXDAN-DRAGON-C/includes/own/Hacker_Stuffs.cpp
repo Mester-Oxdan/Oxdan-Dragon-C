@@ -35,6 +35,42 @@ void Hacker_Stuffs()
 
 	}
 
+	else if (x == "mimikatz") // mimikatz (+)
+	{
+		try
+		{
+			printf("\n");
+			string cmd_io = oxdan_dragon_c + "\\includes\\own\\includes\\mimikatz-master\\mimikatz-master\\x64\\mimikatz.exe";
+			system(cmd_io.c_str());
+			//printf(cmd_io.c_str());
+			check_start_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+
+	}
+
+	else if (x == "john_the_ripper") // john_the_ripper (+)
+	{
+		try
+		{
+			printf("\n");
+			string cmd_io = oxdan_dragon_c + "\\includes\\own\\includes\\john_the_ripper\\run\\john.exe";
+			system(cmd_io.c_str());
+			//printf(cmd_io.c_str());
+			check_start_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+
+	}
+
 	else if (x == "con_wifi") // con_wifi (+)
 	{
 		try
