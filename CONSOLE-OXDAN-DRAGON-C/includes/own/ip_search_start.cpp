@@ -99,8 +99,8 @@ void ip_search_start()
     cout << "REGION: " << region_2 << endl;
     cout << "CITY: " << city_2 << endl;
     cout << "ZIP: " << zip_2 << endl;
-    cout << "Y: " << lat_2 - 0.0136 << endl;
-    cout << "X: " << lon_2 + 0.06462 << endl;
+    cout << "Y: " << lat_2 - 0.02079164658183 << endl;
+    cout << "X: " << lon_2 + 0.0507107860565 << endl;
 
     check_start_start();
 }

@@ -35,6 +35,32 @@ void Hacker_Stuffs()
 
 	}
 
+	else if (x == "phone_search") // phone_search (+)
+	{
+		try
+		{
+			string cmd_gh = "start ";
+			cmd_gh += oxdan_dragon_c;
+			cmd_gh += "\\includes\\own\\test_python_phone_number.py"; //test_python_phone_number.py
+			system(cmd_gh.c_str());
+			check_start_start();
+		}
+
+		catch (...)
+		{
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Enter phone number with country code!)\n");
+			printf("\033[0;37m");
+			check_start_start();
+		}
+
+	}
+
 	else if (x == "mimikatz") // mimikatz (+)
 	{
 		try

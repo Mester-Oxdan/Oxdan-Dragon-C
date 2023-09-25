@@ -133,7 +133,7 @@ int main()
 	//check_start_start();
 	std::fstream txt_yes_no(filePath + "\\includes\\own\\resuorces\\all_txt\\txt_yes_no.txt", ios::out | ios::trunc); //open in constructor
 	std::string data("true");
-	txt_yes_no << data << endl;
+	txt_yes_no << data << endl; 
 
 	first_start();
 }

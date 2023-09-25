@@ -64,6 +64,8 @@ void Commands()
 		Sleep(1);
 		printf("ip_search - searching location by entered network ip address (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // ip_search (+)
 		Sleep(1);
+		printf("phone_search - searching location by entered phone number with country code (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
+		Sleep(1);
 		printf("mimikatz - open mimikatz prog \n"); // mimikatz (+)
 		Sleep(1);
 		printf("john_the_ripper - open john the ripper prog \n"); // john_the_ripper (+)
@@ -72,6 +74,8 @@ void Commands()
 		Sleep(1);
 		printf("wifi_hack - shows tool for hack wifi password \n"); // wifi_hack (+)
 		Sleep(1);
+		//printf("stealer - copy importent files windows in target_files_dis folder \n"); // stealer (+)
+		//Sleep(1);
 		printf("\033[0;37mget_ip_website - shows ip address entered website \033[0;33m(\033[0;37m website name \033[0;33m)\033[0;37m\n"); // get_ip_website (+)
 		Sleep(1);
 		printf("auto_clicker - auto clicking, for exit press 'Esc' \n"); // auto_clicker (+)
