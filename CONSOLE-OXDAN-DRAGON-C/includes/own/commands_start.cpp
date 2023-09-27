@@ -41,8 +41,8 @@ void commands_start()
 		Sleep(1);
 		printf("del \033[0;36mor \033[0;37mdelete - delete entered file \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
-		printf("install - install entered option \033[0;33m(\033[0;37m 7-zip, google_chrome, git, miniconda, python-3.10.6, torrent, virtualbox,\n                                   visual_studio, vlc, vscode, winsdk, wireshark, zeal, zoom, blue_stacks,\n                                   steam, unity, epic_games, custom_cursor, skype, viber, telegram, npm \033[0;33m)\n"); // install (+)
-		Sleep(1);
+		//printf("install - install entered option \033[0;33m(\033[0;37m 7-zip, google_chrome, git, miniconda, python-3.10.6, torrent, virtualbox,\n                                   visual_studio, vlc, vscode, winsdk, wireshark, zeal, zoom, blue_stacks,\n                                   steam, unity, epic_games, custom_cursor, skype, viber, telegram, npm \033[0;33m)\n"); // install (+)
+		//Sleep(1);
 		printf("\033[0;37mupdate - update Dragon console to last version\n"); // update (+)
 		Sleep(1);
 		printf("\n");
@@ -211,9 +211,9 @@ void commands_start()
 		Sleep(1);
 		printf("helpers - shows shows list of top 15 helpers for author (updating with new version) \n"); // helpers (+)
 		Sleep(1);
-		printf("color - set color text \033[0;33m("); // color (+)
-		printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
-		Sleep(1);
+		//printf("color - set color text \033[0;33m("); // color (+)
+		//printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
+		//Sleep(1);
 		printf("color_back - set color background console \033[0;33m("); // color_back (+)
 		printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
 		Sleep(1);

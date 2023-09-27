@@ -82,7 +82,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		}
 	}
 
-	if (x == "color") // color (+)
+	/*if (x == "color") // color (+)
 	{
 
 		if (tokens.size() < 2)
@@ -105,7 +105,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 				check_start_start();
 			}
 		}
-	}
+	}*/
 
 	else if (x == "color_back") // color_back (+)
 	{
@@ -544,11 +544,16 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 			//printf(buf1);
 			string cmd;
 			//cmd += buf143;
-			cmd += oxdan_dragon_c + "CONSOLE-OXDAN-DRAGON-C++.exe";
+			cmd += oxdan_dragon_c + "\\CONSOLE-OXDAN-DRAGON-C++.exe";
+			
+			//printf(cmd.c_str());
+
 			const char* ref = cmd.c_str();
 
 			ShellExecuteA(NULL, "runas", ref, NULL, NULL, SW_SHOW);
+
 			exit(0);
+
 		}
 
 		catch (...)

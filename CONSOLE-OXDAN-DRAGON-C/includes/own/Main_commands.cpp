@@ -1,3 +1,4 @@
+#include <boost/asio.hpp>
 #include <windows.h>
 #include <vector>
 #include <string>
@@ -10,7 +11,7 @@
 #include <process.h>
 #include <algorithm>
 #include <boost/algorithm/string.hpp>
-#include <windows.h>
+
 
 #pragma warning(disable : 4996).
 
@@ -401,32 +402,58 @@ void Main_Commands()
 	{
 		try
 		{
-			/*
-			std::string githubRepo = "Bohdanhladii/repository";
-			std::string branch = "main";  // Replace with the branch you want to update from
 
-			// Clone the GitHub repository
-			std::string gitCommand = "git clone https://github.com/" + githubRepo;
-			system(gitCommand.c_str());
+				boost::asio::io_context io_context;
+				boost::asio::ip::tcp::resolver resolver(io_context);
+				boost::asio::ip::tcp::socket socket(io_context);
 
-			// Get the repository name
-			std::size_t found = githubRepo.find_last_of("/");
-			std::string repoName = githubRepo.substr(found + 1);
+				std::string host = "raw.githubusercontent.com";
+				std::string path = "/Mester-Oxdan/Oxdan-Dragon-Python/main/version";
 
-			// Replace the existing C++ file with the updated one
-			std::string replaceCommand = "mv " + repoName + "/updated_program.cpp program.cpp";
-			system(replaceCommand.c_str());
+				boost::asio::ip::tcp::resolver::query query(host, "http");
+				boost::asio::ip::tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
 
-			// Compile the updated C++ program
-			std::string compileCommand = "g++ program.cpp -o program";
-			system(compileCommand.c_str());
-			*/
-			//system("git pull");
+				boost::asio::connect(socket, endpoint_iterator);
 
-			//std::cout << "\nProgram updated \033[0;32msuccessfully.\033[0;37m\n Please restart the program." << std::endl;
-			//cout << "We try to update all files, but if you still have notification about update," << endl;
-			cout << "Please go on my github, delete your old console, and download new one.\n";
-			cout << "Thanks.\n";
+				// Form the HTTP request
+				std::string request =
+					"GET " + path + " HTTP/1.1\r\n"
+					"Host: " + host + "\r\n"
+					"Connection: close\r\n\r\n";
+
+				// Send the HTTP request
+				boost::asio::write(socket, boost::asio::buffer(request));
+
+				// Read the HTTP response
+				std::string response;
+				boost::asio::streambuf response_buffer;
+				boost::asio::read_until(socket, response_buffer, "\r\n");
+
+				// Read and append the rest of the response
+				std::istream response_stream(&response_buffer);
+				while (!response_stream.eof()) {
+					std::string line;
+					std::getline(response_stream, line);
+					response += line + "\n";
+				}
+
+				// Process the response (e.g., check for the version)
+				if (response.find("1.2023") != std::string::npos) {
+					std::cout << "\n\033[0;33mYou're right!\033[0;37m" << std::endl;
+					std::cout << "We have a new version for you: 2.2024" << std::endl;
+					std::cout << "If you want to \033[0;32mdownload\033[0;37m it, just go to our website or GitHub." << std::endl;
+				}
+				else {
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					printf("(!Program already updated to last version!)\n");
+					printf("\033[0;37m");
+				}
+
 
 			check_start_start();
 
@@ -476,7 +503,7 @@ void Main_Commands()
 		}
 	}
 
-	else if (x == "install") // install (+) ?
+	/*else if (x == "install") // install (+) 
 	{
 
 		if (tokens.size() < 2)
@@ -511,7 +538,7 @@ void Main_Commands()
 		}
 
 		check_start_start();
-	}
+	}*/
 
 	else if (x == "del" || x == "delete") // del/delete (+)
 	{
