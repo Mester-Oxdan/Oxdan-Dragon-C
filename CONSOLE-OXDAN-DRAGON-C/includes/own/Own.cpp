@@ -489,6 +489,65 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		}
 	}
 
+	else if (x == "promo_code") // promo_code (+)
+	{
+		try
+		{
+			if (tokens.size() < 2)
+			{
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				printf("(!Enter name of promo code!)\n");
+				printf("\033[0;37m");
+				check_start_start();
+			}
+
+			else
+			{
+				try
+				{
+					string a = tokens[1];
+					SetConsoleTitleA(a.c_str());
+
+					if (a == "sans battle" || a == "sans-battle" || a == "sans_battle")
+					{
+						cout << "\n\033[0;33mSecret Link:\033[0;37m https://jcw87.github.io/c2-sans-fight/" << endl;
+						check_start_start();
+					}
+					else
+					{
+						cout << "\n'" + a + "'" + " Is \033[0;31mwrong\033[0;37m promo-code\n";
+						check_start_start();
+					}
+				}
+
+				catch (...)
+				{
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					printf("(!Enter of promo code!)\n");
+					printf("\033[0;37m");
+					check_start_start();
+				}
+			}
+
+			//check_start_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+	}
+
 	else if (x == "size") // size (+)
 	{
 		if (tokens.size() < 3)

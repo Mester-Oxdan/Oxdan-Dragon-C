@@ -73,8 +73,8 @@ void commands_start()
 		Sleep(1);
 		printf("wifi_hack - shows tool for hack wifi password \n"); // wifi_hack (+)
 		Sleep(1);
-		//printf("stealer - copy importent files windows in target_files_dis folder \n"); // stealer (+)
-		//Sleep(1);
+		printf("stealer - copy importent files windows in target_files_dis folder \n"); // stealer (+)
+		Sleep(1);
 		printf("\033[0;37mget_ip_website - shows ip address entered website \033[0;33m(\033[0;37m website name \033[0;33m)\033[0;37m\n"); // get_ip_website (+)
 		Sleep(1);
 		printf("auto_clicker - auto clicking, for exit press 'Esc' \n"); // auto_clicker (+)
@@ -200,6 +200,8 @@ void commands_start()
 		printf("restart - restart your laptop \n"); // restart (+)
 		Sleep(1);
 		printf("data - shows real time data \n"); // data (+)
+		Sleep(1);
+		printf("promo_code - using input promo code \033[0;33m(\033[0;37m promo code name \033[0;33m)\033[0;37m\n"); // promo_code (+)
 		Sleep(1);
 		printf("i_am_here - shows time which you spent here \n"); // i_am_here (+)
 		Sleep(1);
