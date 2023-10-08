@@ -35,6 +35,9 @@ int main()
 	//_getch();
 	//printf(oxdan_dragon_c.c_str());
 	//getch();
+	string update_message = "start " + oxdan_dragon_c + "\\includes\\own\\update_message.py";
+	system(update_message.c_str());
+	//getch();
 	string filePath = oxdan_dragon_c;
 	vector<string> directories;
 

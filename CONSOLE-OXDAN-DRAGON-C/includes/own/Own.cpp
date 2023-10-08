@@ -533,7 +533,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 					printf("\033[0;37m");
 					printf(" = ");
 					printf("\033[0;32m");
-					printf("(!Enter of promo code!)\n");
+					printf("(!Enter name of promo code!)\n");
 					printf("\033[0;37m");
 					check_start_start();
 				}

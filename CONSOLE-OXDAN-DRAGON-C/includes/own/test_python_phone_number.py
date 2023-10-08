@@ -18,7 +18,7 @@ from colorama import Fore
 
 # taking input the phonenumber along with the country code
 print(Fore.RED + "Write 'esc' (for exit)")
-number = input(Fore.YELLOW + "Enter Phone Number with country code like (+14129089359): ")
+number = input(Fore.YELLOW + "Enter Phone Number with country code like (" + Fore.WHITE + "+14129089359" + Fore.YELLOW + "): " + Fore.WHITE)
 
 print(Fore.WHITE)
 

@@ -408,7 +408,7 @@ void Main_Commands()
 				boost::asio::ip::tcp::socket socket(io_context);
 
 				std::string host = "raw.githubusercontent.com";
-				std::string path = "/Mester-Oxdan/Oxdan-Dragon-Python/main/version";
+				std::string path = "/Mester-Oxdan/Oxdan-Dragon-C/main/version";
 
 				boost::asio::ip::tcp::resolver::query query(host, "http");
 				boost::asio::ip::tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
