@@ -41,8 +41,8 @@ void commands_start()
 		Sleep(1);
 		printf("del \033[0;36mor \033[0;37mdelete - delete entered file \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
-		//printf("install - install entered option \033[0;33m(\033[0;37m 7-zip, google_chrome, git, miniconda, python-3.10.6, torrent, virtualbox,\n                                   visual_studio, vlc, vscode, winsdk, wireshark, zeal, zoom, blue_stacks,\n                                   steam, unity, epic_games, custom_cursor, skype, viber, telegram, npm \033[0;33m)\n"); // install (+)
-		//Sleep(1);
+		printf("install - install entered option \033[0;33m(\033[0;37m python-3.10.6, nmap-7.94-setup, git, miniconda3 \033[0;33m)\n"); // install (+)
+		Sleep(1);
 		printf("\033[0;37mupdate - update Dragon console to last version\n"); // update (+)
 		Sleep(1);
 		printf("\n");
@@ -65,9 +65,11 @@ void commands_start()
 		Sleep(1);
 		printf("phone_search - searching location by entered phone number with country code (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
 		Sleep(1);
-		printf("mimikatz - open mimikatz prog \n"); // mimikatz (+)
+		printf("mimikatz - using mimikatz commands \n"); // mimikatz (+)
 		Sleep(1);
-		printf("john_the_ripper - open john the ripper prog \n"); // john_the_ripper (+)
+		printf("john - using john the ripper commands \n"); // john (+)
+		Sleep(1);
+		printf("nmap - using nmap commands \n"); // nmap (+)
 		Sleep(1);
 		printf("con_wifi - doing connection to entered wifi \n"); // con_wifi (+)
 		Sleep(1);

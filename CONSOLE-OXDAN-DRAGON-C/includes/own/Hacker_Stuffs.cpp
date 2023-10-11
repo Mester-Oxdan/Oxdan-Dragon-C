@@ -4,6 +4,7 @@
 #include <string>
 #include "all_diclarations.h"
 #include <shlobj_core.h>
+#include <boost/algorithm/string.hpp>
 
 using namespace std;
 
@@ -117,7 +118,7 @@ void Hacker_Stuffs()
 
 	}
 
-	else if (x == "john_the_ripper") // john_the_ripper (+)
+	else if (x == "john_3") // john (+)
 	{
 		try
 		{
@@ -133,6 +134,120 @@ void Hacker_Stuffs()
 			check_start_start();
 		}
 
+	}
+
+	else if (boost::starts_with(writex, "john")) // john (+)
+	{
+		try
+		{
+
+			cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<string> command;
+			string word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = "";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			// Remove "cmd" from the command vector
+			command.erase(remove(command.begin(), command.end(), "john"), command.end());
+
+			string separator = " ";
+			string right_command = "";
+			right_command += oxdan_dragon_c + "\\includes\\own\\includes\\john_the_ripper\\run\\john.exe ";
+
+			for (const string& cmd : command) {
+				right_command += separator + cmd;
+			}
+
+			system(right_command.c_str());
+			//cout << " " << endl;
+
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
+			check_start_start();
+		}
+	}
+
+	else if (boost::starts_with(writex, "nmap")) // nmap (+)
+	{
+		try
+		{
+
+			cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<string> command;
+			string word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = "";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			// Remove "cmd" from the command vector
+			//command.erase(remove(command.begin(), command.end(), "nmap"), command.end());
+
+			string separator = " ";
+			string right_command = "";
+			//right_command += oxdan_dragon_c + "\\includes\\own\\includes\\john_the_ripper\\run\\john.exe ";
+
+			for (const string& cmd : command) {
+				right_command += separator + cmd;
+			}
+
+			system(right_command.c_str());
+			//cout << " " << endl;
+
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Install nmap-7.94-setup!)\n");
+			printf("\033[0;37m");
+			check_start_start();
+		}
 	}
 
 	else if (x == "con_wifi") // con_wifi (+)

@@ -184,12 +184,10 @@ void Main_Commands()
 				}
 				else {
 					system(right_command.c_str());
-					cout << " " << endl;
+					//cout << " " << endl;
 				}
 
-				cout << " " << endl;
-
-			
+				//cout << " " << endl;
 
 			check_start_start();
 
@@ -503,7 +501,7 @@ void Main_Commands()
 		}
 	}
 
-	/*else if (x == "install") // install (+) 
+	else if (x == "install") // install (+) 
 	{
 
 		if (tokens.size() < 2)
@@ -538,7 +536,7 @@ void Main_Commands()
 		}
 
 		check_start_start();
-	}*/
+	}
 
 	else if (x == "del" || x == "delete") // del/delete (+)
 	{
