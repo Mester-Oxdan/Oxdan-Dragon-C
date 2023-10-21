@@ -13,6 +13,7 @@
 #include "RealPlayer_checkers.h"
 #include "Button_checkers.h"
 #include "Texture_checkers.h"
+#include "../../../all_diclarations.h"
 
 int TOTAL_BUTTONS = 32;
 
@@ -114,7 +115,7 @@ void GameState_checkers::stateEvent(){
 bool GameState_checkers::loadMedia(){
     bool initSuccessfulful = true;
 
-    if (!spriteSheetTexture.loadFromFile("data/CheckerSprites.png")) {
+    if (!spriteSheetTexture.loadFromFile(oxdan_dragon_c + "/includes/own/data/CheckerSprites.png")) {
         printf("Could not load sprite");
         initSuccessfulful = false;
     }

@@ -199,10 +199,14 @@ void checkers_2_start()
 
 	// Load checker textures and remove white background
 	//Checker::sTextureCache[(int)CheckerType::NONE] = loadTexture(renderer, "assets/Empty.bmp");
-	Checker::sTextureCache[(int)CheckerType::RED] = loadTexture(renderer, "assets/RedChecker.bmp");
-	Checker::sTextureCache[(int)CheckerType::BLACK] = loadTexture(renderer, "assets/BlackChecker.bmp");
-	Checker::sTextureCache[(int)CheckerType::KING_RED] = loadTexture(renderer, "assets/KingRedChecker.bmp");
-	Checker::sTextureCache[(int)CheckerType::KING_BLACK] = loadTexture(renderer, "assets/KingBlackChecker.bmp");
+	string str1 = oxdan_dragon_c + "/includes/own/assets/RedChecker.bmp";
+	string str2 = oxdan_dragon_c + "/includes/own/assets/BlackChecker.bmp";
+	string str3 = oxdan_dragon_c + "/includes/own/assets/KingRedChecker.bmp";
+	string str4 = oxdan_dragon_c + "/includes/own/assets/KingBlackChecker.bmp";
+	Checker::sTextureCache[(int)CheckerType::RED] = loadTexture(renderer, str1.c_str());
+	Checker::sTextureCache[(int)CheckerType::BLACK] = loadTexture(renderer, str2.c_str());
+	Checker::sTextureCache[(int)CheckerType::KING_RED] = loadTexture(renderer, str3.c_str());
+	Checker::sTextureCache[(int)CheckerType::KING_BLACK] = loadTexture(renderer, str4.c_str());
 
 	// Define highlights (RGBA)
 	Highlight::sColourCache[(int)HighlightType::NONE] = { 0, 0, 0, 0 };

@@ -4,6 +4,7 @@
 #include <algorithm>
 
 #include "utils_chess_ai.hpp"
+#include "../../../all_diclarations.h"
 
 extern void search(board::Game& game);
 
@@ -46,31 +47,49 @@ Gui::Gui()
 
 void Gui::initSurface()
 {
-    tileSurface[0] = IMG_Load("imgs/whiteSqr.png");
-    tileSurface[1] = IMG_Load("imgs/blackSqr.png");
-    tileSurface[2] = IMG_Load("imgs/lastmovelight.png");
-    tileSurface[3] = IMG_Load("imgs/lastmovedark.png");
+    string strr1 = oxdan_dragon_c + "/includes/own/imgs/whiteSqr.png";
+    string strr2 = oxdan_dragon_c + "/includes/own/imgs/blackSqr.png";
+    string strr3 = oxdan_dragon_c + "/includes/own/imgs/lastmovelight.png";
+    string strr4 = oxdan_dragon_c + "/includes/own/imgs/lastmovedark.png";
+    string strr5 = oxdan_dragon_c + "/includes/own/imgs/wP.png";
+    string strr6 = oxdan_dragon_c + "/includes/own/imgs/wN.png";
+    string strr7 = oxdan_dragon_c + "/includes/own/imgs/wB.png";
+    string strr8 = oxdan_dragon_c + "/includes/own/imgs/wR.png";
+    string strr9 = oxdan_dragon_c + "/includes/own/imgs/wQ.png";
+    string strr10 = oxdan_dragon_c + "/includes/own/imgs/wK.png";
+    string strr11 = oxdan_dragon_c + "/includes/own/imgs/bP.png";
+    string strr12 = oxdan_dragon_c + "/includes/own/imgs/bN.png";
+    string strr13 = oxdan_dragon_c + "/includes/own/my_dragon_ico.jpg";
+    string strr14 = oxdan_dragon_c + "/includes/own/imgs/bB.png";
+    string strr15 = oxdan_dragon_c + "/includes/own/imgs/bR.png";
+    string strr16 = oxdan_dragon_c + "/includes/own/imgs/bQ.png";
+    string strr17 = oxdan_dragon_c + "/includes/own/imgs/bK.png";
+    string strr18 = oxdan_dragon_c + "/includes/own/imgs/promoteSqr.png";
+    tileSurface[0] = IMG_Load(strr1.c_str());
+    tileSurface[1] = IMG_Load(strr2.c_str());
+    tileSurface[2] = IMG_Load(strr3.c_str());
+    tileSurface[3] = IMG_Load(strr4.c_str());
 
-    pieceSurface[0] = IMG_Load("imgs/wP.png");
-    pieceSurface[1] = IMG_Load("imgs/wN.png");
-    pieceSurface[2] = IMG_Load("imgs/wB.png");
-    pieceSurface[3] = IMG_Load("imgs/wR.png");
-    pieceSurface[4] = IMG_Load("imgs/wQ.png");
-    pieceSurface[5] = IMG_Load("imgs/wK.png");
-    pieceSurface[6] = IMG_Load("imgs/bP.png");
-    pieceSurface[7] = IMG_Load("imgs/bN.png");
-    pieceSurface[99] = IMG_Load("my_dragon_ico.jpg");
-    pieceSurface[8] = IMG_Load("imgs/bB.png");
-    pieceSurface[9] = IMG_Load("imgs/bR.png");
-    pieceSurface[10] = IMG_Load("imgs/bQ.png");
-    pieceSurface[11] = IMG_Load("imgs/bK.png");
+    pieceSurface[0] = IMG_Load(strr5.c_str());
+    pieceSurface[1] = IMG_Load(strr6.c_str());
+    pieceSurface[2] = IMG_Load(strr7.c_str());
+    pieceSurface[3] = IMG_Load(strr8.c_str());
+    pieceSurface[4] = IMG_Load(strr9.c_str());
+    pieceSurface[5] = IMG_Load(strr10.c_str());
+    pieceSurface[6] = IMG_Load(strr11.c_str());
+    pieceSurface[7] = IMG_Load(strr12.c_str());
+    pieceSurface[8] = IMG_Load(strr14.c_str());
+    pieceSurface[9] = IMG_Load(strr15.c_str());
+    pieceSurface[10] = IMG_Load(strr16.c_str());
+    pieceSurface[11] = IMG_Load(strr17.c_str());
+    //pieceSurface[15] = IMG_Load(strr13.c_str());
+    promoteSqrSurface = IMG_Load(strr18.c_str());
 
-    promoteSqrSurface = IMG_Load("imgs/promoteSqr.png");
     promoteTexture = SDL_CreateTextureFromSurface(renderer, promoteSqrSurface);
     lastmoveTextureLight = SDL_CreateTextureFromSurface(renderer, tileSurface[2]);
     lastmoveTextureDark = SDL_CreateTextureFromSurface(renderer, tileSurface[3]);
 
-    SDL_SetWindowIcon(window, pieceSurface[99]);
+    //SDL_SetWindowIcon(window, pieceSurface[15]);
 }
 
 void Gui::initBoard()

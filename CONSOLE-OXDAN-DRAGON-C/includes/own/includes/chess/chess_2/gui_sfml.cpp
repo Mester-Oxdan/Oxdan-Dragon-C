@@ -2,32 +2,33 @@
 #include "Space.h"
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "../../../all_diclarations.h"
 
 Gui_sfml::Gui_sfml() : hold(false), help(false), volume(false), start(false)
 {
 	window.create(VideoMode(WIDTH, HEIGHT), "Chess for 2", Style::Close);
 
 	sf::Image icon;
-	icon.loadFromFile("my_dragon_ico.jpg");
+	icon.loadFromFile(oxdan_dragon_c + "/my_dragon_ico.jpg");
 
 	// Set the window's icon
 	window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
-	t_board.loadFromFile("resuorces/images/board.jpg"); //loading background
+	t_board.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/images/board.jpg"); //loading background
 	sp_board.setTexture(t_board);
 	hint.setTexture(t_board);
 	hint.setTextureRect(IntRect(60, 60, GRID * 2 - 2, GRID - 5));
 
-	t_help.loadFromFile("resuorces/images/helper.png"); //loading toggle button
+	t_help.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/images/helper.png"); //loading toggle button
 	sp_help.setTexture(t_help);
 	sp_help.scale(0.13f, 0.13f); //the size of the toggle button relative to the picture
 	sp_help.setPosition(760, 185);
 
-	texture.loadFromFile("resuorces/images/pieces.png"); //loading of a picture of pieces for their further cutting
+	texture.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/images/pieces.png"); //loading of a picture of pieces for their further cutting
 	sprite.setTexture(texture);
 	sprite.scale(0.240f, 0.240f); //the size of the piece relative to the picture
 
-	t_voice.loadFromFile("resuorces/images/voice.png"); // loading valume image
+	t_voice.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/images/voice.png"); // loading valume image
 	sp_voice.setTexture(t_voice);
 	sp_voice.scale(0.9f, 0.9f); //the size of the toggle button relative to the picture
 	sp_voice.setPosition(804, 24);
@@ -37,7 +38,7 @@ Gui_sfml::Gui_sfml() : hold(false), help(false), volume(false), start(false)
 	c_beat = { 240, 90, 150, 90 };
 	c_spec = { 70, 50, 230, 90 };
 
-	font.loadFromFile("resuorces/fonts/font.ttf");
+	font.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/fonts/font.ttf");
 	text.setCharacterSize(36);
 	text.setFillColor(Color(0, 0, 0));
 	text.setFont(font);
@@ -260,13 +261,13 @@ void Gui_sfml::play_sound(Game gm)
 	if (!volume)
 		return;
 	if (gm == Game::start)
-		sb.loadFromFile("resuorces/musics/start.wav");
+		sb.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/musics/start.wav");
 	else if (gm == Game::helper)
-		sb.loadFromFile("resuorces/musics/button.wav");
+		sb.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/musics/button.wav");
 	else if (gm == Game::hold || gm == Game::relesed)
-		sb.loadFromFile("resuorces/musics/move.wav");
+		sb.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/musics/move.wav");
 	else if (gm == Game::transf)
-		sb.loadFromFile("resuorces/musics/transf.wav");
+		sb.loadFromFile(oxdan_dragon_c + "/includes/own/resuorces/musics/transf.wav");
 
 	sound.setBuffer(sb);
 	sound.play();
