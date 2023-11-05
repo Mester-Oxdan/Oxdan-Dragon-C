@@ -161,19 +161,19 @@ void system_info_start()
 
 	#ifdef linux
 
-	printf("Version: 1.2023 [ENGLISH] (C/C++) [LINUX] \n");
+	printf("Version: 2.2024 [ENGLISH] (C/C++) [LINUX] \n");
 	Sleep(10);
 
 	#endif
 
 	#ifdef _WIN32
 
-	printf("Version: 1.2023 [ENGLISH] (C/C++) [WINDOWS] \n");
+	printf("Version: 2.2024 [ENGLISH] (C/C++) [WINDOWS] \n");
 	Sleep(10);
 
 	#else
 
-	printf("Version: 1.2023 [ENGLISH] (C/C++) [WINDOWS] \n");
+	printf("Version: 2.2024 [ENGLISH] (C/C++) [WINDOWS] \n");
 	Sleep(10);
 
 	#endif

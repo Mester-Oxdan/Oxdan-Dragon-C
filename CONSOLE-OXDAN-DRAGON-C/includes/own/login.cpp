@@ -213,7 +213,7 @@ void ask()
 					system("cls");
 					printf("\033[0;33mOxdan"); // intro cmd (+)
 					printf("\033[0;31m Dragon");
-					printf("\033[0;37m [ Version: 1.2023 [ENGLISH] (C/C++) [WINDOWS] ] \n");
+					printf("\033[0;37m [ Version: 2.2024 [ENGLISH] (C/C++) [WINDOWS] ] \n");
 					printf("(p) Oxdan Praduction. \n");
 					start_start(true);
 				}

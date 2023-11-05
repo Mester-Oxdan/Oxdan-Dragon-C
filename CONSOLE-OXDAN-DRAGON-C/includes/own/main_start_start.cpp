@@ -10,7 +10,7 @@ void main_start_start(string man, bool willstart)
 		//willstart = false;
 		//check_start_start();
 
-		std::fstream txt_yes_no("C:\\Users\\bogda\\source\\repos\\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\resuorces\\all_txt\\txt_yes_no.txt", ios::out | ios::trunc); //open in constructor
+		std::fstream txt_yes_no(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\txt_yes_no.txt", ios::out | ios::trunc); //open in constructor
 		std::string data("false");
 		txt_yes_no << data << endl;
 
@@ -22,7 +22,7 @@ void main_start_start(string man, bool willstart)
 		//willstart = true;
 		//check_start_start();
 
-		std::fstream txt_yes_no("C:\\Users\\bogda\\source\\repos\\CONSOLE-OXDAN-DRAGON-C++\\x64\\Debug\\resuorces\\all_txt\\txt_yes_no.txt", ios::out | ios::trunc); //open in constructor
+		std::fstream txt_yes_no(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\txt_yes_no.txt", ios::out | ios::trunc); //open in constructor
 		std::string data("true");
 		txt_yes_no << data << endl;
 

@@ -23,11 +23,11 @@ void Main_Commands()
 	{
 		try
 		{
-			printf("\n\033[0;33m Oxdan");
+			printf("\n\033[0;33mOxdan");
 			Sleep(10);
 			printf("\033[0;31m Dragon");
 			Sleep(10);
-			printf("\033[0;37m [ Version: 1.2023 [ENGLISH] (C/C++) [WINDOWS] ] \n");
+			printf("\033[0;37m [ Version: 2.2024 [ENGLISH] (C/C++) [WINDOWS] ] \n");
 			Sleep(10);
 			printf("(c) Oxdan Praduction. \n");
 			Sleep(10);
@@ -436,9 +436,9 @@ void Main_Commands()
 				}
 
 				// Process the response (e.g., check for the version)
-				if (response.find("1.2023") != std::string::npos) {
+				if (response.find("2.2024") != std::string::npos) {
 					std::cout << "\n\033[0;33mYou're right!\033[0;37m" << std::endl;
-					std::cout << "We have a new version for you: 2.2024" << std::endl;
+					std::cout << "We have a new version for you: 3.2025" << std::endl;
 					std::cout << "If you want to \033[0;32mdownload\033[0;37m it, just go to our website or GitHub." << std::endl;
 				}
 				else {
