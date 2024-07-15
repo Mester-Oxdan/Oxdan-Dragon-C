@@ -1,2 +1,3 @@
 # Ignore the entire .vs folder
 .vs/
+.x64/
