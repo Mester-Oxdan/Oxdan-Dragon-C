@@ -12,7 +12,7 @@ void donators_start()
 	printf("\033[0;33mDONATORS: \033[0;37m");
 	gotoxy(49, 4);
 	Sleep(1);
-	printf("1) no body");
+	printf("1) Cinderella - $10");
 	gotoxy(49, 5);
 	Sleep(1);
 	printf("2) no body");

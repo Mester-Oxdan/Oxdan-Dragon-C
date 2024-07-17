@@ -13,7 +13,7 @@ void links_start()
 		Sleep(1);
 		printf("\033[0;37m"); // (+)
 		Sleep(1);
-		printf("1) OXDAN DRAGON website (httpstest) \n"); // 1) link OXDAN DRAGON (+)
+		printf("1) OXDAN DRAGON website (https://oxdan.com) \n"); // 1) link OXDAN DRAGON (+)
 		Sleep(1);
 		printf("2) chess.com (https://www.chess.com/home) \n"); // 2) link chess.com (+)
 		Sleep(1);
@@ -29,11 +29,19 @@ void links_start()
 		Sleep(1);
 		printf("8) Kwork (https://kwork.com/user/jecob)\n"); // 8) Kwork (+)
 		Sleep(1);
-		printf("9) Fiverr (https://www.fiverr.com/jecob_567)\n"); // 9) Fiverr (+)
+		printf("9) Fiverr (https://www.fiverr.com/jecob_567)\n"); // 9) link Fiverr (+)
 		Sleep(1);
-		printf("10) For Sponsoring/Donations (4403 9352 3234 1307)\n"); // 10) Sponsoring/Donations (+)
+		printf("10) Upwork (https://www.upwork.com/freelancers/~01e296384cd379e73e?viewMode=1&mp_source=share)\n"); // 10) Upwork(+)
 		Sleep(1);
-		printf("11) \n"); // 11)  (+)
+		printf("11) Reddit (https://www.reddit.com/u/detektive-void/s/JyYykvbe9o)\n"); // 11) Reddit(+)
+		Sleep(1);
+		printf("12) For Sponsoring/Donations: Cash App ($BoHladii /OR/ 4403 9352 3234 1307)\n"); // 12) Sponsoring / Donations Cash App(+)
+		Sleep(1);
+		printf("13) Buy Me A Coffee (https://www.buymeacoffee.com/oxdan)\n"); // 13) Buy Me A Coffee(+)
+		Sleep(1);
+		printf("14) For Shops: Etsy (https://oxdanpraduction3dart.etsy.com)\n"); // 14) Etsy(+)
+		Sleep(1);
+		printf("15) \n"); // 15)  (+)
 		Sleep(1);
 		check_start_start();
 }

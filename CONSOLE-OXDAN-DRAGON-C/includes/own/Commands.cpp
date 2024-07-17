@@ -18,15 +18,17 @@ void Commands()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37m--help \033[0;36mor \033[0;37m-help \033[0;36mor \033[0;37mhelp \033[0;36mor \033[0;37m-h - shows all commands \n"); // --help (+)
+		printf("\033[0;37msearch - check if entered command exists \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // search (-)
+		Sleep(1);
+		printf("--help \033[0;36mor \033[0;37m-help \033[0;36mor \033[0;37mhelp \033[0;36mor \033[0;37m-h - shows all commands \n"); // --help (+)
 		Sleep(1);
 		printf("--version \033[0;36mor \033[0;37m-version \033[0;36mor \033[0;37mversion \033[0;36mor \033[0;37m-v - shows version \n"); // --version (+)
 		Sleep(1);
-		printf("pip - using pip commands \n"); // pip (+)
+		printf("pip - using entered pip commands \n"); // pip (+)
 		Sleep(1);
-		printf("git - using git commands \n"); // git (+)
+		printf("git - using entered git commands \n"); // git (+)
 		Sleep(1);
-		printf("conda - using conda commands \n"); // conda (+)
+		printf("conda - using entered conda commands \n"); // conda (+)
 		Sleep(1); 
 		printf("cmd - using cmd commands \n"); // cmd (+)
 		Sleep(1);
@@ -52,7 +54,7 @@ void Commands()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37minject_prog - shows injector for any program \n"); // inject_prog (+)
+		printf("\033[0;37minjector_dll - shows dll injector \n"); // inject_dll (+)
 		Sleep(1);
 		printf("pas_gen - shows password generator \033[0;33m(\033[0;37m w, u, n, nw \033[0;33m)\033[0;37m\n"); // pas_gen (+)
 		Sleep(1);
@@ -60,31 +62,33 @@ void Commands()
 		Sleep(1);
 		printf("cor_desk - shows coordinates Desktop,Console,... \n"); // cor_desk (+)
 		Sleep(1);
-		printf("ascii_code - shows ascii code keybord \n"); // ascii_code (+)
+		printf("ascii_code - shows ascii code of each pressed key \n"); // ascii_code (+)
 		Sleep(1);
-		printf("ip_search - searching location by entered network ip address (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // ip_search (+)
+		printf("ip_search - searching location by entered network ip address \033[0;33m(\033[0;37m ip address \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // ip_search (+)
 		Sleep(1);
-		printf("phone_search - searching location by entered phone number with country code (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
+		printf("phone_search - searching location by entered phone number with country code \033[0;33m(\033[0;37m phone number \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
 		Sleep(1);
-		printf("mimikatz - using mimikatz commands \n"); // mimikatz (+)
+		printf("mimikatz - using entered mimikatz commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // mimikatz (+)
 		Sleep(1);
-		printf("john - using john the ripper commands \n"); // john (+)
+		printf("john - using entered john the ripper commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // john (+)
 		Sleep(1);
-		printf("nmap - using nmap commands \n"); // nmap (+)
+		printf("nmap - using entered nmap commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // nmap (+)
 		Sleep(1);
-		printf("con_wifi - doing connection to entered wifi \n"); // con_wifi (+)
+		printf("con_wifi - doing connection to entered wifi network \033[0;33m(\033[0;37m wifi network name \033[0;33m)\033[0;37m \n"); // con_wifi (+)
 		Sleep(1);
-		printf("wifi_hack - shows tool for hack wifi password \n"); // wifi_hack (+)
+		printf("wifi_hack - shows tool for brute force wifi network \n"); // wifi_hack (+)
 		Sleep(1);
-		printf("stealer - copy importent files windows in target_files_dis folder \n"); // stealer (+)
+		printf("stealer - coping importent files windows in target_files_dis folder \n"); // stealer (+)
 		Sleep(1);
 		printf("\033[0;37mget_ip_website - shows ip address entered website \033[0;33m(\033[0;37m website name \033[0;33m)\033[0;37m\n"); // get_ip_website (+)
 		Sleep(1);
 		printf("auto_clicker - auto clicking, for exit press 'Esc' \n"); // auto_clicker (+)
 		Sleep(1);
-		printf("morse_code - shows morse code cipher \n"); // morse_code (+)
+		printf("morse_code_cipher - shows morse code cipher \n"); // morse_code (+)
 		Sleep(1);
 		printf("caesar_cipher - shows caesar cipher \n"); // caesar_cipher (+)
+		Sleep(1);
+		printf("ai_chat - shows ai chat \n"); // ai_chat (+)
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
@@ -92,7 +96,7 @@ void Commands()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37mukraine - shows flag Ukraine \n"); // ukraine (+)
+		printf("\033[0;37mukraine - shows Ukraine flag \n"); // ukraine (+)
 		Sleep(1);
 		printf("author - shows author of this console \n"); // author (+)
 		Sleep(1);
@@ -110,7 +114,7 @@ void Commands()
 		Sleep(1);
 		printf("instructions - go to instructions page \n"); // instructions (+)
 		Sleep(1);
-		printf("del_account - delete entered account \n"); // del_account (+)
+		printf("del_account - delete entered account \033[0;33m(\033[0;37m account name \033[0;33m)\033[0;37m \n"); // del_account (+)
 		Sleep(1);
 		printf("logout - go to main menu \n"); // logout (+)
 		Sleep(1);
@@ -130,9 +134,9 @@ void Commands()
 		Sleep(1);
 		printf("calendar - shows calendar \n"); // calendar (+)
 		Sleep(1);
-		printf("webcam_recorder - shows webcam video recorder (without taking voice (you can use dictaphone for recording voice)) \n"); // webcam_recorder (+)
+		printf("webcam_recorder - shows webcam video recorder (without recording voice (you can use dictaphone for recording voice)) \n"); // webcam_recorder (+)
 		Sleep(1);
-		printf("screen_recorder - shows screen video recorder (without taking voice (you can use dictaphone for recording voice)) \n"); // screen_recorder (+)
+		printf("screen_recorder - shows screen video recorder (without recording voice (you can use dictaphone for recording voice)) \n"); // screen_recorder (+)
 		Sleep(1);
 		printf("cur_conv - shows currency converter \n"); // cur_conv (+)
 		Sleep(1);
@@ -141,6 +145,10 @@ void Commands()
 		printf("translator - shows languages translator \n"); // translator (+)
 		Sleep(1);
 		printf("dictaphone - shows dictaphone \n"); // dictaphone (+)
+		Sleep(1);
+		printf("chat_client - host to the chat server \n"); // chat_client (+)
+		Sleep(1);
+		printf("chat_server - creates chat server \n"); // chat_server (+)
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
@@ -194,9 +202,9 @@ void Commands()
 		Sleep(1);
 		printf("\033[0;37mtitle - set input title \033[0;33m(\033[0;37m title name \033[0;33m)\033[0;37m\n"); // title (+)
 		Sleep(1);
-		printf("new \033[0;36mor \033[0;37mstart - create new Dragon console \n"); // new (+)
+		printf("new \033[0;36mor \033[0;37mstart - opens one more Dragon console \n"); // new (+)
 		Sleep(1);
-		printf("open - open entered path to file \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m \n"); // open (+)
+		printf("open - open entered file \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m \n"); // open (+)
 		Sleep(1);
 		printf("shutdown - shutdown your laptop \n"); // shutdown (+)
 		Sleep(1);
@@ -206,20 +214,20 @@ void Commands()
 		Sleep(1);
 		printf("promo_code - using input promo code \033[0;33m(\033[0;37m promo code name \033[0;33m)\033[0;37m\n"); // promo_code (+)
 		Sleep(1);
-		printf("i_am_here - shows time which you spent here \n"); // i_am_here (+)
+		printf("i_am_here - shows how much time did you spent here \n"); // i_am_here (+)
 		Sleep(1);
 		printf("&main - turn main \033[0;33m(\033[0;37m on, off \033[0;33m)\033[0;37m \n"); // &main (+)
 		Sleep(1);
 		printf("donate - donate specified amount of money for author \n"); // donate (+)
 		Sleep(1);
-		printf("donators - shows shows list of top 15 donators for author (updating with new version) \n"); // donators (+)
+		printf("donators - shows list of top 15 donators for author (updating with new version) \n"); // donators (+)
 		Sleep(1);
-		printf("helpers - shows shows list of top 15 helpers for author (updating with new version) \n"); // helpers (+)
+		printf("helpers - shows list of top 15 helpers for author (updating with new version) \n"); // helpers (+)
 		Sleep(1);
-		//printf("color - set color text \033[0;33m("); // color (+)
-		//printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
-		//Sleep(1);
-		printf("color_back - set color background console \033[0;33m("); // color_back (+)
+		printf("color - set color text \033[0;33m("); // color (+)
+		printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
+		Sleep(1);
+		printf("color_back - set background color for console \033[0;33m("); // color_back (+)
 		printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
 		Sleep(1);
 		printf("i? - shows you are admin or user \n"); // i? (+)
@@ -230,22 +238,22 @@ void Commands()
 		Sleep(1);
 		printf("send_ph_message - send message on entered phone number \n"); // send_ph_message (+)
 		Sleep(1);
-		printf("history - shows commands which you already wrote \n"); // history (+)
+		printf("history - shows all entered commands \n"); // history (+)
 		Sleep(1);
-		printf("cls_history - clear commands which you already wrote \n"); // cls_history (+)
+		printf("cls_history - clear all entered commands \n"); // cls_history (+)
 		Sleep(1);
 		printf("memory - shows memory of your disk \n"); // memory (+)
 		Sleep(1);
 		printf("rules - shows rules of this console \n"); // rules (+)
 		Sleep(1);
-		printf("commands - shows just commands \n"); // commands (+)
+		printf("commands - shows commands only \n"); // commands (+)
 		Sleep(1);
-		printf("tips - shows just tips \n"); // tips (+)
+		printf("tips - shows tips only \n"); // tips (+)
 		Sleep(1);
-		printf("links - shows just links \n"); // links (+)
+		printf("links - shows links only \n"); // links (+)
 		Sleep(1);
-		//printf("dragon_helper - will enter commands by your saying while did not say 'exit' \n"); // dragon_helper (+)
-		//Sleep(1);
+		printf("dragon_helper - will enter commands that you said, while you did't say 'exit' \n"); // dragon_helper (+)
+		Sleep(1);
 		printf("my_volume_level - shows windows volume level \n"); // my_volume_level (+)
 		Sleep(1);
 		printf("set_volume_level - set windows volume level \033[0;33m(\033[0;37m number \033[0;33m)\033[0;37m\n"); // set_volume_level (+)
@@ -272,7 +280,7 @@ void Commands()
 		Sleep(1);
 		printf("melt_screen - shows melting screen, for exit from process press 'Alt + F4' \n"); // melt_screen (+)
 		Sleep(1);
-		printf("gdi_virus - shows gdi virus, for exit just wait or close it \n"); // gdi_virus (+)
+		printf("gdi_virus - shows gdi virus, for exit just wait or close program \n"); // gdi_virus (+)
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
@@ -304,7 +312,7 @@ void Commands()
 		Sleep(1);
 		printf("\033[0;37m"); // (+)
 		Sleep(1);
-		printf("1) OXDAN DRAGON website (httpstest) \n"); // 1) link OXDAN DRAGON (+)
+		printf("1) OXDAN DRAGON website (https://oxdan.com) \n"); // 1) link OXDAN DRAGON (+)
 		Sleep(1);
 		printf("2) chess.com (https://www.chess.com/home) \n"); // 2) link chess.com (+)
 		Sleep(1);
@@ -322,9 +330,17 @@ void Commands()
 		Sleep(1);
 		printf("9) Fiverr (https://www.fiverr.com/jecob_567)\n"); // 9) link Fiverr (+)
 		Sleep(1);
-		printf("10) For Sponsoring/Donations (4403 9352 3234 1307)\n"); // 10) 10) Sponsoring/Donations (+)
+		printf("10) Upwork (https://www.upwork.com/freelancers/~01e296384cd379e73e?viewMode=1&mp_source=share)\n"); // 10) Upwork(+)
 		Sleep(1);
-		printf("11) \n"); // 11)  (+)
+		printf("11) Reddit (https://www.reddit.com/u/detektive-void/s/JyYykvbe9o)\n"); // 11) Reddit(+)
+		Sleep(1);
+		printf("12) For Sponsoring/Donations: Cash App ($BoHladii /OR/ 4403 9352 3234 1307)\n"); // 12) Sponsoring / Donations Cash App(+)
+		Sleep(1);
+		printf("13) Buy Me A Coffee (https://www.buymeacoffee.com/oxdan)\n"); // 13) Buy Me A Coffee(+)
+		Sleep(1);
+		printf("14) For Shops: Etsy (https://oxdanpraduction3dart.etsy.com)\n"); // 14) Etsy(+)
+		Sleep(1);
+		printf("15) \n"); // 15)  (+)
 		Sleep(1);
 		check_start_start();
 	}
