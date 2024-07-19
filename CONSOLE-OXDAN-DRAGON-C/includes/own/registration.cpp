@@ -99,7 +99,7 @@ void registration()
 		reg << reguser << ' ' << keyregpass << endl;
 
 		gotoxy(50, 14);
-		cout << "\033[0;32m!REGISTRATION SUCESSFUL!\033[0;37m";
+		cout << "\033[0;32m!REGISTRATION SUCCESSFUL!\033[0;37m";
 		_getch();
 
 		first_start();
@@ -109,7 +109,7 @@ void registration()
 	reg << reguser << ' ' << keyregpass << endl;
 
 	gotoxy(45, 14);
-	cout << "\033[0;32m!REGISTRATION SUCESSFUL!\033[0;37m";
+	cout << "\033[0;32m!REGISTRATION SUCCESSFUL!\033[0;37m";
 	_getch();
 
 	first_start();

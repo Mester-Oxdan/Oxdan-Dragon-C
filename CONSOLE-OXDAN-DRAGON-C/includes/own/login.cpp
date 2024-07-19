@@ -103,7 +103,7 @@ void ask()
 							ofstream reg(oxdan_dragon_c +  "\\includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
 							reg << keyemail << ' ' << endl;
 							gotoxy(47, 14);
-							cout << "\033[0;32m!EMAIL SUCESSFUL!\033[0;37m";
+							cout << "\033[0;32m!EMAIL SUCCESSFUL!\033[0;37m";
 							_getch();
 							ask();
 						}
@@ -114,7 +114,7 @@ void ask()
 						ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
 						reg << keyemail << ' ' << endl;
 						gotoxy(47, 14);
-						cout << "\033[0;32m!EMAIL SUCESSFUL!\033[0;37m";
+						cout << "\033[0;32m!EMAIL SUCCESSFUL!\033[0;37m";
 						_getch();
 						ask();
 					}
@@ -122,7 +122,7 @@ void ask()
 					ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\email_data_base.txt", ios::app);
 					reg << keyemail << ' ' << endl;
 					gotoxy(47, 14);
-					cout << "\033[0;32m!EMAIL SUCESSFUL!\033[0;37m";
+					cout << "\033[0;32m!EMAIL SUCCESSFUL!\033[0;37m";
 					_getch();
 					ask();
 				}
@@ -183,7 +183,7 @@ void ask()
 							ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
 							reg << keyphonenumber << ' ' << endl;
 							gotoxy(45, 14);
-							cout << "\033[0;32m!PHONE NUMBER SUCESSFUL!\033[0;37m";
+							cout << "\033[0;32m!PHONE NUMBER SUCCESSFUL!\033[0;37m";
 							getch();
 							ask();
 						}
@@ -194,7 +194,7 @@ void ask()
 						ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
 						reg << keyphonenumber << ' ' << endl;
 						gotoxy(45, 14);
-						cout << "\033[0;32m!PHONE NUMBER SUCESSFUL!\033[0;37m";
+						cout << "\033[0;32m!PHONE NUMBER SUCCESSFUL!\033[0;37m";
 						getch();
 						ask();
 					}
@@ -202,7 +202,7 @@ void ask()
 					ofstream reg(oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\phone_number_data_base.txt", ios::app);
 					reg << keyphonenumber << ' ' << endl;
 					gotoxy(45, 14);
-					cout << "\033[0;32m!PHONE NUMBER SUCESSFUL!\033[0;37m";
+					cout << "\033[0;32m!PHONE NUMBER SUCCESSFUL!\033[0;37m";
 					getch();
 					ask();
 

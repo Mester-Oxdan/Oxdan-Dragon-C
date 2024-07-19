@@ -4,6 +4,7 @@
 #include <fstream>
 #include <chrono>
 #include <string>
+// #include <boost/filesystem.hpp>
 #include <string.h>
 
 #define OXIDAN_MAIN
@@ -28,7 +29,7 @@ int main()
 	int nchar = GetEnvironmentVariableA("OXDAN-DRAGON-C", buf2, 256);
 	oxdan_dragon_c = buf2;
 	//cout << "pt 1: oxidan_dragpn_c =" << oxdan_dragon_c << endl;
-	//getch();
+	//getch()
 	//cout << oxdan_dragon_c;
 	//getch();
 	//cout << oxdan_dragon_c + "\\includes\\own\\resuorces\\all_txt\\txt_yes_no.txt";

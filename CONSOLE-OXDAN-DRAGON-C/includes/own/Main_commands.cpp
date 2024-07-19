@@ -11,11 +11,164 @@
 #include <process.h>
 #include <algorithm>
 #include <boost/algorithm/string.hpp>
-
+#include <boost/filesystem.hpp>
 
 #pragma warning(disable : 4996).
 
 using namespace std;
+namespace fs = boost::filesystem;
+
+void handle_directory_or_file(const std::string& path) {
+	try {
+		fs::path p(path);
+
+		if (fs::is_directory(p)) {
+			bool has_files = false;
+
+			for (fs::directory_iterator it(p); it != fs::directory_iterator(); ++it) {
+				if (fs::is_regular_file(it->path())) {
+					has_files = true;
+					break;
+				}
+			}
+
+			if (has_files) {
+				cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+				std::string confirmation;
+				std::cout << "\n\033[0;33mPath '" << path << "' is a Directory. Are you sure you want to delete this directory and its contents? (yes/no): \033[0;37m";
+				std::getline(std::cin, confirmation);
+				boost::algorithm::to_lower(confirmation);
+
+				if (confirmation == "yes" || confirmation == "y") {
+					fs::remove_all(p);
+					//std::cout << "\n(!SUCCESS!) = (!Directory '" << path << "' !)\n";
+					printf("\033[0;32m");
+					printf("\n");
+					printf("(!SUCCESS!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;33m");
+					//printf("(!Enter path to directory!)\n");
+					cout << "(!Directory '" << path << "' has been deleted successfully!)\n";
+					printf("\033[0;37m");
+				}
+				else if (confirmation == "esc") {
+					// Handle 'esc' as needed
+					check_start_start();
+				}
+				else {
+					//std::cout << "\n(!ERROR!) = (!!)\n";
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					printf("(!Directory has not been deleted!)\n");
+					printf("\033[0;37m");
+				}
+			}
+			else {
+				cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+				std::string confirmation;
+				std::cout << "\n\033[0;33mPath '" << path << "' is an Empty Directory. Do you want to delete this empty directory? (yes/no): \033[0;37m";
+				std::getline(std::cin, confirmation);
+				boost::algorithm::to_lower(confirmation);
+
+				if (confirmation == "yes" || confirmation == "y") {
+					fs::remove(p);
+					//std::cout << "\n(!SUCCESS!) = (!Empty directory '" << path << "' !)\n";
+					printf("\033[0;32m");
+					printf("\n");
+					printf("(!SUCCESS!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;33m");
+					//printf("(!Enter path to directory!)\n");
+					cout << "(!Empty directory '" << path << "' has been deleted successfully!)\n";
+					printf("\033[0;37m");
+				}
+				else if (confirmation == "esc") {
+					// Handle 'esc' as needed
+					check_start_start();
+				}
+				else {
+					//std::cout << "\n(!ERROR!) = (!!)\n";
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					//printf("(!Enter path to directory!)\n");
+					cout << "(!Empty directory has not been deleted!)\n";
+					printf("\033[0;37m");
+				}
+			}
+		}
+		else if (fs::is_regular_file(p)) {
+			cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+			std::string confirmation;
+			std::cout << "\n\033[0;33mPath '" << path << "' is a file. Are you sure you want to delete this file? (yes/no): \033[0;37m";
+			std::getline(std::cin, confirmation);
+			boost::algorithm::to_lower(confirmation);
+
+			if (confirmation == "yes" || confirmation == "y") {
+				fs::remove(p);
+				//std::cout << "\n(!SUCCESS!) = (!File '" << path << "' !)\n";
+				printf("\033[0;32m");
+				printf("\n");
+				printf("(!SUCCESS!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;33m");
+				//printf("(!Enter path to directory!)\n");
+				cout << "(!File '" << path << "' has been deleted successfully!)\n";
+				printf("\033[0;37m");
+			}
+			else if (confirmation == "esc") {
+				// Handle 'esc' as needed
+				check_start_start();
+			}
+			else {
+				//std::cout << "\n(!ERROR!) = (!!)\n";
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				//printf("(!Enter path to directory!)\n");
+				cout << "(!File has not been deleted!)\n";
+				printf("\033[0;37m");
+			}
+		}
+		else {
+			//std::cout << "\n(!ERROR!) = (!Path '" << path << "' is neither a file nor a directory!)\n";
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			//printf("(!Enter path to directory!)\n");
+			cout << "(!Path '" << path << "' does not exists!)\n";
+			printf("\033[0;37m");
+		}
+	}
+	catch (const fs::filesystem_error& e) {
+		//std::cout << "\n(!ERROR!) = (" <<  << ")\n";
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		//printf("(!" + e.what() + "!)\n");
+		cout << "(!" << e.what() << "!)\n";
+		printf("\033[0;37m");
+	}
+}
 
 void Main_Commands()
 {
@@ -41,7 +194,7 @@ void Main_Commands()
 		}
 	}
 
-	else if (x == "go_to") // go_to (+)
+	else if (x == "go_to" || x == "cd") // go_to (+)
 	{
 
 		if (tokens.size() < 2)
@@ -77,6 +230,89 @@ void Main_Commands()
 				printf(" = ");
 				printf("\033[0;32m");
 				printf("(!Enter path to directory!)\n");
+				printf("\033[0;37m");
+
+				check_start_start();
+			}
+		}
+
+		check_start_start();
+	}
+
+	else if (x == "search") // search (+)
+	{
+
+		if (tokens.size() < 2)
+		{
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!This command doesn't exists!)\n");
+			printf("\033[0;37m");
+		}
+
+		else
+		{
+			try
+			{
+				char buf[256];
+				string search = tokens[1];
+				//SetCurrentDirectoryA((LPCSTR)cd.c_str());
+				//GetCurrentDirectoryA(255, buf);
+
+				std::vector<std::string> my_list = { "search", "--help", "-help", "help", "-h", "--version", "-version", "version", "-v", "pip", "git", "conda",
+		"cmd", "cls", "clear", "go_to", "dir", "ls", "mkdir", "create", "del", "delete", "install", "update",
+		"injector_dll", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code", "ip_search", "phone_search", "mimikatz",
+		"john", "nmap", "con_wifi", "wifi_hack", "stealer", "get_ip_website", "auto_clicker", "morse_code_cipher",
+		"caesar_cipher", "ai_chat", "ukraine", "author", "matrix", "login", "registration", "instructions",
+		"del_account", "logout", "tim", "time", "stopwatch", "timer", "calculator", "calendar", "webcam_recorder",
+		"screen_recorder", "cur_conv", "notepad", "translator", "dictaphone", "chat_client", "chat_server", "pacman",
+		"2048", "arkanoid", "flappy_bird", "tetris", "hangman", "car_racing", "guess_number", "math_game",
+		"typing_tutor", "battle_city", "doom", "mario", "snake", "ping_pong", "tic_tac_toe", "checkers", "chess",
+		"space_shooter", "title", "new", "start", "open", "shutdown", "restart", "data", "promo_code", "i_am_here",
+		"&main", "donate", "donators", "helpers", "color_back", "i?", "administrator", "admin", "superuser",
+		"chan_backg", "send_ph_message", "history", "cls_history", "memory", "rules", "commands", "tips", "links",
+		"my_volume_level", "set_volume_level", "set_mute", "ip", "size", "my_location", "system_info",
+		"energy", "power", "prank_button", "melt_screen", "gdi_virus", "exit", "esc", "quit" };
+
+
+				// Check if the input exists in the list
+				if (std::find(my_list.begin(), my_list.end(), search) != my_list.end()) {
+					printf("\033[0;32m");
+					printf("\n");
+					printf("(!SUCCESS!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;33m");
+					printf("(!This command exists!)\n");
+					printf("\033[0;37m");
+				}
+				else {
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					printf("(!This command doesn't exists!)\n");
+					printf("\033[0;37m");
+				}
+
+				check_start_start();
+			}
+
+			catch (...)
+			{
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				printf("(!This command doesn't exists!)\n");
 				printf("\033[0;37m");
 
 				check_start_start();
@@ -180,7 +416,7 @@ void Main_Commands()
 					printf("\033[0;37m");
 					printf(" = ");
 					printf("\033[0;32m");
-					printf("(!We're so sorry about that, only cmd command can't be run!)\n");
+					printf("(!We're so sorry about that, only cmd --> cmd command can't be run!)\n");
 				}
 				else {
 					system(right_command.c_str());
@@ -439,7 +675,7 @@ void Main_Commands()
 				if (response.find("2.2024") != std::string::npos) {
 					std::cout << "\n\033[0;33mYou're right!\033[0;37m" << std::endl;
 					std::cout << "We have a new version for you: 3.2025" << std::endl;
-					std::cout << "If you want to \033[0;32mdownload\033[0;37m it, just go to our website or GitHub." << std::endl;
+					std::cout << "If you want to \033[0;32mdownload\033[0;37m it, just go to our Website or GitHub." << std::endl;
 				}
 				else {
 					printf("\033[0;31m");
@@ -550,7 +786,7 @@ void Main_Commands()
 				printf("\033[0;37m");
 				printf(" = ");
 				printf("\033[0;32m");
-				printf("(!Enter name for file!)\n");
+				printf("(!Enter name for file or directory!)\n");
 				printf("\033[0;37m");
 			}
 
@@ -560,16 +796,9 @@ void Main_Commands()
 				{
 					char buf[256];
 					string name = tokens[1];
-
-					if (rmdir(name.c_str()) == true)
-					{
-						check_start_start();
-					}
-
-					else if (remove(name.c_str()) == true)
-					{
-						check_start_start();
-					}
+					boost::filesystem::path path = boost::filesystem::current_path();
+					std::string path_1 = path.string() + "\\" + name;
+					handle_directory_or_file(path_1);
 				}
 
 				catch (...)
@@ -589,7 +818,7 @@ void Main_Commands()
 			printf("\033[0;37m");
 			printf(" = ");
 			printf("\033[0;32m");
-			printf("(!Enter name for file!)\n");
+			printf("(!Enter name for file or directory!)\n");
 			printf("\033[0;37m");
 		}
 	}
@@ -615,10 +844,57 @@ void Main_Commands()
 			{
 				char buf[256];
 				string name = tokens[1];
-				string cmd;
-				cmd = "mkdir ";
-				cmd += name;
-				system(cmd.c_str());
+				fs::path dir_path(name);
+
+				if (fs::exists(dir_path)) {
+					if (fs::is_directory(dir_path)) {
+						//std::cout << ".\n";
+						printf("\033[0;31m");
+						printf("\n");
+						printf("(!ERROR!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;32m");
+						printf("(!Directory with that name already exists!)\n");
+						printf("\033[0;37m");
+					}
+					else {
+						//std::cout << "A .\n";
+						printf("\033[0;31m");
+						printf("\n");
+						printf("(!ERROR!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;32m");
+						printf("(!File with that name already exists!)\n");
+						printf("\033[0;37m");
+					}
+				}
+				else {
+					// Directory does not exist, create it
+					if (fs::create_directory(dir_path)) {
+						//std::cout << ".\n";
+						printf("\033[0;32m");
+						printf("\n");
+						printf("(!SUCCESS!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;33m");
+						printf("(!Directory created successfully!)\n");
+						printf("\033[0;37m");
+					}
+					else {
+						//std::cout << ".\n";
+						printf("\033[0;31m");
+						printf("\n");
+						printf("(!ERROR!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;32m");
+						printf("(!Failed to create directory!)\n");
+						printf("\033[0;37m");
+					}
+				}
 			}
 
 			catch (...)
@@ -652,9 +928,60 @@ void Main_Commands()
 				char buf[256];
 				string name = tokens[1];
 
-				string cmd;
-				cmd += name;
-				ofstream{ cmd };
+				fs::path file_path(name);
+
+				if (fs::exists(file_path)) {
+					if (fs::is_regular_file(file_path)) {
+						//std::cout << "File already exists.\n";
+						printf("\033[0;31m");
+						printf("\n");
+						printf("(!ERROR!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;32m");
+						printf("(!File with that name already exists!)\n");
+						printf("\033[0;37m");
+					}
+					else {
+						//std::cout << "A directory with that name already exists.\n";
+						printf("\033[0;31m");
+						printf("\n");
+						printf("(!ERROR!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;32m");
+						printf("(!Directory with that name already exists!)\n");
+						printf("\033[0;37m");
+					}
+				}
+				else {
+					// File does not exist, create it
+					std::ofstream file(file_path.string());
+					if (file) {
+						//std::cout << "File created successfully.\n";
+						file.close(); // Close the file stream
+
+						printf("\033[0;32m");
+						printf("\n");
+						printf("(!SUCCESS!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;33m");
+						printf("(!File created successfully!)\n");
+						printf("\033[0;37m");
+					}
+					else {
+						//std::cout << ".\n";
+						printf("\033[0;31m");
+						printf("\n");
+						printf("(!ERROR!)");
+						printf("\033[0;37m");
+						printf(" = ");
+						printf("\033[0;32m");
+						printf("(!Failed to create file!)\n");
+						printf("\033[0;37m");
+					}
+				}
 			}
 
 			catch (...)

@@ -10,7 +10,7 @@ using namespace std;
 
 void Hacker_Stuffs()
 {
-	if (x == "inject_prog") // inject_prog (+)
+	if (x == "injector_dll") // injector_dll (+)
 	{
 		try
 		{

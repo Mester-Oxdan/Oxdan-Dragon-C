@@ -2,6 +2,7 @@
 #include <iostream>
 #include <conio.h>
 #include <string>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
@@ -18,7 +19,9 @@ int getDLLpath(char* dll)
 	cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
 	cout << "\n\033[0;33mEnter path to DLL file: \033[0;37m";
 	cin >> dll;
-	if (dll == "esc")
+	std::string str = dll;
+	boost::to_lower(str);
+	if (str == "esc")
 	{
 		check_start_start();
 	}
@@ -27,8 +30,15 @@ int getDLLpath(char* dll)
 
 int getPID(int* PID)
 {
+	cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
 	cout << "\n\033[0;33mEnter PID to target process: \033[0;37m";
 	cin >> *PID;
+	std::string str = std::to_string(*PID);
+	boost::to_lower(str);
+	if (str == "esc")
+	{
+		check_start_start();
+	}
 	return 1;
 }
 
@@ -47,7 +57,7 @@ int getProc(HANDLE* handleToProc, DWORD pid)
 		printf("\033[0;32m");
 		printf("(!Unable to open process!)\n");
 		printf("\033[0;37m");
-		getch();
+		_getch();
 		cin.clear();
 		check_start_start();
 
@@ -55,8 +65,16 @@ int getProc(HANDLE* handleToProc, DWORD pid)
 	}
 	else
 	{
-		cout << "Process opened \033[0;32msuccessfully!\033[0;37m\n";
-		getch();
+		//cout << "Process opened \033[0;32msuccessfully!\033[0;37m\n";
+		printf("\033[0;32m");
+		printf("\n");
+		printf("(!SUCCESS!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;33m");
+		printf("(!Process opened successfully!)\n");
+		printf("\033[0;37m");
+		//getch();
 		check_start_start();
 		return 1;
 	}

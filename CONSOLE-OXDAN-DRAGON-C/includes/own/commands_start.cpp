@@ -33,15 +33,15 @@ void commands_start()
 		Sleep(1);
 		printf("cls \033[0;36mor \033[0;37mclear - clear your screen \n"); // cls (+)
 		Sleep(1);
-		printf("go_to - go to entered directory \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m\n"); // go_to (+)
+		printf("go_to \033[0;36mor \033[0;37mcd - go to entered directory \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m\n"); // go_to (+)
 		Sleep(1);
-		printf("dir \033[0;36mor \033[0;37mls - shows all files of current directory \n"); // dir (+)
+		printf("dir \033[0;36mor \033[0;37mls - shows all files and folders of current directory \n"); // dir (+)
 		Sleep(1);
 		printf("mkdir - create new folder with entered name \033[0;33m(\033[0;37m folder name \033[0;33m)\033[0;37m\n"); // mkdir (+)
 		Sleep(1);
 		printf("create - create new file with entered name.type \033[0;33m(\033[0;37m name.type \033[0;33m)\033[0;37m\n"); // create (+)
 		Sleep(1);
-		printf("del \033[0;36mor \033[0;37mdelete - delete entered file \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
+		printf("del \033[0;36mor \033[0;37mdelete - delete entered file name or directory \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
 		printf("install - install entered option \033[0;33m(\033[0;37m python-3.10.6, nmap-7.94-setup, git, miniconda3 \033[0;33m)\n"); // install (+)
 		Sleep(1);
@@ -223,9 +223,9 @@ void commands_start()
 		Sleep(1);
 		printf("helpers - shows list of top 15 helpers for author (updating with new version) \n"); // helpers (+)
 		Sleep(1);
-		printf("color - set color text \033[0;33m("); // color (+)
-		printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
-		Sleep(1);
+		//printf("color - set color text \033[0;33m("); // color (+)
+		//printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
+		//Sleep(1);
 		printf("color_back - set background color for console \033[0;33m("); // color_back (+)
 		printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
 		Sleep(1);
@@ -251,8 +251,8 @@ void commands_start()
 		Sleep(1);
 		printf("links - shows links only \n"); // links (+)
 		Sleep(1);
-		printf("dragon_helper - will enter commands that you said, while you did't say 'exit' \n"); // dragon_helper (+)
-		Sleep(1);
+		//printf("dragon_helper - will enter commands that you said, while you did't say 'exit' \n"); // dragon_helper (+)
+		//Sleep(1);
 		printf("my_volume_level - shows windows volume level \n"); // my_volume_level (+)
 		Sleep(1);
 		printf("set_volume_level - set windows volume level \033[0;33m(\033[0;37m number \033[0;33m)\033[0;37m\n"); // set_volume_level (+)
