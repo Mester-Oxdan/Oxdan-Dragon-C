@@ -83,7 +83,15 @@ bool Maths(stack <Leksema>& Stack_n, stack <Leksema>& Stack_o, Leksema& item) { 
 	case '/':
 		b = Stack_n.top().value;
 		if (a == 0) {
-			cerr << "\nYou can't divide by 0!\n";
+			//cerr << "\nYou can't divide by 0!\n";
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!You can't divide by 0!)\n");
+			printf("\033[0;37m");
 			return false;
 		}
 		else {
@@ -114,7 +122,15 @@ bool Maths(stack <Leksema>& Stack_n, stack <Leksema>& Stack_o, Leksema& item) { 
 
 	case 't':
 		if (Cos(a) == 0) {
-			cerr << "\nWrong argument for tangent!\n";
+			//cerr << "\nWrong argument for tangent!\n";
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Wrong argument for tangent!)\n");
+			printf("\033[0;37m");
 			return false;
 		}
 		else {
@@ -128,7 +144,15 @@ bool Maths(stack <Leksema>& Stack_n, stack <Leksema>& Stack_o, Leksema& item) { 
 
 	case 'g':
 		if (Sin(a) == 0) {
-			cerr << "\nInvalid argument for cotangent!\n";
+			//cerr << "\nInvalid argument for cotangent!\n";
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Invalid argument for cotangent!)\n");
+			printf("\033[0;37m");
 			return false;
 		}
 		else {
@@ -149,7 +173,15 @@ bool Maths(stack <Leksema>& Stack_n, stack <Leksema>& Stack_o, Leksema& item) { 
 		break;
 
 	default:
-		cerr << "\nError!\n";
+		//cerr << "\nError!\n";
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		printf("(!Something went wrong!)\n");
+		printf("\033[0;37m");
 		return false;
 		break;
 	}
@@ -169,14 +201,21 @@ void calculator_start()
 	while (true)
 	{
 		printf("\n");
-		cout << "To use Pi, type 'p'; to use E, type 'exp(1)'\n";
+		cout << "\033[0;31mEnter 'esc' (for exit) \033[0;37m";
+		cout << "\n\033[0;33mTo use Pi, type 'p'; to use E, type 'exp(1)'\033[0;37m\n";
 		Sleep(170);
-		cout << "Enter expression: ";
+		cout << "\033[0;33mEnter expression: \033[0;37m";
 		Sleep(170);
 		std::string str;
 		getline(cin, str);
-		stringstream sstr{ str };
 
+		if (str == "esc" || str == "Esc" || str == "ESC")
+		{
+			check_start_start();
+		}
+
+		stringstream sstr{ str };
+		
 		char Ch; //Переменная, в которую будет записываться текущий обрабатываемый символ
 		double value;
 		bool flag = true; //Нужен для того, чтобы программа смогла отличить унарный минус (-5) от вычитания (2-5)
@@ -285,7 +324,15 @@ void calculator_start()
 				continue;
 			}
 			else { //Если прочитан какой-то странный символ
-				cout << "\nInvalid expression entered!\n";
+				//cout << "\nInvalid expression entered!\n";
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				printf("(!Invalid expression entered!)\n");
+				printf("\033[0;37m");
 				getch();
 				check_start_start(); // (+)
 
@@ -297,7 +344,7 @@ void calculator_start()
 			}
 			else continue; //Если все хорошо
 		}
-		cout << "\033[0;31m" << "  !" << "\033[0;37m" << "Answer: " << Stack_n.top().value << endl; //Выводим ответ
+		cout << "\033[0;31m" << "!" << "\033[0;33m" << "Answer: " << "\033[0;37m" << Stack_n.top().value << endl; //Выводим ответ
 		getch();
 		check_start_start(); // (+)
 	}

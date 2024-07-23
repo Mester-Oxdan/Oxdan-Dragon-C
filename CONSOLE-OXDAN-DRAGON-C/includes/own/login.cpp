@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <string.h>
 #include <fstream>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
@@ -276,7 +277,7 @@ void login()
 	string user, pass, u, p;
 	system("cls");
 	gotoxy(46, 8);
-	cout << "\033[0;31mWrite 'esc' (for exit) \033[0;37m";
+	cout << "\033[0;31mEnter 'esc' (for exit) \033[0;37m";
 	gotoxy(51, 9);
 	cout << "\033[0;31mLOGIN: \033[0;37m";
 	SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN);
@@ -284,7 +285,8 @@ void login()
 	cout << "USERNAME: ";
 	SetConsoleTextAttribute(hStdOut, FOREGROUND_RED);
 	cin >> user;
-
+	boost::to_lower(user);
+	boost::trim(user);
 	if (user == "esc")
 	{
 		first_start();

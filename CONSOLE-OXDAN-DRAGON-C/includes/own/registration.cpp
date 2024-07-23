@@ -2,6 +2,7 @@
 #include <iostream>
 #include <conio.h>
 #include <fstream>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
@@ -14,7 +15,7 @@ void registration()
 	string reguser, regpass, ru, rp;
 	system("cls");
 	gotoxy(46, 8);
-	cout << "\033[0;31mWrite 'esc' (for exit) \033[0;37m";
+	cout << "\033[0;31mEnter 'esc' (for exit) \033[0;37m";
 	gotoxy(49, 9);
 	cout << "\033[0;31mREGISTRATION: \033[0;37m";
 	SetConsoleTextAttribute(hStdOut, FOREGROUND_RED | FOREGROUND_GREEN);
@@ -22,7 +23,8 @@ void registration()
 	cout << "USERNAME: ";
 	SetConsoleTextAttribute(hStdOut, FOREGROUND_RED);
 	cin >> reguser;
-
+	boost::to_lower(reguser);
+	boost::trim(reguser);
 	if (reguser == "esc")
 	{
 		first_start();

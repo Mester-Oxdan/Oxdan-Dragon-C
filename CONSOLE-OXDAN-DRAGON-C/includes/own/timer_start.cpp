@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <conio.h>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
@@ -34,8 +35,18 @@ void timer_start()
 	int number;
 	printf("\n");
 
-	cout << "Hours: "; cin >> h1;
-	if (!(isNumber2(h1)))
+	cout << "\033[0;31mEnter 'esc' (for exit) \033[0;37m\n";
+	cout << "\033[0;33mEnter number of Hours: \033[0;37m"; cin >> h1;
+
+	boost::to_lower(h1);
+	boost::trim(h1);
+
+	if (h1 == "esc")
+	{
+		check_start_start();
+	}
+
+	else if (!(isNumber2(h1)))
 	{
 		printf("\033[0;31m");
 		printf("\n");
@@ -51,8 +62,18 @@ void timer_start()
 		check_start_start();
 	}
 
-	cout << "\nMinutes: "; cin >> m1;
-	if (!(isNumber2(m1)))
+	cout << "\n\033[0;31mEnter 'esc' (for exit) \033[0;37m";
+	cout << "\n\033[0;33mEnter number of Minutes: \033[0;37m"; cin >> m1;
+
+	boost::to_lower(m1);
+	boost::trim(m1);
+
+	if (m1 == "esc")
+	{
+		check_start_start();
+	}
+
+	else if (!(isNumber2(m1)))
 	{
 		printf("\033[0;31m");
 		printf("\n");
@@ -68,8 +89,18 @@ void timer_start()
 		check_start_start();
 	}
 
-	cout << "\nSeconds: "; cin >> s1;
-	if (!(isNumber2(s1)))
+	cout << "\n\033[0;31mEnter 'esc' (for exit) \033[0;37m";
+	cout << "\n\033[0;33mEnter number of Seconds: \033[0;37m "; cin >> s1;
+
+	boost::to_lower(s1);
+	boost::trim(s1);
+
+	if (s1 == "esc")
+	{
+		check_start_start();
+	}
+
+	else if (!(isNumber2(s1)))
 	{
 		printf("\033[0;31m");
 		printf("\n");

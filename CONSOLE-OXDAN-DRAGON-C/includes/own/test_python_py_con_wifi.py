@@ -7,6 +7,9 @@ import os
 
 profile = pywifi.Profile()
 
+def remove_098(string):
+    return string.replace(" ", "")
+
 def crack_4(password):
 
     while True:
@@ -49,11 +52,12 @@ def crack_4(password):
 
                 time.sleep(4)
                 if iface.status() == const.IFACE_CONNECTED:
-                    print("\nConnection was " + Fore.GREEN + "successful!" + Fore.WHITE)
+                    #print("\nConnection was " + Fore.GREEN + "successful!" + Fore.WHITE)
+		    print(Fore.GREEN + "\n(!SUCCESS!) " + Fore.WHITE + "=" + Fore.YELLOW + " (!Wifi connection successful!)\n" + Fore.WHITE)
                     getch()
                     return True
                 else:
-                    print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi password or ssid was wrong!)\n" + Fore.WHITE)
+                    print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi password or ssid is incorrect!)\n" + Fore.WHITE)
                     getch()
                     return False
                          
@@ -61,14 +65,15 @@ def crack_4(password):
 def con_wifi_start():
 
     os.system("cls")
-    print(Fore.RED + "Write 'esc' (for exit)")
+    print(Fore.RED + "\nEnter 'esc' (for exit)")
     ferd = input(Fore.YELLOW + "Enter wifi name: " + Fore.WHITE)
 
-    if ferd.lower() == "esc":
+    if remove_098(ferd.lower()) == "esc":
         exit(0)
 
+    print(Fore.RED + "\nEnter 'esc' (for exit)")
     ferd_2 = input(Fore.YELLOW + "Enter wifi password: " + Fore.WHITE)
-    if ferd_2.lower() == "esc":
+    if remove_098(ferd_2.lower()) == "esc":
         exit(0)
     try:
         

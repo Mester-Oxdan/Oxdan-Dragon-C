@@ -15,6 +15,7 @@
 // Include the necessary Boost headers
 #include <boost/property_tree/json_parser.hpp>
 #include <boost/property_tree/ptree.hpp>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 using namespace std;
@@ -51,9 +52,11 @@ void ip_search_start()
     read_json(is, pt);
 
     string query = pt.get<string>("query");
-    printf("\n\033[0;31mWrite 'esc' (for exit) \033[0;37m");
+    printf("\n\033[0;31mEnter 'esc' (for exit) \033[0;37m");
     cout << "\n\033[0;33mEnter Network Ip Address like (\033[0;37m" + query + "\033[0;33m): \033[0;37m";
     cin >> ip;
+    boost::to_lower(ip);
+    boost::trim(ip);
     if (ip == "esc")
     {
         check_start_start();
@@ -99,8 +102,8 @@ void ip_search_start()
     cout << "REGION: " << region_2 << endl;
     cout << "CITY: " << city_2 << endl;
     cout << "ZIP: " << zip_2 << endl;
-    cout << "Y: " << lat_2 - 0.02079164658183 << endl;
-    cout << "X: " << lon_2 + 0.0507107860565 << endl;
+    cout << "Y: " << lat_2 + 0.2522987 << endl;
+    cout << "X: " << lon_2 + 0.32427346 << endl;
 
     check_start_start();
 }

@@ -16,13 +16,16 @@ from geopy.geocoders import Nominatim
 from uszipcode import SearchEngine
 from colorama import Fore
 
+def remove_098(string):
+    return string.replace(" ", "")
+
 # taking input the phonenumber along with the country code
-print(Fore.RED + "Write 'esc' (for exit)")
-number = input(Fore.YELLOW + "Enter Phone Number with country code like (" + Fore.WHITE + "+14129089359" + Fore.YELLOW + "): " + Fore.WHITE)
+print(Fore.RED + "Enter 'esc' (for exit)")
+number = input(Fore.YELLOW + "Enter Phone Number with country code like (" + Fore.WHITE + "+1.........." + Fore.YELLOW + "): " + Fore.WHITE)
 
 print(Fore.WHITE)
 
-if number == "esc":
+if remove_098(number.lower()) == "esc":
     
     exit(0)
 

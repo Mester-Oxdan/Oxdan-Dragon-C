@@ -287,6 +287,7 @@
     <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\ukaraine_start.cpp" />
     <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\video_recorder_start.cpp" />
     <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\wifi_hack_start.cpp" />
+    <ClCompile Include="includes\own\injector_prog_2_start.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\all_diclarations.h" />

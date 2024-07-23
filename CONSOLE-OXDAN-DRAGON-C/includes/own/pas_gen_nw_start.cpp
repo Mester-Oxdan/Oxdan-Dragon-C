@@ -3,9 +3,24 @@
 #include <iostream>
 #include <fstream>
 #include <conio.h>
+#include <cmath>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 using namespace std;
+
+// Function to generate passwords recursively
+void generatePasswords_2(const char* words, int size, int length, string currentPassword, ofstream& outFile) {
+	if (length == 0) {
+		outFile << currentPassword << endl;
+		cout << currentPassword << endl;
+		return;
+	}
+
+	for (int i = 0; i < size; ++i) {
+		generatePasswords_2(words, size, length - 1, currentPassword + words[i], outFile);
+	}
+}
 
 void pas_gen_nw_start()
 {
@@ -14,92 +29,39 @@ void pas_gen_nw_start()
 	 'r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m','1','2','3','4','5','6',
 	 '7','8','9','0',' ' };
 
-	//unsigned short Pas, Char, size = sizeof(words) / sizeof(words[0]);
-	string Pas, Char;
-	int size = sizeof(words) / sizeof(words[0]);
+    string Char;
+    int size = sizeof(words) / sizeof(words[0]);
 
-	printf("\n\033[0;31mWrite 'esc' (for exit) \033[0;37m");
-	cout << "\n\033[0;33mEnter Number of passwords: \033[0;37m";
-	cin >> Pas;
+    printf("\n\033[0;31mEnter 'esc' (for exit) \033[0;37m");
+    cout << "\n\033[0;33mEnter Number of chars in passwords: \033[0;37m";
+    cin >> Char;
+    boost::to_lower(Char);
+    boost::trim(Char);
+    if (Char == "esc") {
+        check_start_start();
+    }
 
-	if (Pas == "esc")
-	{
-		check_start_start();
-	}
+    if (stoi(Char) == 0) {
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        printf("(!Only integers!)\n");
+        printf("\033[0;37m");
+        cin.clear();
+        cin.ignore();
+        _getch();
+        check_start_start();
+    }
 
-	if (stoi(Pas) == 0)
-	{
-		//if (!(isNumber6(to_string(Pas))))
-		//{
-		printf("\033[0;31m");
-		printf("\n");
-		printf("(!ERROR!)");
-		printf("\033[0;37m");
-		printf(" = ");
-		printf("\033[0;32m");
-		printf("(!Only integers!)\n");
-		printf("\033[0;37m");
-		cin.clear();
-		cin.ignore();
-		_getch();
+    int Char_pas = stoi(Char);
+    ofstream outFile("Pass_Gen_NW.txt");
+    cout << "\n";
 
-		check_start_start();
+    generatePasswords_2(words, size, Char_pas, "", outFile);
 
-		//}
-	}
-
-	cout << "\n\033[0;33mEnter Number of chars in passwords: \033[0;37m";
-	cin >> Char;
-
-	if (Char == "esc")
-	{
-		check_start_start();
-	}
-
-	if (stoi(Char) == 0)
-	{
-		//if (!(isNumber6(to_string(Pas))))
-		//{
-		printf("\033[0;31m");
-		printf("\n");
-		printf("(!ERROR!)");
-		printf("\033[0;37m");
-		printf(" = ");
-		printf("\033[0;32m");
-		printf("(!Only integers!)\n");
-		printf("\033[0;37m");
-		cin.clear();
-		cin.ignore();
-		_getch();
-
-		check_start_start();
-
-		//}
-	}
-
-	int Pas_pas = stoi(Pas);
-	int Char_pas = stoi(Char);
-
-	const unsigned short saveChar = Char_pas;
-
-	ofstream outFile("Pass_Gen_NW.txt");
-	cout << "\n";
-	for (; Pas_pas > 0; Pas_pas--)
-	{
-		for (; Char_pas > 0; Char_pas--)
-		{
-			outFile << words[rand() % size];
-			cout << words[rand() % size];
-		}
-
-		if (Char_pas == 0)
-		{
-			Char_pas = saveChar;
-			outFile << endl;
-			cout << endl;
-		}
-	}
-	outFile.close();
-
-	check_start_start();
+    outFile.close();
+    check_start_start();
 }

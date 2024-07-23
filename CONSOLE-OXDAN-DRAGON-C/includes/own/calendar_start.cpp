@@ -28,10 +28,10 @@ void printCalendar(int year)
 		"January", "February", "March", "April", "May", "June",
 		"July", "August", "September", "October", "November", "December" };
 	printf("\n");
-	cout << "---------------------------------------" << endl;
+	cout << "\033[0;31m---------------------------------------" << endl;
 
-	cout << "              Calendar - " << year << endl;
-	cout << "---------------------------------------" << endl
+	cout << "-            Calendar - " << year << "          -" << endl;
+	cout << "---------------------------------------\033[0;37m" << endl
 		<< endl;
 	int days;
 	int current;
@@ -50,7 +50,7 @@ void printCalendar(int year)
 
 			days = mDays[i];
 		cout << endl
-			<< "--------------" << monthList[i] << "---------------" << endl;
+			<< "\033[0;33m--------------" << monthList[i] << "---------------" << endl;
 		cout << "  Sun  Mon  Tue  Wed  Thu  Fri  Sat" << endl;
 
 		int k;
@@ -89,7 +89,7 @@ void calendar_start()
 		printCalendar(year);
 
 		cout << endl << endl;
-		cout << "Press " << endl;
+		cout << "\033[0;37mPress " << endl;
 		cout << "-n for next year" << endl;
 		cout << "-p for previous year" << endl;
 		cout << "-e for exit" << endl;

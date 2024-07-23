@@ -43,7 +43,7 @@ void commands_start()
 		Sleep(1);
 		printf("del \033[0;36mor \033[0;37mdelete - delete entered file name or directory \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
-		printf("install - install entered option \033[0;33m(\033[0;37m python-3.10.6, nmap-7.94-setup, git, miniconda3 \033[0;33m)\n"); // install (+)
+		printf("install - install entered option \033[0;33m(\033[0;37m python, nmap, git, miniconda3, virtualbox, wireshark, protonvpn \033[0;33m)\n"); // install (+)
 		Sleep(1);
 		printf("\033[0;37mupdate - update Dragon console to last version\n"); // update (+)
 		Sleep(1);
@@ -53,7 +53,9 @@ void commands_start()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37minjector_dll - shows dll injector \n"); // inject_dll (+)
+		printf("\033[0;37mdll_injector - shows dll injector, run as admin \n"); // dll_injector (+)
+		Sleep(1);
+		printf("file_injector - shows file injector, run as admin \n"); // file_injector (+)
 		Sleep(1);
 		printf("pas_gen - shows password generator \033[0;33m(\033[0;37m w, u, n, nw \033[0;33m)\033[0;37m\n"); // pas_gen (+)
 		Sleep(1);
@@ -77,7 +79,7 @@ void commands_start()
 		Sleep(1);
 		printf("wifi_hack - shows tool for brute force wifi network \n"); // wifi_hack (+)
 		Sleep(1);
-		printf("stealer - coping importent files windows in target_files_dis folder \n"); // stealer (+)
+		printf("stealer - coping importent files windows in target_files_dis folder, run as admin \n"); // stealer (+)
 		Sleep(1);
 		printf("\033[0;37mget_ip_website - shows ip address entered website \033[0;33m(\033[0;37m website name \033[0;33m)\033[0;37m\n"); // get_ip_website (+)
 		Sleep(1);
@@ -107,9 +109,9 @@ void commands_start()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37mlogin - go to login page \n"); // login (+)
+		printf("\033[0;37mlogin \033[0;36mor \033[0;37msignin - go to login page \n"); // login (+)
 		Sleep(1);
-		printf("registration - go to registration page \n"); // registration (+)
+		printf("registration \033[0;36mor \033[0;37msignup - go to registration page \n"); // registration (+)
 		Sleep(1);
 		printf("instructions - go to instructions page \n"); // instructions (+)
 		Sleep(1);
@@ -148,6 +150,10 @@ void commands_start()
 		printf("chat_client - host to the chat server \n"); // chat_client (+)
 		Sleep(1);
 		printf("chat_server - creates chat server \n"); // chat_server (+)
+		Sleep(1);
+		printf("files_convertor - converts file to another file \n"); // files_convertor (+)
+		Sleep(1);
+		printf("3d_price_calc - calculates price for 3d model at Oxdan store \n"); // 3d_price_calc (+)
 		Sleep(1);
 		printf("\n");
 		Sleep(1);

@@ -51,7 +51,7 @@ void my_wifi_pas_start()
 	printf("\n\033[0;31mWIFI_PASSWORDS: \033[0;37m\n");
 
 	vector<string> wifi = getWifiList();
-
+	//printf("\n\033[0;33mWifi:                            Password:\033[0;37m\n");
 	for (string ssid : wifi)
 	{
 		printf("\n");

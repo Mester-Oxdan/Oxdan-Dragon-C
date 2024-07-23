@@ -95,6 +95,7 @@ void matrix_start();
 // for Hacker_Stuffs:
 
 void inject_prog_start();
+void inject_prog_2_start();
 void cor_desk_start();
 void ascii_code_start();
 void my_wifi_pas_start();
@@ -106,6 +107,7 @@ void pas_gen_u_start();
 void pas_gen_n_start();
 void pas_gen_nw_start();
 void morse_code_start();
+void initialize_morse_to_english();
 void cuaser_cipher_start();
 
 // for Main_commands:

@@ -4,70 +4,101 @@
 #include <conio.h>
 #include <windows.h>
 #include <stdio.h>
+#include <boost/algorithm/string.hpp>
+#include <unordered_map>
+#include <sstream>
+#include <vector>
+#include <cstdlib>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
 
 using namespace std;
 
-struct Pairs
-{
-    char Letter;
-    string Pattern;
+// Morse code mappings
+std::unordered_map<char, std::string> ENGLISH_TO_MORSE = {
+    {'a', ".-"}, {'b', "-..."}, {'c', "-.-."}, {'d', "-.."}, {'e', "."}, {'f', "..-."}, {'g', "--."}, {'h', "...."},
+    {'i', ".."}, {'j', ".---"}, {'k', "-.-"}, {'l', ".-.."}, {'m', "--"}, {'n', "-."}, {'o', "---"}, {'p', ".--."},
+    {'q', "--.-"}, {'r', ".-."}, {'s', "..."}, {'t', "-"}, {'u', "..-"}, {'v', "...-"}, {'w', ".--"}, {'x', "-..-"},
+    {'y', "-.--"}, {'z', "--.."}, {'0', "-----"}, {'1', ".----"}, {'2', "..---"}, {'3', "...--"}, {'4', "....-"},
+    {'5', "....."}, {'6', "-...."}, {'7', "--..."}, {'8', "---.."}, {'9', "----."}, {'.', ".-.-.-"}, {',', "--..--"},
+    {'?', "..--.."}, {'\'', ".----."}, {'!', "-.-.--"}, {'/', "-..-."}, {'(', "-.--."}, {')', "-.--.-"}, {'&', ".-..."},
+    {':', "---..."}, {';', "-.-.-."}, {'=', "-...-"}, {'+', ".-.-."}, {'-', "-....-"}, {'_', "..--.-"}, {'"', ".-..-."},
+    {'$', "...-..-"}, {'@', ".--.-."}, {' ', " "}
 };
 
-void CheckLetter(Pairs pr[], char c)
-{
-    for (int k = 0; k < 27; k++)     //this loop will loop on the array to find the character and print its corresponding ciphered pattern
-    {
-        if (c == pr[k].Letter)
-        {
-            cout << pr[k].Pattern << " ";
+std::unordered_map<std::string, char> MORSE_TO_ENGLISH;
+
+// Function to convert English to Morse code
+std::string english_to_morse(const std::string& message) {
+    std::stringstream morse;
+    for (char c : message) {
+        if (ENGLISH_TO_MORSE.find(c) != ENGLISH_TO_MORSE.end()) {
+            morse << ENGLISH_TO_MORSE[c] << " ";
         }
     }
+    return morse.str();
 }
 
-void CheckPattern(Pairs pr[], string temp)
-{
-    for (int j = 0; j < 26; j++)     //this loop will loop on the array to find the pattern and print its corresponding deciphered character
-    {
-        if (temp == pr[j].Pattern)
-        {
-            cout << pr[j].Letter;
+// Function to convert Morse code to English
+std::string morse_to_english(const std::string& message) {
+    std::stringstream english_message;
+    std::istringstream words_stream(message);
+    std::string word;
+
+    while (std::getline(words_stream, word, ' ')) {
+        if (MORSE_TO_ENGLISH.find(word) != MORSE_TO_ENGLISH.end()) {
+            english_message << MORSE_TO_ENGLISH[word];
+        }
+        else if (word == "") {
+            english_message << " ";
         }
     }
+
+    return english_message.str();
 }
 
-Pairs pr[] = { {'a',".-"},{'b',"-..."},{'c',"-.-."},{'d',"-.."},{'e',"."},{'f',"..-."},{'g',"--."},{'h',"...."},{'i',".."},{'j',".---"},{'k',"-.-"},{'l',".-.."},{'m',"--"},{'n',"-."},{'o',"---"},{'p',".--."},{'q',"--.-"},{'r',".-."},{'s',"..."},{'t',"-"},{'u',"..-"},{'v',"...-"},{'w',".--"},{'x',"-..-"},{'y',"-.--"},{'z',"--.."},{' '," "} };
+
+// Function to initialize MORSE_TO_ENGLISH map
+void initialize_morse_to_english() {
+    for (const auto& pair : ENGLISH_TO_MORSE) {
+        MORSE_TO_ENGLISH[pair.second] = pair.first;
+    }
+}
 
 void morse_code_start()
 {
     try
     {
-
         while (true)
         {
             system("cls");
             string op;
 
-            cout << "\n\033[0;31mWrite esc (for exit) \033[0;37m\n";
+            cout << "\n\033[0;31mEnter 'esc' (for exit) \033[0;37m\n";
             cout << "\033[0;33m(1) Morse to English (2) English to Morse: \033[0;37m";
 
             cin >> op;
-
+            boost::to_lower(op);
+            boost::trim(op);
             if (op == "2")
             {
                 string sentence;
                 system("cls");
+                cout << "\n\033[0;31mEnter 'esc' (for exit) \033[0;37m\n";
                 cout << "\033[0;33mEnter text to cipher: \033[0;37m";
                 cin.ignore();
                 getline(cin, sentence);
-
-                for (int i = 0; i < sentence.size(); i++)     //this loop will loop on the sentence and take each character and then go to CheckLetter function to find its corresponding pattern
-                {
-                    char c = tolower(sentence[i]);     //this function will change any uppercase letter into its lowercase
-                    CheckLetter(pr, c);
+                boost::to_lower(sentence);
+                if (sentence == "esc" || sentence == "Esc" || sentence == "ESC") {
+                    check_start_start();
                 }
+                else {
+                    std::string morse = english_to_morse(sentence);
+                    cout << "\n" << "\033[0;33m" << "Encrypted message: " << "\033[0;37m" << morse ;
+                    
+                }
+
                 _getch();
             }
 
@@ -80,43 +111,26 @@ void morse_code_start()
             {
                 string pattern = "";
                 system("cls");
+                cout << "\n\033[0;31mEnter 'esc' (for exit) \033[0;37m\n";
                 cout << "\033[0;33mEnter text to decipher: \033[0;37m";
                 cin.ignore();
                 getline(cin, pattern);
-                pattern = pattern + ' ';
-                string temp = "";
 
-                for (int i = 0; i < pattern.size(); i++)     //this loop will loop on the string and take each pattern and then go to CheckPattern function to find its corresponding letter
-                {
+                if (pattern == "esc" || pattern == "Esc" || pattern == "ESC") {
+                    check_start_start();
+                }
+                else {
 
-                    if (pattern[i] == ' ')        //when we find a space we take the pattern before it and search for its corresponding letter
-                    {
-                        CheckPattern(pr, temp);
-
-                        temp = "";
-                        if (i != pattern.size() - 1)
-                        {
-                            if (pattern[i + 1] == ' ' && pattern[i + 2] == ' ')    //if the program founds 2 spaces after a space it prints a space
-                            {
-
-                                cout << " ";
-                            }
-                        }
-
-
-                        continue;
-                    }
-
-
-                    temp += pattern[i];
-
+                    std::string english = morse_to_english(pattern);
+                    //std::cout << "Decrypted message: " << english << std::endl;
+                    cout << "\n" << "\033[0;33m" << "Decrypted message: " << "\033[0;37m" << english ;
+                    _getch();
                 }
                 _getch();
             }
 
             else
             {
-
                 morse_code_start();
             }
         }
@@ -124,8 +138,6 @@ void morse_code_start()
 
     catch (...)
     {
-
         morse_code_start();
     }
-    
 }

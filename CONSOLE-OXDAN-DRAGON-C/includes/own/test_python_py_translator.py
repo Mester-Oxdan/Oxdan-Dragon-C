@@ -2,21 +2,27 @@
 from colorama import Fore
 from translate import Translator
 
+def remove_098(string):
+    return string.replace(" ", "")
+
 def start():
 
     try:
-            print(Fore.RED + "\nWrite 'esc' (for exit)")
+            print(Fore.RED + "\nEnter 'esc' (for exit)")
             x = input(Fore.YELLOW + "Enter language from: " + Fore.WHITE)
-            if x == "esc":
+            if remove_098(x.lower()) == "esc":
 
                exit(0)
 
+	    print(Fore.RED + "\nEnter 'esc' (for exit)")
             y = input(Fore.YELLOW + "Enter language to: " + Fore.WHITE)
-            if y == "esc":
+            if remove_098(y.lower()) == "esc":
 
                 exit(0)
+
+	    print(Fore.RED + "\nEnter 'esc' (for exit)")
             z = input(Fore.YELLOW + "Enter text to translate from " + x + " to " + y + ": " + Fore.WHITE)
-            if z == "esc":
+            if remove_098(z.lower()) == "esc":
 
                 exit(0)
 

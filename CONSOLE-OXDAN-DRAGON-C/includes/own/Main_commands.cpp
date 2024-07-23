@@ -33,12 +33,12 @@ void handle_directory_or_file(const std::string& path) {
 			}
 
 			if (has_files) {
-				cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+				cout << "\n\033[0;31mEnter 'esc' (for exit)\033[0;37m";
 				std::string confirmation;
 				std::cout << "\n\033[0;33mPath '" << path << "' is a Directory. Are you sure you want to delete this directory and its contents? (yes/no): \033[0;37m";
 				std::getline(std::cin, confirmation);
-				boost::algorithm::to_lower(confirmation);
-
+				boost::to_lower(confirmation);
+				boost::trim(confirmation);
 				if (confirmation == "yes" || confirmation == "y") {
 					fs::remove_all(p);
 					//std::cout << "\n(!SUCCESS!) = (!Directory '" << path << "' !)\n";
@@ -69,12 +69,12 @@ void handle_directory_or_file(const std::string& path) {
 				}
 			}
 			else {
-				cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+				cout << "\n\033[0;31mEnter 'esc' (for exit)\033[0;37m";
 				std::string confirmation;
 				std::cout << "\n\033[0;33mPath '" << path << "' is an Empty Directory. Do you want to delete this empty directory? (yes/no): \033[0;37m";
 				std::getline(std::cin, confirmation);
-				boost::algorithm::to_lower(confirmation);
-
+				boost::to_lower(confirmation);
+				boost::trim(confirmation);
 				if (confirmation == "yes" || confirmation == "y") {
 					fs::remove(p);
 					//std::cout << "\n(!SUCCESS!) = (!Empty directory '" << path << "' !)\n";
@@ -107,12 +107,12 @@ void handle_directory_or_file(const std::string& path) {
 			}
 		}
 		else if (fs::is_regular_file(p)) {
-			cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+			cout << "\n\033[0;31mEnter 'esc' (for exit)\033[0;37m";
 			std::string confirmation;
 			std::cout << "\n\033[0;33mPath '" << path << "' is a file. Are you sure you want to delete this file? (yes/no): \033[0;37m";
 			std::getline(std::cin, confirmation);
-			boost::algorithm::to_lower(confirmation);
-
+			boost::to_lower(confirmation);
+			boost::trim(confirmation);
 			if (confirmation == "yes" || confirmation == "y") {
 				fs::remove(p);
 				//std::cout << "\n(!SUCCESS!) = (!File '" << path << "' !)\n";

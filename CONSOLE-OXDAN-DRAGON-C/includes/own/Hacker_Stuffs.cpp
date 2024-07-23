@@ -10,11 +10,24 @@ using namespace std;
 
 void Hacker_Stuffs()
 {
-	if (x == "injector_dll") // injector_dll (+)
+	if (x == "dll_injector") // dll_injector (+)
 	{
 		try
 		{
 			inject_prog_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+	}
+
+	else if (x == "file_injector") // file_injector (+)
+	{
+		try
+		{
+			inject_prog_2_start();
 		}
 
 		catch (...)
@@ -105,25 +118,7 @@ void Hacker_Stuffs()
 		try
 		{
 			printf("\n");
-			string cmd_io = oxdan_dragon_c + "\\includes\\own\\includes\\mimikatz-master\\mimikatz-master\\x64\\mimikatz.exe";
-			system(cmd_io.c_str());
-			//printf(cmd_io.c_str());
-			check_start_start();
-		}
-
-		catch (...)
-		{
-			check_start_start();
-		}
-
-	}
-
-	else if (x == "john_3") // john (+)
-	{
-		try
-		{
-			printf("\n");
-			string cmd_io = oxdan_dragon_c + "\\includes\\own\\includes\\john_the_ripper\\run\\john.exe";
+			string cmd_io = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\mimikatz-master\\mimikatz-master\\x64\\mimikatz.exe";
 			system(cmd_io.c_str());
 			//printf(cmd_io.c_str());
 			check_start_start();
@@ -164,7 +159,7 @@ void Hacker_Stuffs()
 
 			string separator = " ";
 			string right_command = "";
-			right_command += oxdan_dragon_c + "\\includes\\own\\includes\\john_the_ripper\\run\\john.exe ";
+			right_command += "start " + oxdan_dragon_c + "\\includes\\own\\includes\\john_the_ripper\\run\\john.exe ";
 
 			for (const string& cmd : command) {
 				right_command += separator + cmd;
@@ -309,10 +304,11 @@ void Hacker_Stuffs()
 		}
 	}
 
-	else if (x == "morse_code") // morse_code (+)
+	else if (x == "morse_code_cipher") // morse_code_cipher (+)
 	{
 		try
 		{
+			initialize_morse_to_english();
 			morse_code_start();
 		}
 

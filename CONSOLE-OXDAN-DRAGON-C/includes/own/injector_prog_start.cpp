@@ -16,11 +16,12 @@ int getProc(HANDLE*, DWORD);
 
 int getDLLpath(char* dll)
 {
-	cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+	cout << "\n\033[0;31mEnter 'esc' (for exit)\033[0;37m";
 	cout << "\n\033[0;33mEnter path to DLL file: \033[0;37m";
 	cin >> dll;
 	std::string str = dll;
 	boost::to_lower(str);
+	boost::trim(str);
 	if (str == "esc")
 	{
 		check_start_start();
@@ -30,11 +31,12 @@ int getDLLpath(char* dll)
 
 int getPID(int* PID)
 {
-	cout << "\n\033[0;31mWrite 'esc' (for exit)\033[0;37m";
+	cout << "\n\033[0;31mEnter 'esc' (for exit)\033[0;37m";
 	cout << "\n\033[0;33mEnter PID to target process: \033[0;37m";
 	cin >> *PID;
 	std::string str = std::to_string(*PID);
 	boost::to_lower(str);
+	boost::trim(str);
 	if (str == "esc")
 	{
 		check_start_start();
