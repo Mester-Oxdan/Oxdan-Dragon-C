@@ -51,8 +51,18 @@ void notepad_start()
     sf::Font font;
 
     // Check if the font was loaded successfully
-    if (!font.loadFromFile("resuorces\\fonts\\arial.ttf")) {
-        cerr << "Failed to load font" << endl;
+    string text_font_file = (oxdan_dragon_c + "\\includes\\own\\resuorces\\fonts\\arial.ttf");
+    if (!font.loadFromFile(text_font_file)) {
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        printf("(!Failed to load Font!)\n");
+        printf("\033[0;37m");
+        //cout << oxdan_dragon_c << "\\includes\\own\\resuorces\\fonts\\arial.ttf";
+        check_start_start();
     }
 
     // Create a text object for displaying the user's input
@@ -63,8 +73,17 @@ void notepad_start()
     inputText.setPosition(sf::Vector2f(10, 10));
 
     sf::Image icon;
-    if (!icon.loadFromFile("my_dragon_ico.jpg")) {
+    if (!icon.loadFromFile(oxdan_dragon_c + "\\includes\\own\\my_dragon_ico.jpg")) {
         // Handle error loading icon file
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        printf("(!Failed to load Files!)\n");
+        printf("\033[0;37m");
+        check_start_start();
     }
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
@@ -97,8 +116,15 @@ void notepad_start()
                     ofstream file("notepad.txt", ios::app);
                     file << inputString;
                     file.close();
-                    cout << "Text \033[0;32msaved\033[0;37m to file notepad.txt" << endl;
-
+                    //cout << "Text \033[0;32msaved\033[0;37m to file notepad.txt" << endl;
+                    printf("\033[0;32m");
+                    printf("\n");
+                    printf("(!SUCCESS!)");
+                    printf("\033[0;37m");
+                    printf(" = ");
+                    printf("\033[0;33m");
+                    printf("(!Text saved to file notepad.txt!)\n");
+                    printf("\033[0;37m");
                     // Clear the input string
                     inputString = "";
                 }

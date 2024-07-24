@@ -272,8 +272,8 @@ private:
 
 		if (frame % PLAYER_SPEED == 0)
 		{
-			if (IsKeyDown(KEY_A)) { if (p.x > 1)					--p.x; }
-			else if (IsKeyDown(KEY_D)) { if (p.x < SCREEN_WIDTH - 2)	++p.x; }
+			if (IsKeyDown(KEY_A) || IsKeyDown(KEY_ARROW_LEFT)) { if (p.x > 1)					--p.x; }
+			else if (IsKeyDown(KEY_D) || IsKeyDown(KEY_ARROW_RIGHT)) { if (p.x < SCREEN_WIDTH - 2)	++p.x; }
 		}
 		if (o.isPlayerAlwaysShooting | IsKeyDown(KEY_BACKSPACE))	playerShoot();
 		if (IsKeyDown(KEY_G))										playerThrowGranade();

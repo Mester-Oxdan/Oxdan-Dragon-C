@@ -1,16 +1,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <sstream>
 #include <iomanip>
-#include <algorithm>
-#include <iterator>
 #include <cstdlib>
 #include <cstdio>
-#include <memory>
-#include <stdexcept>
 #include <array>
+#include <windows.h>
 
 // Include the necessary Boost headers
 #include <boost/property_tree/json_parser.hpp>
@@ -43,7 +38,15 @@ void ip_search_start()
 
     }
     catch (const exception& e) {
-        cerr << "Error: " << e.what() << endl;
+        //cerr << "Error: " << e.what() << endl;
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        cout << "(!Error: " << e.what() << "!)\n";
+        printf("\033[0;37m");
     }
 
     // Parse the JSON response using Boost.PropertyTree
@@ -80,7 +83,15 @@ void ip_search_start()
 
     }
     catch (const exception& e) {
-        cerr << "Error: " << e.what() << endl;
+        //cerr << "Error: " << e.what() << endl;
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        printf("(!Failed to get power status!)\n");
+        printf("\033[0;37m");
     }
 
     // Parse the JSON response using Boost.PropertyTree
@@ -98,12 +109,18 @@ void ip_search_start()
     double lon_2 = pt_2.get<double>("lon");
 
     // Print the results
-    cout << "\nCOUNTRY: " << country_2 << endl;
-    cout << "REGION: " << region_2 << endl;
-    cout << "CITY: " << city_2 << endl;
-    cout << "ZIP: " << zip_2 << endl;
-    cout << "Y: " << lat_2 + 0.2522987 << endl;
-    cout << "X: " << lon_2 + 0.32427346 << endl;
+    cout << "\nCOUNTRY: " << country_2 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "REGION: " << region_2 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "CITY: " << city_2 << " \033[0;33m(80% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "ZIP: " << zip_2 << " \033[0;33m(80% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "Y: " << lat_2 + 0.2522987 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "X: " << lon_2 + 0.32427346 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
 
     check_start_start();
 }

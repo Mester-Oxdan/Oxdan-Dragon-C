@@ -1,3 +1,29 @@
-﻿  calendar_start.cpp
-C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\calendar_start.cpp(8,32): warning C4081: expected 'newline'; found '.'
+﻿  space_shooter_start.cpp
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(57,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(177,71): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(178,65): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(179,62): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(184,19): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(185,19): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(186,35): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(188,18): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(189,18): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(190,18): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(191,18): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(192,33): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(193,33): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(194,33): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(195,33): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(198,19): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(199,34): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(201,34): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(202,49): warning C4309: 'argument': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(366,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(374,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(379,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(399,28): warning C4309: '=': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(400,31): warning C4309: '=': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(401,31): warning C4309: '=': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(402,31): warning C4309: '=': truncation of constant value
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\space_shooter_start.cpp(477,30): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   CONSOLE-OXDAN-DRAGON-C++.vcxproj -> C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\x64\Debug\CONSOLE-OXDAN-DRAGON-C++.exe

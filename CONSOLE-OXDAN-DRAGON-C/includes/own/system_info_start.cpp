@@ -35,24 +35,24 @@ void system_info_start()
 		printf("You are: 'User' \n");
 		Sleep(10);
 	}
-	printf("Language: English \n");
+	printf("Language: 'English' \n");
 	Sleep(10);
 
 	#ifdef linux
 
-	printf("System: Linux \n");
+	printf("System: 'Linux' \n");
 	Sleep(10);
 	
 	#endif
 
 	#ifdef _WIN32
 
-	printf("System: Windows \n");
+	printf("System: 'Windows' \n");
 	Sleep(10);
 
 	#else
 
-	printf("System: Windows \n");
+	printf("System: 'Unknown' \n");
 	Sleep(10);
 
 	#endif
@@ -112,7 +112,7 @@ void system_info_start()
 		printf("\033[0;37m");
 		printf(" = ");
 		printf("\033[0;32m");
-		printf("(!get host by name failed: %d ", WSAGetLastError(), "!)\n");
+		printf("(!Get host by name failed: %d ", WSAGetLastError(), "!)\n");
 		printf("\033[0;37m");
 		_getch();
 
@@ -145,7 +145,15 @@ void system_info_start()
 
 	}
 	catch (const exception& e) {
-		cerr << "Error: " << e.what() << endl;
+		//cerr << "Error: " << e.what() << endl;
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		cout << "(!Error: " << e.what() << "!)\n";
+		printf("\033[0;37m");
 	}
 
 	// Parse the JSON response using Boost.PropertyTree
@@ -173,7 +181,7 @@ void system_info_start()
 
 	#else
 
-	printf("Version: 2.2024 [ENGLISH] (C/C++) [WINDOWS] \n");
+	printf("Version: 2.2024 [ENGLISH] (C/C++) [UNKNOWN] \n");
 	Sleep(10);
 
 	#endif

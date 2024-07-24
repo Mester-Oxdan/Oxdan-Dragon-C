@@ -1,16 +1,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <sstream>
 #include <iomanip>
-#include <algorithm>
-#include <iterator>
 #include <cstdlib>
 #include <cstdio>
-#include <memory>
-#include <stdexcept>
 #include <array>
+#include <windows.h>
 
 // Include the necessary Boost headers
 #include <boost/property_tree/json_parser.hpp>
@@ -40,7 +35,15 @@ void my_location_start() {
 
     }
     catch (const exception& e) {
-        cerr << "Error: " << e.what() << endl;
+        //cerr << "Error: " << e.what() << endl;
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        cout << "(!Error: " << e.what() << "!)\n";
+        printf("\033[0;37m");
     }
 
     // Parse the JSON response using Boost.PropertyTree
@@ -57,12 +60,18 @@ void my_location_start() {
     double lon = pt.get<double>("lon");
 
     // Print the results
-    cout << "\nCOUNTRY: " << country << endl;
-    cout << "REGION: " << region << endl;
-    cout << "CITY: " << city << endl;
-    cout << "ZIP: " << zip << endl;
-    cout << "Y: " << lat - 0.0136 << endl;
-    cout << "X: " << lon + 0.06462 << endl;
+    cout << "\nCOUNTRY: " << country << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "REGION: " << region << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "CITY: " << city << " \033[0;33m(80% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "ZIP: " << zip << " \033[0;33m(80% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "Y: " << lat + 0.2522987 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
+    cout << "X: " << lon + 0.32427346 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    Sleep(1);
 
     check_start_start();
 }

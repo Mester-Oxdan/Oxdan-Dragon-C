@@ -1,49 +1,65 @@
 #include <windows.h>
+#include <stdio.h>  // For printf
 #include "all_diclarations.h"
 
 void energy_start()
 {
-	SYSTEM_POWER_STATUS spsPwr;
+    SYSTEM_POWER_STATUS spsPwr;
 
-	// Gets the system power status 
-	GetSystemPowerStatus(&spsPwr);
+    // Gets the system power status
+    if (GetSystemPowerStatus(&spsPwr))
+    {
+        // Check battery life percentage and print accordingly
+        if (spsPwr.BatteryLifePercent < 50)
+        {
+            // Prints battery percentage
+            printf("\nBattery percentage: \033[0;31m%d\033[0;37m\n", spsPwr.BatteryLifePercent);
+        }
+        else
+        {
+            // Prints battery percentage
+            printf("\nBattery percentage: \033[0;32m%d\033[0;37m\n", spsPwr.BatteryLifePercent);
+        }
 
-	if (spsPwr.BatteryLifePercent < 50)
-	{
-		// Prints battery percentage 
-		printf("\nBattery percentage: \033[0;31m%d\n", spsPwr.BatteryLifePercent);
-		Sleep(1);
-	}
+        // Check if the system is plugged in
+        if (spsPwr.ACLineStatus == 1)
+        {
+            // Prints power plugged in status
+            printf("\033[0;37mPower plugged in: \033[0;32myes\n\033[0;37m");
+        }
+        else if (spsPwr.ACLineStatus == 0)
+        {
+            // Prints power not plugged in status
+            printf("\033[0;37mPower plugged in: \033[0;31mno\n\033[0;37m");
+        }
+        else
+        {
+            // Prints unknown power status
+            printf("\033[0;37mPower plugged in: \033[0;33munknown\n\033[0;37m");
+        }
 
-	if (spsPwr.BatteryLifePercent > 50)
-	{
-		// Prints battery percentage 
-		printf("\nBattery percentage: \033[0;32m%d\n", spsPwr.BatteryLifePercent);
-		Sleep(1);
-	}
+        // Optional: Print battery life time if available
+        if (spsPwr.BatteryLifeTime != (DWORD)-1)
+        {
+            printf("\033[0;37mBattery left: %d:%02d:%02d\n",
+                spsPwr.BatteryLifeTime / 3600,
+                (spsPwr.BatteryLifeTime % 3600) / 60,
+                spsPwr.BatteryLifeTime % 60);
+        }
+    }
+    else
+    {
+        // Handle error if GetSystemPowerStatus fails
+        //printf("\033[0;31mFailed to get power status\033[0;37m\n");
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        printf("(!Failed to get power status!)\n");
+        printf("\033[0;37m");
+    }
 
-	if (GetSystemPowerStatus(&spsPwr) == true)
-	{
-		// Prints power plugged in or not 
-		printf("\033[0;37mPower plugged in: \033[0;32myes\n",
-			spsPwr.ACLineStatus);
-		Sleep(1);
-	}
-
-	if (GetSystemPowerStatus(&spsPwr) == false)
-	{
-		// Prints power plugged in or not 
-		printf("\033[0;37mPower plugged in: \033[0;31mno\n",
-			spsPwr.ACLineStatus);
-		Sleep(1);
-	}
-
-	// Prints battery life time 
-	printf("\033[0;37mBattery left: %d:%d:%d\n",
-		spsPwr.BatteryLifeTime / 3600,
-		(spsPwr.BatteryLifeTime % 3600) / 60,
-		spsPwr.BatteryLifeTime % 60);
-	Sleep(1);
-
-	check_start_start();
+    check_start_start();
 }
