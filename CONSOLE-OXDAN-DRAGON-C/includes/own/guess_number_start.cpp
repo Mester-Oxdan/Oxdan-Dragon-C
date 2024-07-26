@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <conio.h>
 #include <iostream>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
@@ -25,23 +26,24 @@ void guess_number_start()
 	string answer;
 
 	int left, right;
-	left = 0;
+	left = 1;
 	right = 100;
 
 	while (true)
 	{
 		try
 		{
-			printf("\n\033[0;31mWrite 'esc' (for exit) \033[0;37m");
+			printf("\n\033[0;31mEnter 'esc' (for exit) \033[0;37m");
 			cout << "\n\033[0;33mGuess number (\033[0;31m" << to_string(left) << "\033[0;37m - \033[0;32m" << to_string(right) << "\033[0;33m): \033[0;37m";
 			cin >> answer;
-
+			boost::to_lower(answer);
+			boost::trim(answer);
 			if (answer == "esc")
 			{
 				check_start_start();
 			}
 
-			if (!(isNumber22(answer)))
+			else if (!(isNumber22(answer)))
 			{
 				printf("\033[0;31m");
 				printf("\n");

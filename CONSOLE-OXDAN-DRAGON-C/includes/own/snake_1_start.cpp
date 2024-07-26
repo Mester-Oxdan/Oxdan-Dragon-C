@@ -148,6 +148,7 @@ void snake_1_start()
 
 			case 27: // если была нажата клавиша ESC
 				flag = false; // устанавливаем флажок на ЛОЖЬ, чтоб закончить показ движения
+				printf("\033[0;37m");
 				system("mode 141, 29"); // set size of console (+)
 				SetWindow(600, 600); // set buffer size of console (+)
 				check_start_start();

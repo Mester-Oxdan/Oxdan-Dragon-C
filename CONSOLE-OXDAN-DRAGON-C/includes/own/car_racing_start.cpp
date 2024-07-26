@@ -467,13 +467,13 @@ void fristDesign() {
 
     glColor3f(0.000, 1.000, 0.000);
     renderBitmapString(30, 50 + 10, (void*)font2, "Press SPACE to START");
-    renderBitmapString(30, 50 - 3 + 10, (void*)font2, "Or Press ENTER to START");
+    renderBitmapString(30, 50 - 3 + 10, (void*)font2, "Press ENTER to START");
 
     glColor3f(1.000, 1.000, 1.000);
-    renderBitmapString(30, 50 - 6 + 10, (void*)font3, "Press UP to increase Speed");
-    renderBitmapString(30, 50 - 8 + 10, (void*)font3, "Press DWON to decrease Speed");
-    renderBitmapString(30, 50 - 10 + 10, (void*)font3, "Press RIGHT to turn Right");
-    renderBitmapString(30, 50 - 12 + 10, (void*)font3, "Press LEFT to turn Left");
+    renderBitmapString(30, 50 - 6 + 10, (void*)font3, "Press UP/W to increase Speed");
+    renderBitmapString(30, 50 - 8 + 10, (void*)font3, "Press DOWN/S to decrease Speed");
+    renderBitmapString(30, 50 - 10 + 10, (void*)font3, "Press RIGHT/D to turn Right");
+    renderBitmapString(30, 50 - 12 + 10, (void*)font3, "Press LEFT/A to turn Left");
 
 }
 
@@ -500,8 +500,6 @@ void display() {
     glutSwapBuffers();
 }
 
-
-
 void spe_key(int key, int x, int y) {
     switch (key) {
     case GLUT_KEY_DOWN:
@@ -511,7 +509,6 @@ void spe_key(int key, int x, int y) {
     case GLUT_KEY_UP:
         FPS = FPS + 2;
         break;
-
     case GLUT_KEY_LEFT:
         if (lrIndex >= 0) {
             lrIndex = lrIndex - (FPS / 10);
@@ -520,8 +517,6 @@ void spe_key(int key, int x, int y) {
             }
         }
         break;
-
-
     case GLUT_KEY_RIGHT:
         if (lrIndex <= 44) {
             lrIndex = lrIndex + (FPS / 10);
@@ -530,11 +525,43 @@ void spe_key(int key, int x, int y) {
             }
         }
         break;
-
     default:
         break;
     }
+}
 
+void key(unsigned char key, int x, int y) {
+    switch (key) {
+    case 's':
+    case 'S':
+        if (FPS > (50 + (level * 2)))
+            FPS = FPS - 2;
+        break;
+    case 'w':
+    case 'W':
+        FPS = FPS + 2;
+        break;
+    case 'a':
+    case 'A':
+        if (lrIndex >= 0) {
+            lrIndex = lrIndex - (FPS / 10);
+            if (lrIndex < 0) {
+                lrIndex = -1;
+            }
+        }
+        break;
+    case 'd':
+    case 'D':
+        if (lrIndex <= 44) {
+            lrIndex = lrIndex + (FPS / 10);
+            if (lrIndex > 44) {
+                lrIndex = 45;
+            }
+        }
+        break;
+    default:
+        break;
+    }
 }
 
 void processKeys(unsigned char key, int x, int y) {
@@ -583,19 +610,46 @@ void processKeys(unsigned char key, int x, int y) {
             level = 0;
         }
         break;
-
+    case 's':
+    case 'S':
+        if (FPS > (50 + (level * 2)))
+            FPS = FPS - 2;
+        break;
+    case 'w':
+    case 'W':
+        FPS = FPS + 2;
+        break;
+    case 'a':
+    case 'A':
+        if (lrIndex >= 0) {
+            lrIndex = lrIndex - (FPS / 10);
+            if (lrIndex < 0) {
+                lrIndex = -1;
+            }
+        }
+        break;
+    case 'd':
+    case 'D':
+        if (lrIndex <= 44) {
+            lrIndex = lrIndex + (FPS / 10);
+            if (lrIndex > 44) {
+                lrIndex = 45;
+            }
+        }
+        break;
     default:
         break;
     }
 }
 
+int window;
 void timer23(int) 
 {
 
     try
     {
         //glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-
+        glutGetWindow();
         glutPostRedisplay();
     }
 
@@ -612,16 +666,20 @@ void timer23(int)
 void car_racing_start()
 {
     int argc;
-    char** argv = nullptr;
+    char* argv[] = { (char*)"CarRacing" }; // Create a dummy argument
     //string argv;
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutInitWindowSize(500, 650);
     glutInitWindowPosition(200, 20);
-    int window = glutCreateWindow("Car racing");
+    glutCreateWindow("Car Racing");
+    glutSetWindow(1);
+    window = glutGetWindow();
+    //printf("Window == " + window);
 
     glutDisplayFunc(display);
     glutSpecialFunc(spe_key);
+    //glutKeyboardFunc(key);
     glutKeyboardFunc(processKeys);
 
     glOrtho(0, 100, 0, 100, -1, 1);
@@ -630,10 +688,10 @@ void car_racing_start()
     glutTimerFunc(1000, timer23, 0);
 
     //glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-
+    glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
     glutMainLoop();
 
-    glutDestroyWindow(window);
+    //glutDestroyWindow(window);
     check_start_start();
 
 }

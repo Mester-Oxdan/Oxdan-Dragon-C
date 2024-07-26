@@ -76,7 +76,7 @@ void GetInfo()
 					_getch();
 				}
 
-				cout << "Disk type: \033[0;37m";
+				cout << "\033[0;35mDisk type: \033[0;37m";
 				Sleep(1);
 				if (drive_type == DRIVE_REMOVABLE) cout << "REMOVABLE";
 				else if (drive_type == DRIVE_FIXED)     cout << "FIXED";
@@ -92,7 +92,7 @@ void GetInfo()
 					printf("\033[0;37m");
 					printf(" = ");
 					printf("\033[0;32m");
-					printf("(!Unknown Type!)\n");
+					printf("(!Unknown disk type!)\n");
 					printf("\033[0;37m");
 					_getch();
 				}
@@ -107,7 +107,7 @@ void GetInfo()
 
 				if (Flag)
 				{
-					cout << "\nFiles system: \033[0;37m" + FileSysteNameS + "\n";
+					cout << "\n\033[0;36mFiles system: \033[0;37m" + FileSysteNameS + "\n";
 					Sleep(1);
 				}
 
@@ -119,7 +119,7 @@ void GetInfo()
 					printf("\033[0;37m");
 					printf(" = ");
 					printf("\033[0;32m");
-					printf("(!Get Volume Information!)\n");
+					printf("(!Something went wrong with your files system!)\n");
 					printf("\033[0;37m");
 					_getch();
 				}

@@ -80,8 +80,6 @@ void Commands()
 		Sleep(1);
 		printf("wifi_hack - shows tool for brute force wifi network \n"); // wifi_hack (+)
 		Sleep(1);
-		printf("stealer - coping importent files windows in target_files_dis folder, run as admin \n"); // stealer (+)
-		Sleep(1);
 		printf("\033[0;37mget_ip_website - shows ip address entered website \033[0;33m(\033[0;37m website name \033[0;33m)\033[0;37m\n"); // get_ip_website (+)
 		Sleep(1);
 		printf("auto_clicker - auto clicking, for exit press 'Esc' \n"); // auto_clicker (+)
@@ -216,7 +214,7 @@ void Commands()
 		Sleep(1);
 		printf("restart - restart your laptop \n"); // restart (+)
 		Sleep(1);
-		printf("data - shows real time data \n"); // data (+)
+		printf("date - shows real time and date \n"); // date (+)
 		Sleep(1);
 		printf("promo_code - using input promo code \033[0;33m(\033[0;37m promo code name \033[0;33m)\033[0;37m\n"); // promo_code (+)
 		Sleep(1);
@@ -238,12 +236,12 @@ void Commands()
 		Sleep(1);
 		printf("i? - shows you are admin or user \n"); // i? (+)
 		Sleep(1);
-		printf("administrator \033[0;36mor \033[0;37madmin \033[0;36mor \033[0;37msuperuser - open Dragon console as administrator \n"); // administrator (+)
+		printf("administrator \033[0;36mor \033[0;37madmin \033[0;36mor \033[0;37msuperuser - opens Dragon console as administrator \n"); // administrator (+)
 		Sleep(1);
 		printf("chan_backg - set desktop background with entered path to photo \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m\n"); // chan_backg (+)
 		Sleep(1);
-		printf("send_ph_message - send message on entered phone number \n"); // send_ph_message (+)
-		Sleep(1);
+		//printf("send_ph_message - send message on entered phone number \n"); // send_ph_message (+)
+		//Sleep(1);
 		printf("history - shows all entered commands \n"); // history (+)
 		Sleep(1);
 		printf("cls_history - clear all entered commands \n"); // cls_history (+)

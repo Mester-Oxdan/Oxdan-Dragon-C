@@ -60,7 +60,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		}
 	}
 
-	else if (x == "send_ph_message") // send_ph_message (+)
+	/*else if (x == "send_ph_message") // send_ph_message (+)
 	{
 		try
 		{
@@ -80,7 +80,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 			printf("\033[0;37m");
 			check_start_start();
 		}
-	}
+	}*/
 
 	/*if (x == "color") // color (+)
 	{
@@ -172,14 +172,14 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		check_start_start();
 	}
 
-	else if (x == "data") // data (+)
+	else if (x == "date") // date (+)
 	{
 		try
 		{
 			time_t ttime = time(0);
 
 			char* dt = ctime(&ttime);
-			cout << "\n" << dt << endl;
+			cout << "\n" << "\033[0;33m" << "Date: " << "\033[0;37m" << dt << endl;
 
 			check_start_start();
 		}
@@ -263,6 +263,8 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 	{
 		try
 		{
+			printf("\n");
+			printf("\033[0;33mHISTORY: \033[0;37m");
 			printf("\n");
 			for (int i = 0; i < history.size(); i++) {
 					cout << i << ") " << history[i] << endl;

@@ -6,7 +6,7 @@
 
 Gui_sfml::Gui_sfml() : hold(false), help(false), volume(false), start(false)
 {
-	window.create(VideoMode(WIDTH, HEIGHT), "Chess for 2", Style::Close);
+	window.create(VideoMode(WIDTH, HEIGHT), "Chess 2", Style::Close);
 
 	sf::Image icon;
 	icon.loadFromFile(oxdan_dragon_c + "/my_dragon_ico.jpg");

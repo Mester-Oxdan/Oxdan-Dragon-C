@@ -36,6 +36,16 @@ void Pranks()
 				{
 					prank_button_yes();
 				}
+				else {
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					printf("(!Enter prank_button option!)\n");
+					printf("\033[0;37m");
+				}
 			}
 
 			catch (...)

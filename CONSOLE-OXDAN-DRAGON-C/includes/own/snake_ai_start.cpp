@@ -233,10 +233,16 @@ void snake_ai_start()
 	do
 	{
 		bool kill1 = snake1.UserControl('W', 'S', 'A', 'D', true) == reKill;
-		if ((kill1)
-			|| ((userCnt >= 2)
-				&& (snake2.UserControl(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, false) == reKill))
-			)
+		if ((kill1) || ((userCnt >= 2) && (snake2.UserControl(VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT, false) == reKill)))
+		{
+			snake1.Init(10, 5, dirRight);
+			snake2.Init(70, 5, dirLeft);
+			if (kill1)
+				snake2.IncScore();
+			else
+				snake1.IncScore();
+		}
+		if ((kill1) || ((userCnt >= 2) && (snake2.UserControl('W', 'S', 'A', 'D', false) == reKill)))
 		{
 			snake1.Init(10, 5, dirRight);
 			snake2.Init(70, 5, dirLeft);
