@@ -161,6 +161,29 @@ void Init()
 	glOrtho(0, 300, 300, 0, 1, 0);
 }
 
+void handleKeypress(unsigned char key, int x, int y) {
+	if (key == 27) { // 27 is the ASCII code for the Escape key
+		glutLeaveMainLoop(); // Close the window and exit the main loop
+		check_start_start();
+	}
+}
+
+// Function to set the window icon
+void setWindowIcon_2(const char* path) {
+	HINSTANCE hInstance = GetModuleHandle(NULL);
+	HICON hIcon = (HICON)LoadImageA(hInstance, path, IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
+	if (hIcon) {
+		HWND hwnd = FindWindowA(NULL, "Arkanoid"); // Ensure this matches the title set in glutCreateWindow
+		if (hwnd) {
+			SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_BIG, (LPARAM)hIcon);
+			SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_SMALL, (LPARAM)hIcon);
+		}
+	}
+	else {
+		MessageBoxA(NULL, "Failed to load icon.", "Error", MB_OK | MB_ICONERROR);
+	}
+}
+
 void arkanoid_start()
 {
 	try
@@ -176,11 +199,13 @@ void arkanoid_start()
 		glutInitWindowSize(300, 300);
 		glutInitWindowPosition(100, 200);
 		int window = glutCreateWindow("Arkanoid");
-
+		string text_icon = oxdan_dragon_c + "\\my_dragon_ico.ico";
+		setWindowIcon_2(text_icon.c_str());
 		glutDisplayFunc(Draw);
 		glutTimerFunc(33, Timer, 0);
 		glutPassiveMotionFunc(RacketMouse);
 		glutMouseFunc(MousePress);
+		glutKeyboardFunc(handleKeypress);
 		Init();
 
 		for (int i = 0; i < 10; i++)
@@ -196,8 +221,8 @@ void arkanoid_start()
 		//glutMainLoop();
 
 
-		/// glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
-		glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
+		glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
+		//glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
 
 		//glutMainLoopEvent(); // Process initial events
 

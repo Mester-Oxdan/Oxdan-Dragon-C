@@ -565,7 +565,11 @@ void key(unsigned char key, int x, int y) {
 }
 
 void processKeys(unsigned char key, int x, int y) {
-
+    if (key == 27) { // 27 is the ASCII code for the Escape key
+        glutLeaveMainLoop(); // Close the window and exit the main loop
+        //glutDestroyWindow(windowID);
+        check_start_start();
+    }
     switch (key)
     {
     case ' ':
@@ -663,6 +667,22 @@ void timer23(int)
     glutTimerFunc(1000 / FPS, timer23, 0);
 }
 
+// Function to set the window icon
+void setWindowIcon_1(const char* path) {
+    HINSTANCE hInstance = GetModuleHandle(NULL);
+    HICON hIcon = (HICON)LoadImageA(hInstance, path, IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
+    if (hIcon) {
+        HWND hwnd = FindWindowA(NULL, "Car Racing"); // Ensure this matches the title set in glutCreateWindow
+        if (hwnd) {
+            SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_BIG, (LPARAM)hIcon);
+            SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_SMALL, (LPARAM)hIcon);
+        }
+    }
+    else {
+        MessageBoxA(NULL, "Failed to load icon.", "Error", MB_OK | MB_ICONERROR);
+    }
+}
+
 void car_racing_start()
 {
     int argc;
@@ -676,7 +696,8 @@ void car_racing_start()
     glutSetWindow(1);
     window = glutGetWindow();
     //printf("Window == " + window);
-
+    string text_icon = oxdan_dragon_c + "\\my_dragon_ico.ico";
+    setWindowIcon_1(text_icon.c_str());
     glutDisplayFunc(display);
     glutSpecialFunc(spe_key);
     //glutKeyboardFunc(key);

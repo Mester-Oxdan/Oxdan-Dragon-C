@@ -20,7 +20,7 @@ GameOverState::~GameOverState(){
 }
 
 void GameOverState::stateEnter(){
-    printf("!GAME OVER!\n");
+    printf("\033[0;31m!GAME OVER!\n \033[0;37m");
 }
 
 void GameOverState::stateEvent(){

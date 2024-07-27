@@ -29,7 +29,15 @@ MenuState_checkers::~MenuState_checkers(){
 
 void MenuState_checkers::stateEnter(){
     if (!loadMedia()) {
-        cout<<"Could not load media"<<endl;
+        //cout<<"Could not load media"<<endl;
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        cout << "(!Could not load media!)\n";
+        printf("\033[0;37m");
     }
 }
 

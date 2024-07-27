@@ -28,7 +28,16 @@ Application_checkers::Application_checkers(){
     gRenderer=NULL;
     // Checks if init was able to excute //
     if(!init()){
-        cout<<"Could not load application!"<<endl;
+        //cout<<"Could not load application!"<<endl;
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        //printf("(!Enter pas_gen option!)\n");
+        cout << "(!Could not load application!)";
+        printf("\033[0;37m");
     }
     applicationStateManager = new ApplicationStateManager;
 }
@@ -49,7 +58,16 @@ bool Application_checkers::init(){
 
     if(SDL_Init(SDL_INIT_VIDEO)>0)
     {
-        cout<<"Failed init. SDL_ERROR: %s\n"<<SDL_GetError();
+        //cout<<"Failed init. SDL_ERROR: %s\n"<<SDL_GetError();
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        //printf("(!Enter pas_gen option!)\n");
+        cout << "(!Failed init. SDL_ERROR: " << SDL_GetError() << "!)";
+        printf("\033[0;37m");
         initSuccessful = false;
     }
     else
@@ -57,13 +75,31 @@ bool Application_checkers::init(){
         if( !SDL_SetHint( SDL_HINT_RENDER_SCALE_QUALITY, "1" ) )
         {
             cout<<"Warning: Linear texture filtering not enabled!"<<endl;
+            printf("\033[0;31m");
+            printf("\n");
+            printf("(!ERROR!)");
+            printf("\033[0;37m");
+            printf(" = ");
+            printf("\033[0;32m");
+            //printf("(!Enter pas_gen option!)\n");
+            cout << "(!Warning: Linear texture filtering not enabled!)";
+            printf("\033[0;37m");
         }
 
-        gWindow=SDL_CreateWindow("Checkers with ai",SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,SCREEN_WIDTH,SCREEN_HEIGHT,SDL_WINDOW_SHOWN);
+        gWindow=SDL_CreateWindow("Checkers Ai",SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,SCREEN_WIDTH,SCREEN_HEIGHT,SDL_WINDOW_SHOWN);
 
         if(gWindow==NULL)
         {
-            cout<<"Couldnt make window. SDL_Error: %s\n"<<SDL_GetError()<<endl;
+            //cout<<"Couldnt make window. SDL_Error: %s\n"<<SDL_GetError()<<endl;
+            printf("\033[0;31m");
+            printf("\n");
+            printf("(!ERROR!)");
+            printf("\033[0;37m");
+            printf(" = ");
+            printf("\033[0;32m");
+            //printf("(!Enter pas_gen option!)\n");
+            cout << "(!Couldnt make window. SDL_Error: " << SDL_GetError() << "!)";
+            printf("\033[0;37m");
             initSuccessful = false;
         }
         else
@@ -71,7 +107,16 @@ bool Application_checkers::init(){
             gRenderer=SDL_CreateRenderer(gWindow,-1,SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
             if(gRenderer==NULL)
             {
-                cout<<"Renderer failed. SDL_Error: %s\n"<<SDL_GetError()<<endl;
+                //cout<<"Renderer failed. SDL_Error: %s\n"<<SDL_GetError()<<endl;
+                printf("\033[0;31m");
+                printf("\n");
+                printf("(!ERROR!)");
+                printf("\033[0;37m");
+                printf(" = ");
+                printf("\033[0;32m");
+                //printf("(!Enter pas_gen option!)\n");
+                cout << "(!Renderer failed. SDL_Error: " << SDL_GetError() << "!)";
+                printf("\033[0;37m");
                 initSuccessful = false;
             }
             else
@@ -82,7 +127,16 @@ bool Application_checkers::init(){
                 int imgFlags = IMG_INIT_PNG;
                 if( !( IMG_Init( imgFlags ) & imgFlags ) )
                 {
-                    cout<<"Image failed. SDl_image Error: %s\n"<<IMG_GetError()<<endl;
+                    //cout<<"Image failed. SDl_image Error: %s\n"<<IMG_GetError()<<endl;
+                    printf("\033[0;31m");
+                    printf("\n");
+                    printf("(!ERROR!)");
+                    printf("\033[0;37m");
+                    printf(" = ");
+                    printf("\033[0;32m");
+                    //printf("(!Enter pas_gen option!)\n");
+                    cout << "(!Image failed. SDl_image Error: " << IMG_GetError() << "!)";
+                    printf("\033[0;37m");
                     initSuccessful = false;
                 }
             }

@@ -44,7 +44,15 @@ static SDL_Texture* loadTexture(SDL_Renderer* renderer, const char* filePath)
 	SDL_Surface* loadedSurface = SDL_LoadBMP(filePath);
 	if (loadedSurface == nullptr)
 	{
-		std::cout << "SDL could not load image into surface! Error: " << SDL_GetError() << std::endl;
+		//std::cout << "SDL could not load image into surface! Error: " << SDL_GetError() << std::endl;
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		cout << "(!SDL could not load image into surface! Error: " << SDL_GetError() << "!)\n";
+		printf("\033[0;37m");
 	}
 	else
 	{
@@ -55,7 +63,15 @@ static SDL_Texture* loadTexture(SDL_Renderer* renderer, const char* filePath)
 		texture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
 		if (texture == nullptr)
 		{
-			std::cout << "SDL could not create texture from surface! Error: " << SDL_GetError() << std::endl;
+			//std::cout << "SDL could not create texture from surface! Error: " << SDL_GetError() << std::endl;
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			cout << "(!SDL could not create texture from surface! Error: " << SDL_GetError() << "!)\n";
+			printf("\033[0;37m");
 		}
 
 		// Free surface
@@ -165,6 +181,28 @@ static void checkDirection(Square grid[], const Direction& direction, const Chec
 
 }
 
+void handleEvents() {
+	SDL_Event event;
+	while (SDL_PollEvent(&event)) {
+		switch (event.type) {
+		case SDL_QUIT:
+
+			SDL_Quit();
+			check_start_start();
+			break;
+		case SDL_KEYDOWN:
+			if (event.key.keysym.sym == SDLK_ESCAPE) {
+
+				SDL_Quit();
+				check_start_start();
+			}
+			break;
+		default:
+			break;
+		}
+	}
+}
+
 void checkers_2_start()
 {
 	// Define window dimensions
@@ -174,24 +212,45 @@ void checkers_2_start()
 	// Initalise SDL video subsystem
 	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
-		std::cout << "SDL could not intialise! Error: " << SDL_GetError() << std::endl;
-		
+		//std::cout << "SDL could not intialise! Error: " << SDL_GetError() << std::endl;
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		cout << "(!SDL could not intialise! Error: " << SDL_GetError() << "!)\n";
+		printf("\033[0;37m");
 	}
-
+	handleEvents();
 	// Create window
 	SDL_Window* window = SDL_CreateWindow("Checkers for 2", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowWidth, windowHeight, SDL_WINDOW_SHOWN);
 	if (window == nullptr)
 	{
-		std::cout << "SDL could not create window! Error: " << SDL_GetError() << std::endl;
-		
+		//std::cout << "SDL could not create window! Error: " << SDL_GetError() << std::endl;
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		cout << "(!SDL could not create window! Error: " << SDL_GetError() << "!)\n";
+		printf("\033[0;37m");
 	}
 
 	// Create renderer
 	SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, 0);
 	if (renderer == nullptr)
 	{
-		std::cout << "SDL could not create renderer! Error: " << SDL_GetError() << std::endl;
-		
+		//std::cout << "SDL could not create renderer! Error: " << SDL_GetError() << std::endl;
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		cout << "(!SDL could not create renderer! Error: " << SDL_GetError() << "!)\n";
+		printf("\033[0;37m");
 	}
 
 	// Set checker outline texture and remove white background

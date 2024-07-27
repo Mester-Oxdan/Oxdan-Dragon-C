@@ -64,7 +64,16 @@ GameState_checkers::~GameState_checkers(){
 
 void GameState_checkers::stateEnter(){
     if (!loadMedia()) {
-        cout<<"Could not load media"<<endl;
+        //cout<<"Could not load media"<<endl;
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        //printf("(!Enter pas_gen option!)\n");
+        cout << "(!Could not load media!)\n";
+        printf("\033[0;37m");
     }
 }
 
@@ -116,7 +125,16 @@ bool GameState_checkers::loadMedia(){
     bool initSuccessfulful = true;
 
     if (!spriteSheetTexture.loadFromFile(oxdan_dragon_c + "/includes/own/data/CheckerSprites.png")) {
-        printf("Could not load sprite");
+        //printf("Could not load sprite");
+        printf("\033[0;31m");
+        printf("\n");
+        printf("(!ERROR!)");
+        printf("\033[0;37m");
+        printf(" = ");
+        printf("\033[0;32m");
+        //printf("(!Enter pas_gen option!)\n");
+        cout << "(!Could not load sprite!)\n";
+        printf("\033[0;37m");
         initSuccessfulful = false;
     }
     // Initalize Checkers Pieces //

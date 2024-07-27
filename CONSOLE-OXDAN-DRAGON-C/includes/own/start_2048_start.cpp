@@ -820,6 +820,10 @@ void keyboard76(unsigned char key3, int x3, int y3)
 
 void keyboard(unsigned char key, int x, int y)
 {
+    if (key == 27) { // 27 is the ASCII code for the Escape key
+        glutDestroyWindow(glutGetWindow());
+        check_start_start();
+    }
     if (key == 'w' || key == 'W')
     {
         moveChar = 'W';
@@ -861,6 +865,21 @@ void keyboard(unsigned char key, int x, int y)
     glutPostRedisplay();
 }
 
+void setWindowIcon_4(const char* path) {
+    HINSTANCE hInstance = GetModuleHandle(NULL);
+    HICON hIcon = (HICON)LoadImageA(hInstance, path, IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
+    if (hIcon) {
+        HWND hwnd = FindWindowA(NULL, "2048"); // Ensure this matches the title set in glutCreateWindow
+        if (hwnd) {
+            SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_BIG, (LPARAM)hIcon);
+            SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_SMALL, (LPARAM)hIcon);
+        }
+    }
+    else {
+        MessageBoxA(NULL, "Failed to load icon.", "Error", MB_OK | MB_ICONERROR);
+    }
+}
+
 void start_2048_start()
 {
         //system("cls");
@@ -874,8 +893,11 @@ void start_2048_start()
         glutInitWindowSize(500, 600);
 
         glutCreateWindow("2048");
+        string text_icon = oxdan_dragon_c + "\\my_dragon_ico.ico";
+        setWindowIcon_4(text_icon.c_str());
         createmenu();
         init();
+        
         glutDisplayFunc(display_2048);
         glutKeyboardFunc(keyboard);
 
