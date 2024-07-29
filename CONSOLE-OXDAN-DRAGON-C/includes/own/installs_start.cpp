@@ -55,41 +55,41 @@ void installs_start(string name)
 	else if (name == "miniconda")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\miniconda3.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 	else if (name == "tor")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\tor.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 	else if (name == "torrent")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\torrent.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 	else if (name == "vscode")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\vs_code.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 	else if (name == "vs")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\vs.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 	else if (name == "steam")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\steam.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 	else if (name == "ea")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\ea.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 	else if (name == "7_zip")
 	{
 		string cmdhg_9 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\7_zip.exe";
-		//system(cmdhg_9.c_str());
+		system(cmdhg_9.c_str());
 	}
 }

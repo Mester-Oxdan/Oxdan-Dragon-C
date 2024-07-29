@@ -95,7 +95,7 @@ void matrix_start();
 // for Hacker_Stuffs:
 
 void inject_prog_start();
-void inject_prog_2_start();
+//void inject_prog_2_start();
 void cor_desk_start();
 void ascii_code_start();
 void my_wifi_pas_start();

@@ -1,5 +1,2 @@
-﻿  Serious.cpp
-C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\Serious.cpp(11,32): warning C4081: expected 'newline'; found '.'
-C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\Serious.cpp(85,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\Serious.cpp(86,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+﻿  installs_start.cpp
   CONSOLE-OXDAN-DRAGON-C++.vcxproj -> C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\x64\Debug\CONSOLE-OXDAN-DRAGON-C++.exe

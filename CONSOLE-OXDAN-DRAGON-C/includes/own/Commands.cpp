@@ -44,7 +44,7 @@ void Commands()
 		Sleep(1);
 		printf("del \033[0;36mor \033[0;37mdelete - delete entered file name or directory \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
-		printf("install - install entered option \033[0;33m(\033[0;37m python, nmap, git, miniconda, virtualbox, wireshark, protonvpn, tor, torrent, vscode, vs, steam, ea, zip \033[0;33m)\n"); // install (+)
+		printf("install - install entered option \033[0;33m(\033[0;37m python, nmap, git, miniconda, virtualbox, wireshark, protonvpn, tor, torrent, vscode, vs, steam, ea, 7_zip \033[0;33m)\n"); // install (+)
 		Sleep(1);
 		printf("\033[0;37mupdate - update Dragon console to last version\n"); // update (+)
 		Sleep(1);

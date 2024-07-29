@@ -27,7 +27,12 @@ void Hacker_Stuffs()
 	{
 		try
 		{
-			inject_prog_2_start();
+			//inject_prog_2_start();
+			string cmd_gh = "start ";
+			cmd_gh += oxdan_dragon_c;
+			cmd_gh += "\\includes\\own\\test_python_py_file_injector.py"; //test_python_phone_number.py
+			system(cmd_gh.c_str());
+			check_start_start();
 		}
 
 		catch (...)
