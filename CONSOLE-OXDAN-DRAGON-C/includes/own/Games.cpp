@@ -502,20 +502,6 @@ void Games()
 
 	}
 
-	else if (x == "math_game") // math_game (+)
-	{
-		try
-		{
-			math_game_start();
-		}
-
-		catch (...)
-		{
-			check_start_start();
-		}
-
-	}
-
 	else if (x == "space_shooter") // space_shooter (+)
 	{
 		try
@@ -535,8 +521,9 @@ void Games()
 		try
 		{
 			system("mode 95, 29"); // set size of console (+)
-			SetWindow(141, 29); // set buffer size of console (+)
+			//SetWindow(141, 29); // set buffer size of console (+)
 			typing_tutor_start();
+			SetWindow(147, 29); // set buffer size of console (+)
 		}
 
 		catch (...)

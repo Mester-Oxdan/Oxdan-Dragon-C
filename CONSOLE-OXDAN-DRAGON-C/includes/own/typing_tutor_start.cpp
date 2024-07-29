@@ -60,9 +60,10 @@ void gameover_tt() {
 	cout << "\n\033[0;33m\t\tScore: \033[0;37m" << score_typing_tutor << endl;
 	cout << "\n\033[0;37m\t\tPress any key to go back to menu.\n";
 	getch();
+	system("mode 147, 29"); // set size of console (+)
+	SetWindow(147, 29); // set buffer size of console (+)
 	check_start_start();
-	system("mode 141, 29"); // set size of console (+)
-	SetWindow(141, 29); // set buffer size of console (+)
+	
 }
 void updateScore_tt() {
 	gotoxy(WIN_WIDTH + 7, 5); cout << "\033[0;33mScore: \033[0;37m" << score_typing_tutor << endl;
@@ -88,8 +89,8 @@ void typing_tutor_start() {
 	gotoxy(18, 5); cout << "Press any key to start";
 	getch();
 	gotoxy(18, 5); cout << "                      ";
-
-	while (1) {
+	bool starting_play = true;
+	while (starting_play) {
 		if (kbhit()) {
 			char ch = getch();
 			for (int i = 0; i < 10; i++) {
@@ -100,7 +101,11 @@ void typing_tutor_start() {
 				}
 			}
 			if (ch == 27) {
-				break;
+				starting_play = false;
+				system("cls");
+				system("mode 147, 29"); // set size of console (+)
+				SetWindow(147, 29); // set buffer size of console (+)
+				check_start_start();
 			}
 		}
 
