@@ -180,7 +180,7 @@ void Main_Commands()
 			Sleep(10);
 			printf("\033[0;31m Dragon");
 			Sleep(10);
-			printf("\033[0;37m [ Version: 2.2024 [ENGLISH] (C/C++) [WINDOWS] ] \n");
+			printf("\033[0;37m [ Version: 1.2025 [ENGLISH] (C/C++) [WINDOWS] ] \n");
 			Sleep(10);
 			printf("(c) Oxdan Praduction. \n");
 			Sleep(10);
@@ -264,19 +264,20 @@ void Main_Commands()
 				//GetCurrentDirectoryA(255, buf);
 
 				std::vector<std::string> my_list = { "search", "--help", "-help", "help", "-h", "--version", "-version", "version", "-v", "pip", "git", "conda",
-		"cmd", "cls", "clear", "go_to", "dir", "ls", "mkdir", "create", "del", "delete", "install", "update",
-		"injector_dll", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code", "ip_search", "phone_search", "mimikatz",
-		"john", "nmap", "con_wifi", "wifi_hack", "stealer", "get_ip_website", "auto_clicker", "morse_code_cipher",
-		"caesar_cipher", "ai_chat", "ukraine", "author", "matrix", "login", "registration", "instructions",
-		"del_account", "logout", "tim", "time", "stopwatch", "timer", "calculator", "calendar", "webcam_recorder",
-		"screen_recorder", "cur_conv", "notepad", "translator", "dictaphone", "chat_client", "chat_server", "pacman",
-		"2048", "arkanoid", "flappy_bird", "tetris", "hangman", "car_racing", "guess_number", "math_game",
-		"typing_tutor", "battle_city", "doom", "mario", "snake", "ping_pong", "tic_tac_toe", "checkers", "chess",
-		"space_shooter", "title", "new", "start", "open", "shutdown", "restart", "data", "promo_code", "i_am_here",
-		"&main", "donate", "donators", "helpers", "color_back", "i?", "administrator", "admin", "superuser",
-		"chan_backg", "send_ph_message", "history", "cls_history", "memory", "rules", "commands", "tips", "links",
-		"my_volume_level", "set_volume_level", "set_mute", "ip", "size", "my_location", "system_info",
-		"energy", "power", "prank_button", "melt_screen", "gdi_virus", "exit", "esc", "quit" };
+					"cmd", "cls", "clear", "go_to", "dir", "ls", "mkdir", "create", "del", "delete", "install", "update",
+					"injector_dll", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code", "ip_search", "phone_search", "mimikatz",
+					"john", "nmap", "con_wifi", "wifi_hack", "stealer", "get_ip_website", "auto_clicker", "morse_code_cipher",
+					"caesar_cipher", "ai_chat", "ukraine", "author", "matrix", "login", "registration", "instructions",
+					"del_account", "logout", "tim", "time", "stopwatch", "timer", "calculator", "calendar", "webcam_recorder",
+					"screen_recorder", "cur_conv", "notepad", "translator", "dictaphone", "chat_client", "chat_server", "pacman",
+					"2048", "arkanoid", "flappy_bird", "tetris", "hangman", "car_racing", "guess_number", "math_game",
+					"typing_tutor", "battle_city", "doom", "mario", "snake", "ping_pong", "tic_tac_toe", "checkers", "chess",
+					"space_shooter", "title", "new", "start", "open", "shutdown", "restart", "data", "promo_code", "i_am_here",
+					"&main", "donate", "donators", "helpers", "color_back", "i?", "administrator", "admin", "superuser",
+					"chan_backg", "send_ph_message", "history", "cls_history", "memory", "rules", "commands", "tips", "links",
+					"my_volume_level", "set_volume_level", "set_mute", "ip", "size", "my_location", "system_info",
+					"energy", "power", "prank_button", "melt_screen", "gdi_virus", "exit", "esc", "quit", "file_injector", 
+					"files_convertor", "3d_price_calc" };
 
 
 				// Check if the input exists in the list

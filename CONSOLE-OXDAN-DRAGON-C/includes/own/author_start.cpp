@@ -1,6 +1,6 @@
 #include <windows.h>
 #include <conio.h>
-#include <mmsystem.h>
+#include <iostream>
 #include <SFML/Audio.hpp>
 #include "all_diclarations.h"
 
@@ -49,96 +49,16 @@ void author_start()
 	Sleep(30);
 	printf("\n");
 
+	string filepath = (oxdan_dragon_c + "\\includes\\own\\undertale.wav");
 	sf::SoundBuffer buffer;
-	string filePath = oxdan_dragon_c;
-	vector<string> directories;
+	buffer.loadFromFile(filepath);  // Change to your audio file path
 
-	// Split the path into directories and add them to the list
-	size_t start = 0, end;
-	while ((end = filePath.find("\\", start)) != string::npos) {
-		string dir = filePath.substr(start, end - start);
-		directories.push_back(dir);
-		start = end + 1;
-	}
-	string lastComponent = filePath.substr(start);
-	directories.push_back(lastComponent);
-
-	// Keep track of the first and last words with spaces
-	string firstSpaceWord;
-	string lastSpaceWord;
-
-	// Print the list of directories and detect first/last words with spaces
-	//cout << "Original Path: " << filePath << endl;
-	//cout << "List: ";
-	for (const string& dir : directories) {
-		//cout << "\"" << dir << "\" ";
-
-		if (containsSpaces_2(dir)) {
-			if (firstSpaceWord.empty()) {
-				firstSpaceWord = dir;
-			}
-			lastSpaceWord = dir;
-		}
-	}
-	//cout << endl;
-
-	// Print the first and last words with spaces
-	if (!firstSpaceWord.empty()) {
-		//cout << "First word with spaces: " << firstSpaceWord << endl;
-		//cout << "Last word with spaces: " << lastSpaceWord << endl;
-
-		if (firstSpaceWord == lastSpaceWord)
-		{
-
-			// Replace spaces within the first and last words with double quotes
-			size_t startPos = filePath.find(firstSpaceWord);
-			size_t endPos = startPos + firstSpaceWord.length();
-			string modifiedPath = filePath.substr(0, startPos) + "\"" + firstSpaceWord + filePath.substr(endPos);
-
-			startPos = modifiedPath.find(lastSpaceWord);
-			endPos = startPos + lastSpaceWord.length();
-			modifiedPath = modifiedPath.substr(0, startPos) + lastSpaceWord + "\"" + modifiedPath.substr(endPos);
-
-
-			// Print the modified path
-			//cout << "Modified Path: " << modifiedPath << endl;
-			string cmd_cmd = "start ";
-			cmd_cmd += modifiedPath;
-			system(cmd_cmd.c_str());
-		}
-		else
-		{
-			// Replace spaces within the first and last words with double quotes
-			size_t startPos = filePath.find(firstSpaceWord);
-			size_t endPos = startPos + firstSpaceWord.length();
-			string modifiedPath = filePath.substr(0, startPos) + "\"" + firstSpaceWord + "\"" + filePath.substr(endPos);
-
-			startPos = modifiedPath.find(lastSpaceWord);
-			endPos = startPos + lastSpaceWord.length();
-			modifiedPath = modifiedPath.substr(0, startPos) + "\"" + lastSpaceWord + "\"" + modifiedPath.substr(endPos);
-
-
-			// Print the modified path
-			//cout << "Modified Path: " << modifiedPath << endl;
-			//string cmd_cmd = "start ";
-			//cmd_cmd += modifiedPath;
-			//system(cmd_cmd.c_str());
-
-			!buffer.loadFromFile(filePath + "/includes/own/undertale.wav");
-			sf::Sound sound;
-			sound.setBuffer(buffer);
-			sound.play();
-		}
-	}
-	else {
-		//cout << "No words with spaces found." << endl;
-	}
-
-	!buffer.loadFromFile(filePath + "/includes/own/undertale.wav");
+	// Create a sound instance and set the buffer
 	sf::Sound sound;
 	sound.setBuffer(buffer);
-	sound.play();
 
+	// Play the sound
+	sound.play();
 	getch();
 	system("mode 141, 29"); // set size of console (+)
 	SetWindow(141, 29); // set buffer size of console (+)

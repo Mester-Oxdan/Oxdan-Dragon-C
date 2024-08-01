@@ -1,6 +1,6 @@
 ﻿from msvcrt import getch
 from colorama import Fore
-from translate import Translator
+from googletrans import Translator
 
 def remove_098(string):
     return string.replace(" ", "")
@@ -8,35 +8,38 @@ def remove_098(string):
 def start():
 
     try:
-            print(Fore.RED + "\nEnter 'esc' (for exit)")
+
+            print(" ")
+            print(Fore.RED + "Enter 'esc' (for exit)" + Fore.WHITE)
             x = input(Fore.YELLOW + "Enter language from: " + Fore.WHITE)
             if remove_098(x.lower()) == "esc":
+                exit(0)
 
-               exit(0)
-
-	    print(Fore.RED + "\nEnter 'esc' (for exit)")
+            print(Fore.RED + "\nEnter 'esc' (for exit)" + Fore.WHITE)
             y = input(Fore.YELLOW + "Enter language to: " + Fore.WHITE)
             if remove_098(y.lower()) == "esc":
-
                 exit(0)
 
-	    print(Fore.RED + "\nEnter 'esc' (for exit)")
-            z = input(Fore.YELLOW + "Enter text to translate from " + x + " to " + y + ": " + Fore.WHITE)
+            print(Fore.RED + "\nEnter 'esc' (for exit)" + Fore.WHITE)
+            z = input(Fore.YELLOW + f"Enter text to translate from {x} to {y}: " + Fore.WHITE)
             if remove_098(z.lower()) == "esc":
-
                 exit(0)
 
-            translator = Translator(from_lang = str(x), to_lang = str(y))
+            # Create translator object
+            translator = Translator()
 
-            result = translator.translate(str(z))
+            # Translate the entire sentence
+            result = translator.translate(z, src=x, dest=y).text
 
             print(Fore.YELLOW + "Translated text: " + Fore.WHITE + result)
             getch()
+            exit(0)
+            
 
     except:
 
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Enter valid languages!)\n" + Fore.WHITE)
         getch()
-        exit()
+        exit(0)
 
 start()

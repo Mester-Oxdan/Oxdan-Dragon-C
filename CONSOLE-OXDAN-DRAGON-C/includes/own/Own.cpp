@@ -6,9 +6,12 @@
 #include <atlstr.h>
 #include <chrono>
 #include <conio.h>
+#include <mmsystem.h>
+#include <SFML/Audio.hpp>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
+#pragma comment(lib, "winmm.lib") // Link with the Windows Multimedia library
 
 using namespace std;
 
@@ -128,7 +131,14 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 
 			catch (...)
 			{
-				check_start_start();
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				printf("(!Enter color_back option!)\n");
+				printf("\033[0;37m");
 			}
 		}
 	}
@@ -456,16 +466,18 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		{
 			system("cls");
 			gotoxy(47, 4);
-			printf("Thanks for wanting to send money but if you");
-			gotoxy(46, 5);
-			printf("haven't changed your mind, here the author's");
-			gotoxy(44, 6);
-			printf("card number, don't exceed the amount ($1 - $200).");
-			gotoxy(65, 7);
+			printf("Thanks for your support! If you haven't changed your ");
+			gotoxy(47, 5);
+			printf("mind, here is author's Buy Me A Coffee and Cash App.");
+			gotoxy(50, 6);
+			printf("Please don't exceed limit amount ($1 - $100).");
+			gotoxy(69, 7);
 			printf("Thanks.");
-			gotoxy(53, 9);
-			printf("\033[0;33mCard number:\033[0;37m 4403 9352 3234 1307");
-			gotoxy(57, 11);
+			gotoxy(57, 9);
+			printf("\033[0;33mCash App:\033[0;37m 4403 9352 3234 1307");
+			gotoxy(48, 11);
+			printf("\033[0;33mBuy Me A Coffee:\033[0;37m https://www.buymeacoffee.com/oxdan");
+			gotoxy(59, 13);
 			printf("Press any key to go back.");
 			_getch();
 			printf("\n");
@@ -503,7 +515,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 				printf("\033[0;37m");
 				printf(" = ");
 				printf("\033[0;32m");
-				printf("(!Enter name of promo code!)\n");
+				printf("(!Enter promo code name!)\n");
 				printf("\033[0;37m");
 				check_start_start();
 			}
@@ -513,11 +525,37 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 				try
 				{
 					string a = tokens[1];
-					SetConsoleTitleA(a.c_str());
+					//SetConsoleTitleA(a.c_str());
 
-					if (a == "sans battle" || a == "sans-battle" || a == "sans_battle")
+					if (a == "sans-battle" || a == "sansbattle" || a == "sans_battle")
 					{
 						cout << "\n\033[0;33mSecret Link:\033[0;37m https://jcw87.github.io/c2-sans-fight/" << endl;
+						check_start_start();
+					}
+					if (a == "toby-fox" || a == "tobyfox" || a == "toby_fox")
+					{
+						cout << "\nThanks a lot! You are the hero of my childhood. \n(Big a fan) Thanks for \033[0;31mUndertale\033[0;37m game :)" << endl;
+						sf::SoundBuffer buffer_4;
+						!buffer_4.loadFromFile(oxdan_dragon_c + "/includes/own/undertale.wav");
+						sf::Sound sound_4;
+						sound_4.setBuffer(buffer_4);
+						sound_4.play();
+						check_start_start();
+					}
+					if (a == "scott-cawthon" || a == "scottcawthon" || a == "scott_cawthon")
+					{
+						cout << "\nThanks a lot! You are the one more hero of my childhood. \n(Big a fan) Thanks for \033[0;33mFive Nights at Freddy's\033[0;37m game :)" << endl;
+						sf::SoundBuffer buffer_3;
+						!buffer_3.loadFromFile(oxdan_dragon_c + "/includes/own/freddy_nouse.wav");
+						sf::Sound sound_3;
+						sound_3.setBuffer(buffer_3);
+						sound_3.play();
+
+						sf::SoundBuffer buffer_2;
+						!buffer_2.loadFromFile(oxdan_dragon_c + "/includes/own/fnaf_beatbox_1.wav");
+						sf::Sound sound_2;
+						sound_2.setBuffer(buffer_2);
+						sound_2.play();
 						check_start_start();
 					}
 					else
@@ -535,7 +573,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 					printf("\033[0;37m");
 					printf(" = ");
 					printf("\033[0;32m");
-					printf("(!Enter name of promo code!)\n");
+					printf("(!Enter promo code name!)\n");
 					printf("\033[0;37m");
 					check_start_start();
 				}
@@ -748,6 +786,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 			try
 			{
 				open_start(path45);
+				check_start_start();
 			}
 
 			catch (...)
@@ -756,7 +795,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 			}
 		}
 
-		check_start_start();
+		
 
 	}
 

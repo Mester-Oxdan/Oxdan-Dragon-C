@@ -273,6 +273,22 @@ void Reshape(int x, int y)
 	glMatrixMode(GL_MODELVIEW);
 }
 
+// Function to set the window icon
+void setWindowIcon_17(const char* path) {
+	HINSTANCE hInstance = GetModuleHandle(NULL);
+	HICON hIcon = (HICON)LoadImageA(hInstance, path, IMAGE_ICON, 0, 0, LR_LOADFROMFILE);
+	if (hIcon) {
+		HWND hwnd = FindWindowA(NULL, "Tic Tac Toe 2"); // Ensure this matches the title set in glutCreateWindow
+		if (hwnd) {
+			SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_BIG, (LPARAM)hIcon);
+			SendMessage(hwnd, WM_SETICON, (WPARAM)ICON_SMALL, (LPARAM)hIcon);
+		}
+	}
+	else {
+		MessageBoxA(NULL, "Failed to load icon.", "Error", MB_OK | MB_ICONERROR);
+	}
+}
+
 void tic_tac_toe_2_start()
 {
 	// add icon
@@ -285,8 +301,10 @@ void tic_tac_toe_2_start()
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
 	glutInitWindowPosition(550, 200);
 	glutInitWindowSize(300, 350);
-	glutCreateWindow("Tic-Tac-Toe 2");
+	glutCreateWindow("Tic Tac Toe 2");
 	glutReshapeFunc(Reshape);
+	string text_icon = oxdan_dragon_c + "\\my_dragon_ico.ico";
+	setWindowIcon_17(text_icon.c_str());
 	glutDisplayFunc(Display);
 	//glutKeyboardFunc(Intialize);
 	glutMouseFunc(OnMouseClick);

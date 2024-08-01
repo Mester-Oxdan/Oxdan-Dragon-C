@@ -22,11 +22,11 @@ void main_question_no(string enter_question, string enter_response_yes)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "Main question!");
+    InitWindow(screenWidth, screenHeight, enter_question.c_str());
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
-    string string_no_1 = oxdan_dragon_c + "/my_dragon_ico.jpg";
+    string string_no_1 = oxdan_dragon_c + "\\my_dragon_ico_transformed.png";
     Image icon = LoadImage(string_no_1.c_str());  // Load an image for the icon
     SetWindowIcon(icon);
 
@@ -167,11 +167,11 @@ void main_question_yes(string enter_question, string enter_response_yes)
     const int screenWidth = 800;
     const int screenHeight = 450;
 
-    InitWindow(screenWidth, screenHeight, "Main question!");
+    InitWindow(screenWidth, screenHeight, enter_question_go.c_str());
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
-    string string_yes_1 = oxdan_dragon_c + "/my_dragon_ico.jpg";
+    string string_yes_1 = oxdan_dragon_c + "\\my_dragon_ico_transformed.png";
     Image icon = LoadImage(string_yes_1.c_str());  // Load an image for the icon
     SetWindowIcon(icon);
 

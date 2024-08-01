@@ -50,14 +50,24 @@ void color_back_start(string name)
 	}
 	else if (name == "w" || name == "W") // White (+)
 	{
-		system("color f7");
-		
-		check_start_start();
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		printf("(!Enter color_back option!)\n");
+		printf("\033[0;37m");
 	}
 	else // White (+)
 	{
-		system("color 07");
-		
-		check_start_start();
+		printf("\033[0;31m");
+		printf("\n");
+		printf("(!ERROR!)");
+		printf("\033[0;37m");
+		printf(" = ");
+		printf("\033[0;32m");
+		printf("(!Enter color_back option!)\n");
+		printf("\033[0;37m");
 	}
 }

@@ -41,10 +41,10 @@ void energy_start()
         // Optional: Print battery life time if available
         if (spsPwr.BatteryLifeTime != (DWORD)-1)
         {
-            printf("\033[0;37mBattery left: %d:%02d:%02d\n",
-                spsPwr.BatteryLifeTime / 3600,
-                (spsPwr.BatteryLifeTime % 3600) / 60,
-                spsPwr.BatteryLifeTime % 60);
+            //printf("\033[0;37mBattery left: %d:%02d:%02d\n",
+                //spsPwr.BatteryLifeTime / 3600,
+                //(spsPwr.BatteryLifeTime % 3600) / 60,
+                //spsPwr.BatteryLifeTime % 60);
         }
     }
     else
