@@ -24,8 +24,11 @@ bool containsSpaces_2(const string& str) {
 
 int main()
 {
+	wchar_t bufw[256];
 	int nlen = GetCurrentDirectoryA(255, buf_87);
+	int nlen_w = GetCurrentDirectoryW(255, bufw);
 	SetEnvironmentVariableA("OXDAN-DRAGON-C", buf_87);
+	SetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw);
 	int nchar = GetEnvironmentVariableA("OXDAN-DRAGON-C", buf2, 256);
 	oxdan_dragon_c = buf2;
 	//cout << "pt 1: oxidan_dragpn_c =" << oxdan_dragon_c << endl;

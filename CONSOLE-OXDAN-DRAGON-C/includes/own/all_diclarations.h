@@ -118,6 +118,8 @@ void installs_start(string name);
 
 void timer_start();
 void time_start();
+void chat_start();
+void d_price_calc_start();
 void notepad_start();
 void stopwatch_start();
 void cur_conv_start();

@@ -469,7 +469,10 @@
     <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\wifi_hack_start.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="includes\own\injector_prog_2_start.cpp">
+    <ClCompile Include="includes\own\d_price_calc_start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\own\chat_start.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

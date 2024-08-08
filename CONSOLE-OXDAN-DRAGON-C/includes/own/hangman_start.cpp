@@ -26,7 +26,7 @@ void DrawMan(int tries) {
 void hangman_start() {
     system("cls");
     srand(time(NULL));
-    string wordList[9] = { "apple","peach","banana","strawberry","mango","set","monkey","oxdan","praduction" };
+    string wordList[31] = { "monkey","oxdan","praduction", "africa", "apple", "banana", "power", "sad", "life", "death", "true", "lie", "false", "you", "racism", "???", "friend", "sky", "command", "slave", "neighbor", "fnaf", "undertale", "bendy", "fun", "dumb", "mistake", "wrong", "correct", "free", "freedom"};
     string word;
     string guessed;
 
@@ -43,13 +43,13 @@ void hangman_start() {
 
     while (tries >= 0) {
         system("cls");
-        cout << "Guess Name of thing: " << endl << endl;
+        cout << "Guess Name of Thing: " << endl << endl;
 
         for (int i = 0; i < wordLength; i++)
             cout << " " << dispWord[i] << " ";
         cout << endl << endl << endl;
 
-        cout << "Wrong Attempts: " << tries << " / " << WRONGTRIES << endl;
+        cout << "\033[0;33mAttempts: \033[0;37m" << tries << " / " << WRONGTRIES << endl;
         cout << "Guessed Letters: " << "'" << guessed << "'" << endl;
 
         DrawMan(tries);

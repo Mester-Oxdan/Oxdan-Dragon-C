@@ -75,6 +75,8 @@ void commands_start()
 		Sleep(1);
 		printf("nmap - using entered nmap commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // nmap (+)
 		Sleep(1);
+		printf("hydra - using entered hydra commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // hydra (+)
+		Sleep(1);
 		printf("con_wifi - doing connection to entered wifi network \033[0;33m(\033[0;37m wifi network name \033[0;33m)\033[0;37m \n"); // con_wifi (+)
 		Sleep(1);
 		printf("wifi_hack - shows tool for brute force wifi network \n"); // wifi_hack (+)
@@ -87,8 +89,8 @@ void commands_start()
 		Sleep(1);
 		printf("caesar_cipher - shows caesar cipher \n"); // caesar_cipher (+)
 		Sleep(1);
-		printf("ai_chat - shows ai chat \n"); // ai_chat (+)
-		Sleep(1);
+		//printf("ai_chat - shows ai chat \n"); // ai_chat (+)
+		//Sleep(1);
 		printf("\n");
 		Sleep(1);
 		printf("\033[0;33mPICTURES: \n"); // class PICTURES: (+)
@@ -145,10 +147,8 @@ void commands_start()
 		Sleep(1);
 		printf("dictaphone - shows dictaphone \n"); // dictaphone (+)
 		Sleep(1);
-		printf("chat_client - host to the chat server \n"); // chat_client (+)
-		Sleep(1);
-		printf("chat_server - creates chat server \n"); // chat_server (+)
-		Sleep(1);
+		//printf("chat - shows chat \n"); // chat (+)
+		//Sleep(1);
 		printf("files_convertor - converts file to another file \n"); // files_convertor (+)
 		Sleep(1);
 		printf("3d_price_calc - calculates price for 3d model at Oxdan store \n"); // 3d_price_calc (+)

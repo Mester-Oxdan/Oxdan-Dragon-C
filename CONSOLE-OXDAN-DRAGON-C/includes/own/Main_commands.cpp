@@ -265,9 +265,9 @@ void Main_Commands()
 
 				std::vector<std::string> my_list = { "search", "--help", "-help", "help", "-h", "--version", "-version", "version", "-v", "pip", "git", "conda",
 					"cmd", "cls", "clear", "go_to", "dir", "ls", "mkdir", "create", "del", "delete", "install", "update",
-					"injector_dll", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code", "ip_search", "phone_search", "mimikatz",
+					"injector_dll", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code", "ip_search", "mimikatz",
 					"john", "nmap", "con_wifi", "wifi_hack", "stealer", "get_ip_website", "auto_clicker", "morse_code_cipher",
-					"caesar_cipher", "ai_chat", "ukraine", "author", "matrix", "login", "registration", "instructions",
+					"caesar_cipher", "ukraine", "author", "matrix", "login", "registration", "instructions",
 					"del_account", "logout", "tim", "time", "stopwatch", "timer", "calculator", "calendar", "webcam_recorder",
 					"screen_recorder", "cur_conv", "notepad", "translator", "dictaphone", "chat_client", "chat_server", "pacman",
 					"2048", "arkanoid", "flappy_bird", "tetris", "hangman", "car_racing", "guess_number", "math_game",
@@ -277,7 +277,7 @@ void Main_Commands()
 					"chan_backg", "send_ph_message", "history", "cls_history", "memory", "rules", "commands", "tips", "links",
 					"my_volume_level", "set_volume_level", "set_mute", "ip", "size", "my_location", "system_info",
 					"energy", "power", "prank_button", "melt_screen", "gdi_virus", "exit", "esc", "quit", "file_injector", 
-					"files_convertor", "3d_price_calc" };
+					"files_convertor", "3d_price_calc" }; //dragon_helper, color, ai_chat, phone_search,
 
 
 				// Check if the input exists in the list
@@ -371,7 +371,7 @@ void Main_Commands()
 			printf("\033[0;37m");
 			printf(" = ");
 			printf("\033[0;32m");
-			printf("(!Install python-3.10.6!)\n");
+			printf("(!Install python!)\n");
 			printf("\033[0;37m");
 
 			check_start_start();
@@ -500,7 +500,7 @@ void Main_Commands()
 		}
 	}
 
-	else if (boost::starts_with(writex, "npm")) // npm (+)
+	/*else if (boost::starts_with(writex, "npm")) // npm (+)
 	{
 		try
 		{
@@ -553,7 +553,7 @@ void Main_Commands()
 
 			check_start_start();
 		}
-		}
+		}*/
 
 	else if (boost::starts_with(writex, "conda")) // conda (+)
 	{

@@ -8,6 +8,8 @@
 
 using namespace std;
 
+#define UNICODE
+
 void Hacker_Stuffs()
 {
 	if (x == "dll_injector") // dll_injector (+)
@@ -55,7 +57,7 @@ void Hacker_Stuffs()
 
 	}
 
-	else if (x == "phone_search") // phone_search (+)
+	/*else if (x == "phone_search") // phone_search (+)
 	{
 		try
 		{
@@ -79,7 +81,7 @@ void Hacker_Stuffs()
 			check_start_start();
 		}
 
-	}
+	}*/
 
 	else if (x == "mimikatz") // mimikatz (+)
 	{
@@ -107,12 +109,12 @@ void Hacker_Stuffs()
 			cout << " " << endl;
 			// Split the input into a vector of strings
 
-			vector<string> command;
-			string word;
+			vector<std::wstring> command;
+			std::wstring word;
 			for (char c : writex) {
 				if (c == ' ') {
 					command.push_back(word);
-					word = "";
+					word = L"";
 				}
 				else {
 					word += c;
@@ -122,18 +124,31 @@ void Hacker_Stuffs()
 				command.push_back(word);
 			}
 
+			command.erase(command.begin());
+
 			// Remove "cmd" from the command vector
-			command.erase(remove(command.begin(), command.end(), "john"), command.end());
+//			command.erase(remove(command.begin(), command.end(), "hydra"), command.end());
 
-			string separator = " ";
-			string right_command = "";
-			right_command += "start " + oxdan_dragon_c + "\\includes\\own\\includes\\john_the_ripper\\run\\john.exe ";
+			wchar_t bufw[256];
+			int nchar = GetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw, 256);
 
-			for (const string& cmd : command) {
+			std::wstring oxdan_dragon_w(bufw);
+
+			std::wstring separator = L" ";
+			std::wstring right_command = L"";
+
+			// std::wstring widestr = std::wstring(oxdan_dragon_c.begin(), oxdan_dragon_c.end());
+			std::wstring widecstr_2(L"\\includes\\own\\includes\\john_the_ripper\\run\\john.exe");
+			//right_command += L'"' + oxdan_dragon_w + widecstr_2 + L'"';
+			right_command += oxdan_dragon_w + widecstr_2;
+			right_command = L"\"" + right_command + L"\"";
+			right_command = L"\"" + right_command + L"\"";
+
+			for (const std::wstring& cmd : command) {
 				right_command += separator + cmd;
 			}
 
-			system(right_command.c_str());
+			_wsystem(right_command.c_str());
 			//cout << " " << endl;
 
 
@@ -207,8 +222,73 @@ void Hacker_Stuffs()
 			printf("\033[0;37m");
 			printf(" = ");
 			printf("\033[0;32m");
-			printf("(!Install nmap-7.94-setup!)\n");
+			printf("(!Install nmap!)\n");
 			printf("\033[0;37m");
+			check_start_start();
+		}
+	}
+
+	else if (boost::starts_with(writex, "hydra")) // hydra (+)
+	{
+		try
+		{
+			cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<std::wstring> command;
+			std::wstring word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = L"";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			command.erase(command.begin());
+
+			// Remove "cmd" from the command vector
+//			command.erase(remove(command.begin(), command.end(), "hydra"), command.end());
+
+			wchar_t bufw[256];
+			int nchar = GetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw, 256);
+			
+			std::wstring oxdan_dragon_w(bufw);
+
+			std::wstring separator = L" ";
+			std::wstring right_command = L"";
+			
+			// std::wstring widestr = std::wstring(oxdan_dragon_c.begin(), oxdan_dragon_c.end());
+			std::wstring widecstr_2(L"\\includes\\own\\includes\\hydra_windows\\hydra.exe");
+			//right_command += L'"' + oxdan_dragon_w + widecstr_2 + L'"';
+			right_command += oxdan_dragon_w + widecstr_2;
+			right_command = L"\"" + right_command + L"\"";
+			right_command = L"\"" + right_command + L"\"";
+
+			for (const std::wstring& cmd : command) {
+				right_command += separator + cmd;
+			}
+
+			_wsystem(right_command.c_str());
+			//cout << " " << endl;
+
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
 			check_start_start();
 		}
 	}

@@ -3,6 +3,7 @@
 #include <iostream>
 #include "all_diclarations.h"
 #include <conio.h>
+#include <iomanip> // For std::setprecision
 
 using namespace std;
 
@@ -54,11 +55,13 @@ void GetInfo()
 
 				if (Flag)
 				{
-					__int64 FreeGiga = TotalNumberOfFreeBytes / 1024 / 1024 / 1024;
-					__int64 TotalGiga = TotalNumberOfBytes / 1024 / 1024 / 1024;
-					cout << "\n\033[0;32mFree space: \033[0;37m" + to_string(FreeGiga) + " GB" + "\n";
+					__int64 FreeGiga = TotalNumberOfFreeBytes / 1073741824;
+					__int64 TotalGiga = TotalNumberOfBytes / 1073741824;
+					cout << "\n\033[0;33mDisk Device: " + DiskName + ":/\n";
 					Sleep(1);
 					cout << "\033[0;33mTotal space: \033[0;37m" + to_string(TotalGiga) + " GB" + "\n";
+					Sleep(1);
+					cout << "\033[0;32mFree space: \033[0;37m" + to_string(FreeGiga) + " GB" + "\n";
 					Sleep(1);
 					cout << "\033[0;31mUsed space: \033[0;37m" + to_string(TotalGiga - FreeGiga) + " GB" + "\n";
 					Sleep(1);
@@ -73,7 +76,8 @@ void GetInfo()
 					printf("\033[0;32m");
 					printf("(!Get Disk Free Space!)\n");
 					printf("\033[0;37m");
-					_getch();
+					//_getch();
+					check_start_start();
 				}
 
 				cout << "\033[0;35mDisk type: \033[0;37m";
@@ -94,7 +98,7 @@ void GetInfo()
 					printf("\033[0;32m");
 					printf("(!Unknown disk type!)\n");
 					printf("\033[0;37m");
-					_getch();
+					check_start_start();
 				}
 
 				USES_CONVERSION_EX;
@@ -121,7 +125,7 @@ void GetInfo()
 					printf("\033[0;32m");
 					printf("(!Something went wrong with your files system!)\n");
 					printf("\033[0;37m");
-					_getch();
+					check_start_start();
 				}
 			}
 		}
