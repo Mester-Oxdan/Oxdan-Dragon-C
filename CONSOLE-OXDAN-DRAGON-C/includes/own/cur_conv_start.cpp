@@ -1,5 +1,6 @@
 #include <windows.h>
 #include <iostream>
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 using namespace std;
@@ -17,12 +18,19 @@ void cur_conv_start()
 	const double rupee_per = 83.93; //
 	const double real_per = 5.64; //
 
-	double usd;
+	string usd_str;
 
 	cout << endl;
+	printf("\033[0;31mEnter 'esc' (for exit) \033[0;37m\n");
 	cout << "\033[0;32mEnter U.S. dollar amount: \033[0;37m";
-	cin >> usd;
-
+	cin >> usd_str;
+	boost::to_lower(usd_str);
+	boost::trim(usd_str);
+	if (usd_str == "esc")
+	{
+		check_start_start();
+	}
+	double usd = std::stod(usd_str);
 	cout << endl << "(" << "\033[0;31m" << "2025" << "\033[0;37m" << ")" << ":" << "\n";
 	cout << endl << "\033[0;33m" << usd << "\033[0;32m" << "$ " << "\033[0;37m" << "is: " << endl;
 	cout << "                             " << endl;

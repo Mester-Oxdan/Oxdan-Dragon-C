@@ -67,8 +67,8 @@ void commands_start()
 		Sleep(1);
 		printf("ip_search - searching location by entered network ip address \033[0;33m(\033[0;37m ip address \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // ip_search (+)
 		Sleep(1);
-		printf("phone_search - searching location by entered phone number with country code \033[0;33m(\033[0;37m phone number \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
-		Sleep(1);
+		//printf("phone_search - searching location by entered phone number with country code \033[0;33m(\033[0;37m phone number \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
+		//Sleep(1);
 		printf("mimikatz - using entered mimikatz commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // mimikatz (+)
 		Sleep(1);
 		printf("john - using entered john the ripper commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // john (+)
@@ -81,7 +81,7 @@ void commands_start()
 		Sleep(1);
 		printf("wifi_hack - shows tool for brute force wifi network \n"); // wifi_hack (+)
 		Sleep(1);
-		printf("\033[0;37mget_ip_website - shows ip address entered website \033[0;33m(\033[0;37m website name \033[0;33m)\033[0;37m\n"); // get_ip_website (+)
+		printf("\033[0;37mget_ip_website - shows ip address of entered website \033[0;33m(\033[0;37m website name \033[0;33m)\033[0;37m\n"); // get_ip_website (+)
 		Sleep(1);
 		printf("auto_clicker - auto clicking, for exit press 'Esc' \n"); // auto_clicker (+)
 		Sleep(1);
@@ -99,7 +99,7 @@ void commands_start()
 		Sleep(1);
 		printf("\033[0;37mukraine - shows Ukraine flag \n"); // ukraine (+)
 		Sleep(1);
-		printf("author - shows author of this console \n"); // author (+)
+		printf("author - shows Author of this console \n"); // author (+)
 		Sleep(1);
 		printf("matrix - shows hacker matrix \n"); // matrix (+)
 		Sleep(1);
@@ -109,13 +109,15 @@ void commands_start()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37mlogin \033[0;36mor \033[0;37msignin - go to login page \n"); // login (+)
+		printf("\033[0;37mlogin - go to login page \n"); // login (+)
 		Sleep(1);
-		printf("registration \033[0;36mor \033[0;37msignup - go to registration page \n"); // registration (+)
+		printf("registration - go to registration page \n"); // registration (+)
 		Sleep(1);
 		printf("instructions - go to instructions page \n"); // instructions (+)
 		Sleep(1);
-		printf("del_account - delete entered account \033[0;33m(\033[0;37m account name \033[0;33m)\033[0;37m \n"); // del_account (+)
+		printf("del_account - delete entered account \n"); // del_account (+)
+		Sleep(1);
+		printf("my_accounts - shows all your accounts \n"); // my_accounts (+)
 		Sleep(1);
 		printf("logout - go to main menu \n"); // logout (+)
 		Sleep(1);
@@ -125,7 +127,7 @@ void commands_start()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37mtim \033[0;36mor \033[0;37mtime - shows ryal time \n"); // tim (+)
+		printf("\033[0;37mtim \033[0;36mor \033[0;37mtime - shows real time \n"); // tim (+)
 		Sleep(1);
 		printf("stopwatch - shows stopwatch \n"); // stopwatch (+)
 		Sleep(1);
@@ -205,11 +207,11 @@ void commands_start()
 		Sleep(1);
 		printf("new \033[0;36mor \033[0;37mstart - opens one more Dragon console \n"); // new (+)
 		Sleep(1);
-		printf("open - open entered file \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m \n"); // open (+)
+		printf("open - opens entered file \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m \n"); // open (+)
 		Sleep(1);
-		printf("shutdown - shutdown your laptop \n"); // shutdown (+)
+		printf("shutdown - shutdowns your laptop \n"); // shutdown (+)
 		Sleep(1);
-		printf("restart - restart your laptop \n"); // restart (+)
+		printf("restart - restarts your laptop \n"); // restart (+)
 		Sleep(1);
 		printf("date - shows real time and date \n"); // date (+)
 		Sleep(1);
@@ -217,13 +219,13 @@ void commands_start()
 		Sleep(1);
 		printf("i_am_here - shows how much time did you spent here \n"); // i_am_here (+)
 		Sleep(1);
-		printf("&main - turn main \033[0;33m(\033[0;37m on, off \033[0;33m)\033[0;37m \n"); // &main (+)
+		printf("&main - shows and hides start path \033[0;33m(\033[0;37m on, off \033[0;33m)\033[0;37m \n"); // &main (+)
 		Sleep(1);
 		printf("donate - donate specified amount of money for author \n"); // donate (+)
 		Sleep(1);
-		printf("donators - shows list of top 15 donators for author (updating with new version) \n"); // donators (+)
+		printf("donators - shows list of top 15 donators for author (updating every time with new version) \n"); // donators (+)
 		Sleep(1);
-		printf("helpers - shows list of top 15 helpers for author (updating with new version) \n"); // helpers (+)
+		printf("helpers - shows list of top 15 helpers for author (updating every time with new version) \n"); // helpers (+)
 		Sleep(1);
 		//printf("color - set color text \033[0;33m("); // color (+)
 		//printf("\033[0;37m color,\033[0;32m g\033[0;37m,\033[0;34m b\033[0;37m,\033[0;31m r\033[0;37m,\033[0;33m y\033[0;37m,\033[0;37m bl\033[0;37m, w,\033[0;35m p\033[0;37m,\033[0;36m wb \033[0;33m)\033[0;37m \n"); // colors (+)
@@ -235,15 +237,17 @@ void commands_start()
 		Sleep(1);
 		printf("administrator \033[0;36mor \033[0;37madmin \033[0;36mor \033[0;37msuperuser - opens Dragon console as administrator \n"); // administrator (+)
 		Sleep(1);
-		printf("chan_backg - set desktop background with entered path to photo \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m\n"); // chan_backg (+)
+		printf("chan_backg - sets desktop background with entered full path to photo \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m\n"); // chan_backg (+)
 		Sleep(1);
 		//printf("send_ph_message - send message on entered phone number \n"); // send_ph_message (+)
+		//Sleep(1);
+		//printf("send_em_message - sends message on entered email \n"); // send_em_message (+)
 		//Sleep(1);
 		printf("history - shows all entered commands \n"); // history (+)
 		Sleep(1);
 		printf("cls_history - clear all entered commands \n"); // cls_history (+)
 		Sleep(1);
-		printf("memory - shows memory of your disk \n"); // memory (+)
+		printf("memory - shows memory of your disks \n"); // memory (+)
 		Sleep(1);
 		printf("rules - shows rules of this console \n"); // rules (+)
 		Sleep(1);
@@ -267,9 +271,9 @@ void commands_start()
 		Sleep(1);
 		printf("my_location - shows your location \n"); // my_location (+)
 		Sleep(1);
-		printf("system_info - shows info about computer \n"); // system_info (+)
+		printf("system_info - shows info about pc \n"); // system_info (+)
 		Sleep(1);
-		printf("energy \033[0;36mor \033[0;37mpower - shows energy of computer \n"); // energy (+)
+		printf("energy \033[0;36mor \033[0;37mpower - shows energy of pc \n"); // energy (+)
 		Sleep(1);
 		printf("\n");
 		Sleep(1);

@@ -289,6 +289,7 @@
     <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\wifi_hack_start.cpp" />
     <ClCompile Include="includes\own\chat_start.cpp" />
     <ClCompile Include="includes\own\d_price_calc_start.cpp" />
+    <ClCompile Include="includes\own\my_accounts_start.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\all_diclarations.h" />

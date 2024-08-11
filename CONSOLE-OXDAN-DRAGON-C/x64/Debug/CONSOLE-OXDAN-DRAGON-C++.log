@@ -1,2 +1,4 @@
-﻿  cur_conv_start.cpp
+﻿  dictaphone_start.cpp
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\dictaphone_start.cpp(41,51): warning C4018: '>': signed/unsigned mismatch
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\dictaphone_start.cpp(180,1): warning C4715: 'dictaphone_start': not all control paths return a value
   CONSOLE-OXDAN-DRAGON-C++.vcxproj -> C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\x64\Debug\CONSOLE-OXDAN-DRAGON-C++.exe

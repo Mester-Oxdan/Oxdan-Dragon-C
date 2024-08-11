@@ -4,36 +4,58 @@
 #include <stdint.h>
 #include <malloc.h>
 #include <iostream>
+#include <conio.h>  // For _kbhit() and _getch()
+#include <boost/algorithm/string.hpp>
 #include "all_diclarations.h"
 
 using namespace std;
 
 #define SAMPLE_RATE  (44100)
 #define FRAMES_PER_BUFFER (1024)
-//#define NUM_SECONDS     (5)
+#define INITIAL_BUFFER_SIZE (SAMPLE_RATE * 10)
 
-#pragma warning(disable : 4996).
+#pragma warning(disable : 4996)
 
-//define global variables
+// Define global variables
 PaStream* stream;
 int record_state;
 int16_t* recorded_data;
-int num_recorded_frames;
+int num_recorded_frames = 0;
+int buffer_size = INITIAL_BUFFER_SIZE;
 
-//callback functions
+// Callback functions
 static int record_callback(const void* inputBuffer, void* outputBuffer,
     unsigned long framesPerBuffer,
     const PaStreamCallbackTimeInfo* timeInfo,
     PaStreamCallbackFlags statusFlags,
     void* userData)
 {
-    const int16_t* in_data = (int16_t*)inputBuffer;
+    const int16_t* in_data = (const int16_t*)inputBuffer;
     (void)outputBuffer; /* Prevent unused variable warning. */
     (void)timeInfo;
     (void)statusFlags;
     (void)userData;
 
     if (record_state) {
+        // Check if we need to expand the buffer
+        if (num_recorded_frames + framesPerBuffer > buffer_size) {
+            buffer_size *= 2;  // Double the buffer size
+            recorded_data = (int16_t*)realloc(recorded_data, buffer_size * sizeof(int16_t));
+            if (!recorded_data) {
+                //cerr << "Error: Failed to allocate memory for recording data." << endl;
+                printf("\033[0;31m");
+                printf("\n");
+                printf("(!ERROR!)");
+                printf("\033[0;37m");
+                printf(" = ");
+                printf("\033[0;32m");
+                cout << "(!Error: " << "Failed to allocate memory for recording data" << "!)\n";
+                printf("\033[0;37m");
+                return paAbort;
+            }
+        }
+
+        // Copy the incoming data to the buffer
         memcpy(recorded_data + num_recorded_frames, in_data, framesPerBuffer * sizeof(int16_t));
         num_recorded_frames += framesPerBuffer;
     }
@@ -41,19 +63,19 @@ static int record_callback(const void* inputBuffer, void* outputBuffer,
     return 0;
 }
 
-//function to start recording
+// Function to start recording
 int start_recording() {
     record_state = 1;
     return 0;
 }
 
-//function to stop recording
+// Function to stop recording
 int stop_recording() {
     record_state = 0;
     return 0;
 }
 
-//function to save the recorded data to a wav file
+// Function to save the recorded data to a wav file
 int save_to_wav(const char* filename) {
     FILE* fp;
     int n;
@@ -61,7 +83,7 @@ int save_to_wav(const char* filename) {
     fp = fopen(filename, "wb");
     if (!fp) return -1;
 
-    //write wav header
+    // Write wav header
     fwrite("RIFF", 1, 4, fp);
     n = num_recorded_frames * 2 + 36;
     fwrite(&n, 4, 1, fp);
@@ -89,25 +111,23 @@ int save_to_wav(const char* filename) {
     return 0;
 }
 
-//main function
+// Main function
 int dictaphone_start()
 {
-    int NUM_SECONDS;
-    cout << "\n\033[0;33mEnter time to finish recording voice (in seconds): \033[0;37m";
-    cin >> NUM_SECONDS; 
+    cout << "\n\033[0;31mPress 'Esc' for exit\033[0;37m" << endl;
 
     PaStreamParameters inputParameters;
     PaError err;
 
-    //allocate memory for recorded data
-    recorded_data = (int16_t*)malloc(static_cast<size_t>(NUM_SECONDS) * SAMPLE_RATE * 2);
+    // Allocate memory for recorded data
+    recorded_data = (int16_t*)malloc(SAMPLE_RATE * 10 * sizeof(int16_t));  // Allocate memory for 10 seconds
     if (!recorded_data) return -1;
 
-    //initialize portaudio
+    // Initialize PortAudio
     err = Pa_Initialize();
     if (err != paNoError) return -1;
 
-    //open input stream
+    // Open input stream
     inputParameters.device = Pa_GetDefaultInputDevice();
     inputParameters.channelCount = 1;
     inputParameters.sampleFormat = paInt16;
@@ -125,28 +145,37 @@ int dictaphone_start()
     );
     if (err != paNoError) return -1;
 
-    //start recording
+    // Start recording
     err = Pa_StartStream(stream);
     if (err != paNoError) return -1;
 
     start_recording();
-    cout << "\n\033[0;32m[!] Recording voice!\033[0;37m" << endl;
-    Pa_Sleep(NUM_SECONDS * 1000);
-    stop_recording();
-    cout << "\n\033[0;31m[!] Recording voice Finished!\033[0;37m" << endl;
+    cout << "\033[0;33m[!] Recording Started!\033[0;37m" << endl;
 
-    //stop recording
+    // Recording loop
+    while (true) {
+        if (_kbhit() && _getch() == 27) {  // Check if ESC is pressed
+            stop_recording();
+            break;
+        }
+        Pa_Sleep(100);  // Sleep for 100 ms to avoid busy-waiting
+    }
+
+    cout << "\033[0;32m[!] Recording Finished!\033[0;37m" << endl;
+
+    // Stop recording
     err = Pa_CloseStream(stream);
     if (err != paNoError) return -1;
 
-    //terminate portaudio
+    // Terminate PortAudio
     err = Pa_Terminate();
     if (err != paNoError) return -1;
 
-    //save recorded data to a wav file
-    save_to_wav("Output_recorded_voice.wav");
+    // Save recorded data to a wav file
+    save_to_wav("output_recorded_voice.wav");
 
-    //free allocated memory
+    // Free allocated memory
     free(recorded_data);
     check_start_start();
 }
+

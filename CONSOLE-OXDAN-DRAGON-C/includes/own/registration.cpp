@@ -35,7 +35,8 @@ void registration()
 	cout << "PASSWORD: ";
 	SetConsoleTextAttribute(hStdOut, FOREGROUND_RED);
 	cin >> regpass;
-
+	boost::to_lower(regpass);
+	boost::trim(regpass);
 	if (regpass == "esc")
 	{
 		first_start();

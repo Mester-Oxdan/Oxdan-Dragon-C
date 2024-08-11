@@ -135,6 +135,7 @@ void screen_recorder_start();
 void login();
 void registration();
 void del_account_start();
+void my_accounts_start();
 
 // Commands:
 

@@ -31,7 +31,7 @@ void first_start()
 	#define DOWN 80
 
 	system("cls");
-	string Menu[] = { "REGISTRATION                       ", "LOGIN                         ", "INSTRUCTIONS                             ", "EXIT                             "};
+	string Menu[] = { "REGISTRATION                       ", "LOGIN                         ", "SKIP                             ", "INSTRUCTIONS                             ", "EXIT                             "};
 
 	int active_menu = 0;
 
@@ -82,32 +82,54 @@ void first_start()
 
 			if (active_menu == 2) // 3
 			{
+				system("cls");
+				printf("\033[0;33mOxdan"); // intro cmd (+)
+				printf("\033[0;31m Dragon");
+				printf("\033[0;37m [ Version: 1.2025 [ENGLISH] (C/C++) [WINDOWS] ] \n");
+				printf("(p) Oxdan Praduction. \n");
+				start_start(true);
+			}
+
+			if (active_menu == 3) // 4
+			{
 				instructions();
 			}
 
-			if (active_menu == 3) // 3
+			
+
+			if (active_menu == 4) // 5
 			{
 				exit(0);
 			}
 
 		}
 
-		else if (chch == 49)
+		else if (chch == 49) // 1
 		{
 			registration();
 		}
 
-		else if (chch == 50)
+		else if (chch == 50) // 2
 		{
 			login();
 		}
 
-		else if (chch == 51)
+		else if (chch == 51) // 3
+		{
+			system("cls");
+			printf("\033[0;33mOxdan"); // intro cmd (+)
+			printf("\033[0;31m Dragon");
+			printf("\033[0;37m [ Version: 1.2025 [ENGLISH] (C/C++) [WINDOWS] ] \n");
+			printf("(p) Oxdan Praduction. \n");
+			start_start(true);
+		}
+
+		else if (chch == 52) // 4
 		{
 			instructions();
 		}
 
-		else if (chch == 52)
+		else if (chch == 53) // 5
 		{
 			exit(0);
 		}
