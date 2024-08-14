@@ -1,6 +1,6 @@
 /* A Square class with colours and a texture */
 #pragma once
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "Checker.h"
 #include "Highlight.h"

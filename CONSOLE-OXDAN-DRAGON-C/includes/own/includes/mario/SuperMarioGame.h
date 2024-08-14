@@ -3,7 +3,7 @@
 
 #include "GameEngine.h"
 #include "Mario.h"
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include "../../all_diclarations.h"
 //#include <windows.h>
 #include <string>

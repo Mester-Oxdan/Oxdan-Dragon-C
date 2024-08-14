@@ -6,7 +6,7 @@
 #include "Blocks.h"
 #include "Enemies.h"
 #include <cmath>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 CMarioGame* CMarioGame::s_instance = NULL;
 

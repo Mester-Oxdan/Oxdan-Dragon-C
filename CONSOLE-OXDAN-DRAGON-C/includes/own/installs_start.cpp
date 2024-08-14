@@ -20,6 +20,11 @@ void installs_start(string name)
 		string cmdhg_7 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\nmap.exe";
 		system(cmdhg_7.c_str());
 	}
+	else if (name == "metasploit")
+	{
+		string cmdhg_7 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\metasploit.exe";
+		system(cmdhg_7.c_str());
+	}
 	else if (name == "virtualbox")
 	{
 		string cmdhg_7 = "start " + oxdan_dragon_c + "\\includes\\own\\includes\\installs\\virtualbox.exe";

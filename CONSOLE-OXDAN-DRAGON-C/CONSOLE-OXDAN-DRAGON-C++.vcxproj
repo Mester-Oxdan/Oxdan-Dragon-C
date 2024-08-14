@@ -109,8 +109,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\MYPROG\vcpkg\installed\x64-windows\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_highgui4.lib;pdcurses.lib;glut32.lib;opus.lib;out123.lib;OpenGL32.Lib;opencv_videoio4.lib;opencv_ml4.lib;opencv_video4.lib;opencv_stitching4.lib;opencv_objdetect4.lib;ogg.lib;opencv_photo4.lib;freeglut.lib;opencv_imgcodecs4.lib;opencv_imgproc4.lib;OpenAL32.lib;opencv_features2d4.lib;opencv_flann4.lib;glfw3.lib;opencv_calib3d4.lib;opencv_core4.lib;opencv_dnn4.lib;sfml-system.lib;open62541.lib;raylib.lib;portaudio.lib;SDL2test.lib;SDL2main.lib;SDL2_ttf.lib;SDL2_mixer.lib;SDL2_image.lib;SDL2.lib;sfml-graphics.lib;sfml-window.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\MYPROG\vcpkg\installed\x64-windows\debug\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglutd.lib;freetyped.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;SDL2d.lib;SDL2_ttfd.lib;SDL2_imaged.lib;tinyxml.lib;tinyxml2.lib;OpenGL32.Lib;OpenAL32.lib;glfw3dll.lib;raylib.lib;portaudio.lib;libcurl-d.lib;opencv_video4d.lib;opencv_videoio4d.lib;opencv_highgui4d.lib;opencv_photo4d.lib;opencv_imgproc4d.lib;opencv_stitching4d.lib;opencv_objdetect4d.lib;opencv_core4d.lib;opencv_calib3d4d.lib;boost_filesystem-vc142-mt-gd-x64-1_85.lib;boost_system-vc142-mt-gd-x64-1_85.lib;ogg.lib;bz2d.lib;FLAC.lib;brotlicommon.lib;brotlidec.lib;libpng16d.lib;zlibd.lib;jpeg.lib;vorbisenc.lib;vorbisfile.lib;tiffd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

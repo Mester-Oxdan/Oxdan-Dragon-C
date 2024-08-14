@@ -1,6 +1,6 @@
 /* A class to highlight a square*/
 #pragma once
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 // Define highlight types
 enum class HighlightType

@@ -228,6 +228,79 @@ void Hacker_Stuffs()
 		}
 	}
 
+	else if (boost::starts_with(writex, "metasploit")) // metasploit (+)
+	{
+		try
+		{
+			//cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<std::wstring> command;
+			std::wstring word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = L"";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			command.erase(command.begin());
+
+			// Remove "cmd" from the command vector
+//			command.erase(remove(command.begin(), command.end(), "hydra"), command.end());
+
+			wchar_t bufw[256];
+			int nchar = GetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw, 256);
+
+			std::wstring oxdan_dragon_w(bufw);
+
+			std::wstring separator = L" ";
+			std::wstring right_command = L"";
+
+			// std::wstring widestr = std::wstring(oxdan_dragon_c.begin(), oxdan_dragon_c.end());
+			std::wstring widecstr_2(L"C:\\metasploit\\console.bat");
+			//right_command += L'"' + oxdan_dragon_w + widecstr_2 + L'"';
+			right_command += widecstr_2;
+			right_command = L"\"" + right_command + L"\"";
+			right_command = L"\"" + right_command + L"\"";
+
+			for (const std::wstring& cmd : command) {
+				right_command += separator + cmd;
+			}
+
+			_wsystem(right_command.c_str());
+			//cout << " " << endl;
+
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Install metasploit!)\n");
+			printf("\033[0;37m");
+			check_start_start();
+		}
+	}
+
 	else if (boost::starts_with(writex, "hydra")) // hydra (+)
 	{
 		try

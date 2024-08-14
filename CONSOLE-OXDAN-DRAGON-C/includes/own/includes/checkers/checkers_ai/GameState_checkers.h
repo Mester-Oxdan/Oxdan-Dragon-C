@@ -10,8 +10,8 @@
 #define GameState_h
 
 #ifdef _WIN32
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #endif
 
 #ifdef __APPLE__

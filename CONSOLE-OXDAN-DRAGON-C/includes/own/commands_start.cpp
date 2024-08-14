@@ -43,7 +43,7 @@ void commands_start()
 		Sleep(1);
 		printf("del \033[0;36mor \033[0;37mdelete - delete entered file name or directory \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
-		printf("install - install entered option \033[0;33m(\033[0;37m python, nmap, git, miniconda, virtualbox, wireshark, protonvpn, tor, torrent, vscode, vs, steam, ea, 7_zip \033[0;33m)\n"); // install (+)
+		printf("install - install entered option \033[0;33m(\033[0;37m python, nmap, metasploit, git, miniconda, virtualbox, wireshark, protonvpn, tor, torrent, vscode, vs, steam, ea, 7_zip \033[0;33m)\n"); // install (+)
 		Sleep(1);
 		printf("\033[0;37mupdate - update Dragon console to last version\n"); // update (+)
 		Sleep(1);
@@ -76,6 +76,8 @@ void commands_start()
 		printf("nmap - using entered nmap commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // nmap (+)
 		Sleep(1);
 		printf("hydra - using entered hydra commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // hydra (+)
+		Sleep(1);
+		printf("metasploit - using entered metasploit commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // metasploit (+)
 		Sleep(1);
 		printf("con_wifi - doing connection to entered wifi network \033[0;33m(\033[0;37m wifi network name \033[0;33m)\033[0;37m \n"); // con_wifi (+)
 		Sleep(1);

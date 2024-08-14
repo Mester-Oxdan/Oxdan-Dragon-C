@@ -1,6 +1,6 @@
 /* A class to represent a checker */
 #pragma once
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 // Define checker types
 enum class CheckerType

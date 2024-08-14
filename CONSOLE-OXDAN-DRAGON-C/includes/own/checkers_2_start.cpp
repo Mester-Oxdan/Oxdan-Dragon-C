@@ -1,6 +1,6 @@
 /* A game of Checkers (2-players) */
 #include <iostream>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #include "includes/checkers/checkers_2/Square.h"
 #include "all_diclarations.h"
