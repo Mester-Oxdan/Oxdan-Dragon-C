@@ -454,7 +454,7 @@ void Games()
 		}
 		system("cls");
 		printf(" \033[0;37m");
-		system("mode 141, 29"); // set size of console (+)
+		system("mode 148, 29"); // set size of console (+)
 		SetWindow(143, 33); // set buffer size of console (+)
 		check_start_start(); // (+)
 	}

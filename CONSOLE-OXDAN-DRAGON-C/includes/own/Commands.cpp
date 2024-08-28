@@ -44,7 +44,7 @@ void Commands()
 		Sleep(1);
 		printf("del \033[0;36mor \033[0;37mdelete - delete entered file name or directory \033[0;33m(\033[0;37m file name \033[0;33m)\033[0;37m\n"); // del (+)
 		Sleep(1);
-		printf("install - install entered option \033[0;33m(\033[0;37m python, nmap, metasploit, git, miniconda, virtualbox, wireshark, protonvpn, tor, torrent, vscode, vs, steam, ea, 7_zip \033[0;33m)\n"); // install (+)
+		printf("install - install entered option \033[0;33m(\033[0;37m python, nmap, metasploit, git, miniconda, virtualbox, wireshark, \n                                   protonvpn, tor, torrent, vscode, vs, steam, ea, 7_zip \033[0;33m)\n"); // install (+)
 		Sleep(1);
 		printf("\033[0;37mupdate - update Dragon console to last version\n"); // update (+)
 		Sleep(1);
@@ -308,7 +308,7 @@ void Commands()
 		Sleep(1);
 		printf("1) in \033[0;33m( )\033[0;37m shows options \n"); // 1) tip (+)
 		Sleep(1);
-		printf("2) best size for console it is \033[0;33m141\033[0;37m,\033[0;33m 29\033[0;37m \n"); // 2) tip (+)
+		printf("2) best size for console it is \033[0;33m148\033[0;37m,\033[0;33m 29\033[0;37m \n"); // 2) tip (+)
 		Sleep(1);
 		printf("3) \n"); // 3) tip (+)
 		Sleep(1);
@@ -320,35 +320,47 @@ void Commands()
 		Sleep(1);
 		printf("\033[0;37m"); // (+)
 		Sleep(1);
-		printf("1) \033[0;31mOXDAN Website\033[0;37m (https://oxdan.com) \n"); // 1) link OXDAN Website (+)
+		printf("1) \033[0;33mFor social media: \033[0;37m\n"); // 1) For social media (+)
 		Sleep(1);
-		printf("2) \033[0;32mChess.com\033[0;37m (https://www.chess.com/home) \n"); // 2) link chess.com (+)
+		printf("2) YouTube: @Oxdan_Praduction /OR/ https://www.youtube.com/@Oxdan_Praduction \n"); // 1) link Youtube (+)
 		Sleep(1);
-		printf("3) Google Maps Locator (https://www.maps.ie/coordinates.html)\n"); // 3) link google maps locator (+)
+		printf("3) Github: @Mester-Oxdan /OR/ https://github.com/Mester-Oxdan \n"); // 1) link Github (+)
 		Sleep(1);
-		printf("4) Github (https://github.com/Mester-Oxdan)\n"); // 4) link Github (+)
+		printf("4) Tiktok: @oxdan_praduction /OR/ https://www.tiktok.com/@oxdan_praduction \n"); // 1) link Tiktok (+)
 		Sleep(1);
-		printf("5) \033[0;31mYoutube\033[0;37m (https://www.youtube.com/@Oxdan_products)\n"); // 5) link Youtube (+)
+		printf("5) Instagram: @oxdanpraduction /OR/ https://instagram.com/oxdanpraduction \n"); // 1) link Instagram (+)
 		Sleep(1);
-		printf("6) TikTok (https://www.tiktok.com/@oxdan_products.)\n"); // 6) link TikTok (+)
+		printf("6) Facebook: @Mariia Sierova /OR/ https://www.facebook.com/profile.php?id=100087125340188&mibextid=LQQJ4d \n"); // 1) link Facebook (+)
 		Sleep(1);
-		printf("7) \033[38;5;13mInstagram\033[0;37m (https://instagram.com/oxdanpraduction)\n"); // 7) link Instagram (+)
+		printf("7) Kwork: @jecob /OR/ https://kwork.com/user/jecob \n"); // 1) link Kwork (+)
 		Sleep(1);
-		printf("8) \033[0;33mKwork\033[0;37m (https://kwork.com/user/jecob)\n"); // 8) link Kwork (+)
+		printf("8) Fiverr: @jecob_567 /OR/ https://www.fiverr.com/jecob_567 \n"); // 1) link Fiverr (+)
 		Sleep(1);
-		printf("9) \033[0;32mFiverr\033[0;37m (https://www.fiverr.com/jecob_567)\n"); // 9) link Fiverr (+)
+		printf("9) Upwork: https://www.upwork.com/freelancers/~01e296384cd379e73e?viewMode=1&mp_source=share \n"); // 1) link Upwork (+)
 		Sleep(1);
-		printf("10) Upwork (https://www.upwork.com/freelancers/~01e296384cd379e73e?viewMode=1&mp_source=share)\n"); // 10) Upwork(+)
+		printf("10) Reddit: https://www.reddit.com/u/detektive-void/s/JyYykvbe9o \n"); // 1) link Reddit (+)
 		Sleep(1);
-		printf("11) \033[38;5;208mReddit\033[0;37m (https://www.reddit.com/u/detektive-void/s/JyYykvbe9o)\n"); // 11) Reddit(+)
+		printf("11) \033[0;33mFor Sponsoring/Donations: \033[0;37m\n"); // 1) Sponsoring/Donations (+)
 		Sleep(1);
-		printf("12) \033[0;33mFor Sponsoring/Donations:\033[0;32m Cash App\033[0;37m ($BoHladii /OR/ 4403 9352 3234 1307)\n"); // 12) Sponsoring / Donations Cash App(+)
+		printf("12) Cash App: $BoHladii /OR/ 4403 9352 3234 1307 \n"); // 1) link Cash App (+)
 		Sleep(1);
-		printf("13) \033[0;33mBuy Me A Coffee\033[0;37m (https://www.buymeacoffee.com/oxdan)\n"); // 13) Buy Me A Coffee(+)
+		printf("13) Buy Me A Coffee: https://www.buymeacoffee.com/oxdan \n"); // 1) link Buy Me A Coffee (+)
 		Sleep(1);
-		printf("14) \033[0;33mFor Shops:\033[0;37m \033[38;5;208mEtsy\033[0;37m (https://oxdanpraduction3dart.etsy.com)\n"); // 14) Etsy(+)
+		printf("14) \033[0;33mFor Shops:\033[0;37m \n"); // 1) For Shops (+)
 		Sleep(1);
-		printf("15) \n"); // 15)  (+)
+		printf("15) Etsy: https://oxdanpraduction3dart.etsy.com \n"); // 1) link Etsy (+)
+		Sleep(1);
+		printf("16) Tik Tok Shop: @oxdan_praduction_shop /OR/ https://www.tiktok.com/@oxdan_praduction_shop?_t=8p4TNukKU4w&_r=1 \n"); // 1) link Tik Tok Shop (+)
+		Sleep(1);
+		printf("17) \033[0;33mFor Other:\033[0;37m \n"); // 1) For Other (+)
+		Sleep(1);
+		printf("18) Website: https://oxdan.com \n"); // 1) link OXDAN Website (+)
+		Sleep(1);
+		printf("19) \033[0;33mThanks:\033[0;37m \n"); // 1) Thanks (+)
+		Sleep(1);
+		printf("10) Chess.com: https://www.chess.com/home \n"); // 1) link Chess (+)
+		Sleep(1);
+		printf("21) Google Maps Locator: https://www.maps.ie/coordinates.html \n"); // 1) link Google Maps Locatorl (+)
 		Sleep(1);
 		check_start_start();
 	}

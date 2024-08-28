@@ -60,7 +60,7 @@ void author_start()
 	// Play the sound
 	sound.play();
 	getch();
-	system("mode 141, 29"); // set size of console (+)
+	system("mode 148, 29"); // set size of console (+)
 	SetWindow(141, 29); // set buffer size of console (+)
 	check_start_start();
 }

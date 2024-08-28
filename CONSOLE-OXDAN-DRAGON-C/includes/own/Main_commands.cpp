@@ -619,7 +619,7 @@ void Main_Commands()
 			#endif
 
 			#ifdef _WIN32
-			system("mode 141, 29"); // set size of console (+)
+			system("mode 148, 29"); // set size of console (+)
 			SetWindow(141, 29); // set buffer size of console (+)
 			system("cls");
 			#endif

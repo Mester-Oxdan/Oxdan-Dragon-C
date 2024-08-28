@@ -21,7 +21,7 @@ void ConsoleCursorVisibleytg(bool show, short size)
 void first_start()
 {
 	ConsoleCursorVisibleytg(false, 100);
-	system("mode 141, 29"); // set size of console (+)
+	system("mode 152, 29"); // set size of console (+)
 	SetWindow(600, 600); // set buffer size of console (+)
 
 	HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);

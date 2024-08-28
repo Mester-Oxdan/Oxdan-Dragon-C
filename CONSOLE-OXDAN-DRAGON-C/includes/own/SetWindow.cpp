@@ -6,7 +6,7 @@
 void SetWindow(int xc, int yc)
 {
 	_COORD coord;
-	coord.X = 143;
+	coord.X = 152;
 	coord.Y = 600;
 
 	_SMALL_RECT Rect;

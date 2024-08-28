@@ -25,7 +25,7 @@ void Serious()
 			check_start_start();
 		}
 	}
-	/*if (x == "chat") // chat (+)
+	if (x == "chat") // chat (+)
 	{
 		try
 		{
@@ -36,7 +36,7 @@ void Serious()
 		{
 			check_start_start();
 		}
-	}*/
+	}
 
 	if (x == "screen_recorder") // screen_recorder (+)
 	{
