@@ -12,11 +12,101 @@
 #include <algorithm>
 #include <boost/algorithm/string.hpp>
 #include <boost/filesystem.hpp>
+#include <boost/asio/ssl.hpp>
+#include <boost/algorithm/string/trim.hpp>
+#include <regex>
 
 #pragma warning(disable : 4996).
 
 using namespace std;
 namespace fs = boost::filesystem;
+
+bool isUpdateAvailable(const std::string& currentVersion, std::string& outOnlineVersion) {
+	try {
+		boost::asio::io_context io_context;
+		boost::asio::ssl::context ssl_context(boost::asio::ssl::context::sslv23_client);
+		ssl_context.set_default_verify_paths(); // Use system CA certificates
+
+		boost::asio::ssl::stream<boost::asio::ip::tcp::socket> ssl_socket(io_context, ssl_context);
+		const std::string host = "raw.githubusercontent.com";
+		const std::string path = "/Mester-Oxdan/Oxdan-Dragon-C/main/version";
+
+		// Resolve DNS and connect
+		boost::asio::ip::tcp::resolver resolver(io_context);
+		auto endpoints = resolver.resolve(host, "443");
+		boost::asio::connect(ssl_socket.next_layer(), endpoints);
+
+		ssl_socket.handshake(boost::asio::ssl::stream_base::client);
+
+		// Form the HTTPS GET request
+		std::string request =
+			"GET " + path + " HTTP/1.1\r\n"
+			"Host: " + host + "\r\n"
+			"User-Agent: UpdateChecker\r\n"
+			"Connection: close\r\n\r\n";
+
+		boost::asio::write(ssl_socket, boost::asio::buffer(request));
+
+		// Read response headers
+		boost::asio::streambuf response_buffer;
+		boost::asio::read_until(ssl_socket, response_buffer, "\r\n\r\n");
+
+		// Check HTTP status
+		std::istream response_stream(&response_buffer);
+		std::string http_version;
+		unsigned int status_code;
+		std::string status_message;
+
+		response_stream >> http_version >> status_code;
+		std::getline(response_stream, status_message);
+		if (!response_stream || http_version.substr(0, 5) != "HTTP/") {
+			printf("\033[0;31m\n(!ERROR!)\033[0;37m = \033[0;32m(!Invalid HTTP response!)\033[0;37m\n");
+			return false;
+		}
+
+		if (status_code != 200) {
+			printf("\033[0;31m\n(!ERROR!)\033[0;37m = \033[0;32m(!HTTP Response returned with status code %d!)\033[0;37m\n", status_code);
+			return false;
+		}
+
+		// Read the body
+		std::ostringstream oss;
+		oss << &response_buffer;
+
+		boost::system::error_code ec;
+		while (boost::asio::read(ssl_socket, response_buffer, boost::asio::transfer_at_least(1), ec)) {
+			oss << &response_buffer;
+		}
+		if (ec != boost::asio::error::eof && ec) {
+			throw boost::system::system_error(ec);
+		}
+
+		std::string full_response = oss.str();
+		std::size_t header_end = full_response.find("\r\n\r\n");
+		if (header_end == std::string::npos) {
+			printf("\033[0;31m\n(!ERROR!)\033[0;37m = \033[0;32m(!Failed to parse HTTP headers!)\033[0;37m\n");
+			return false;
+		}
+
+		std::string body = full_response.substr(header_end + 4);
+		boost::algorithm::trim(body);
+		outOnlineVersion = body;
+
+		// Validate version string
+		std::regex version_regex(R"(\d+\.\d+)");
+		if (!std::regex_match(outOnlineVersion, version_regex)) {
+			printf("\033[0;31m\n(!ERROR!)\033[0;37m = \033[0;32m(!Received invalid version format: %s!)\033[0;37m\n", outOnlineVersion.c_str());
+			return false;
+		}
+
+		return outOnlineVersion != currentVersion;
+
+	}
+	catch (std::exception& e) {
+		printf("\033[0;31m\n(!ERROR!)\033[0;37m = \033[0;32m(!Exception during update check: %s!)\033[0;37m\n", e.what());
+		return false;
+	}
+}
 
 std::vector<std::string> where(const std::string& cmd_name) {
 	std::vector<std::string> result;
@@ -815,56 +905,40 @@ void Main_Commands()
 		try
 		{
 
-				boost::asio::io_context io_context;
-				boost::asio::ip::tcp::resolver resolver(io_context);
-				boost::asio::ip::tcp::socket socket(io_context);
+			const std::string currentVersion = "2.2024";
+			std::string onlineVersion;
 
-				std::string host = "raw.githubusercontent.com";
-				std::string path = "/Mester-Oxdan/Oxdan-Dragon-C/main/version";
+			if (isUpdateAvailable(currentVersion, onlineVersion)) {
 
-				boost::asio::ip::tcp::resolver::query query(host, "http");
-				boost::asio::ip::tcp::resolver::iterator endpoint_iterator = resolver.resolve(query);
+				std::cout << "\n\033[0;33mUpdate Available!\033[0;37m\n";
+				std::cout << "We have a new version for you: "<< onlineVersion << std::endl;
+				std::cout << "If you want to \033[0;32mdownload\033[0;37m it, just go to our Website or GitHub." << std::endl;
+				std::cout << "Would you like update now? y/n ";
 
-				boost::asio::connect(socket, endpoint_iterator);
+				std::string answer;
+				std::cin >> answer;
+				boost::algorithm::to_lower(answer);
 
-				// Form the HTTP request
-				std::string request =
-					"GET " + path + " HTTP/1.1\r\n"
-					"Host: " + host + "\r\n"
-					"Connection: close\r\n\r\n";
-
-				// Send the HTTP request
-				boost::asio::write(socket, boost::asio::buffer(request));
-
-				// Read the HTTP response
-				std::string response;
-				boost::asio::streambuf response_buffer;
-				boost::asio::read_until(socket, response_buffer, "\r\n");
-
-				// Read and append the rest of the response
-				std::istream response_stream(&response_buffer);
-				while (!response_stream.eof()) {
-					std::string line;
-					std::getline(response_stream, line);
-					response += line + "\n";
-				}
-
-				// Process the response (e.g., check for the version)
-				if (response.find("2.2024") != std::string::npos) {
-					std::cout << "\n\033[0;33mYou're right!\033[0;37m" << std::endl;
-					std::cout << "We have a new version for you: 3.2025" << std::endl;
-					std::cout << "If you want to \033[0;32mdownload\033[0;37m it, just go to our Website or GitHub." << std::endl;
+				if (answer == "y") {
+					// Launch your updater
+					std::system("start ..\\..\\..\\update\\update.exe");
+					std::exit(0);
 				}
 				else {
-					printf("\033[0;31m");
-					printf("\n");
-					printf("(!ERROR!)");
-					printf("\033[0;37m");
-					printf(" = ");
-					printf("\033[0;32m");
-					printf("(!Program already updated to last version!)\n");
-					printf("\033[0;37m");
+					check_start_start();
 				}
+			}
+			else {
+				//std::cout << "\033[0;32mYour app is already up to date.\033[0;37m\n";
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				printf("(!Program already updated to last version!)\n");
+				printf("\033[0;37m");
+			}
 
 
 			check_start_start();
