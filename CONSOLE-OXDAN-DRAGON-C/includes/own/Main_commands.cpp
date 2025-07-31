@@ -911,9 +911,17 @@ void Main_Commands()
 			if (isUpdateAvailable(currentVersion, onlineVersion)) {
 
 				std::cout << "\n\033[0;33mUpdate Available!\033[0;37m\n";
+				Sleep(1);
 				std::cout << "We have a new version for you: "<< onlineVersion << std::endl;
+				Sleep(1);
 				std::cout << "If you want to \033[0;32mdownload\033[0;37m it, just go to our Website or GitHub." << std::endl;
-				std::cout << "Would you like update now? y/n ";
+				Sleep(1);
+				std::cout << "Github: @Mester-Oxdan /OR/ https://github.com/Mester-Oxdan" << std::endl;
+				Sleep(1);
+				std::cout << "Website: https://oxdan.com" << std::endl;
+				Sleep(1);
+				std::cout << "Would you like to update now? y/n ";
+				Sleep(1);
 
 				std::string answer;
 				std::cin >> answer;
@@ -921,7 +929,7 @@ void Main_Commands()
 
 				if (answer == "y") {
 					// Launch your updater
-					std::system("start ..\\..\\..\\update\\update.exe");
+					std::system("start ..\\update\\update.exe");
 					std::exit(0);
 				}
 				else {
