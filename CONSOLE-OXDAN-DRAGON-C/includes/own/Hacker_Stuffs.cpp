@@ -25,24 +25,6 @@ void Hacker_Stuffs()
 		}
 	}
 
-	else if (x == "file_injector") // file_injector (+)
-	{
-		try
-		{
-			//inject_prog_2_start();
-			string cmd_gh = "start ";
-			cmd_gh += oxdan_dragon_c;
-			cmd_gh += "\\includes\\own\\test_python_py_file_injector.py"; //test_python_phone_number.py
-			system(cmd_gh.c_str());
-			check_start_start();
-		}
-
-		catch (...)
-		{
-			check_start_start();
-		}
-	}
-
 	else if (x == "cor_desk") // cor_desk (+)
 	{
 		try
@@ -674,6 +656,29 @@ void Hacker_Stuffs()
 			printf(" = ");
 			printf("\033[0;32m");
 			printf("(!Enter network ip address!)\n");
+			printf("\033[0;37m");
+			check_start_start();
+		}
+	}
+
+	else if (x == "phone_search") // phone_search (+)
+	{
+		try
+		{
+			string filePath = "start " + oxdan_dragon_c + "/includes/own/test_python_py_phone_search.py";
+			system(filePath.c_str());
+			check_start_start();
+		}
+
+		catch (...)
+		{
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Enter Phone Number With Country Code!)\n");
 			printf("\033[0;37m");
 			check_start_start();
 		}

@@ -57,8 +57,6 @@ void commands_start()
 		Sleep(1);
 		printf("\033[0;37mdll_injector - shows dll injector, run as admin \n"); // dll_injector (+)
 		Sleep(1);
-		printf("file_injector - shows file injector, run as admin \n"); // file_injector (+)
-		Sleep(1);
 		printf("pas_gen - shows password generator \033[0;33m(\033[0;37m w, u, n, nw \033[0;33m)\033[0;37m\n"); // pas_gen (+)
 		Sleep(1);
 		printf("my_wifi_pas - shows list passwords of yours wifi \n"); // my_wifi_pas (+)
@@ -69,8 +67,8 @@ void commands_start()
 		Sleep(1);
 		printf("ip_search - searching location by entered network ip address \033[0;33m(\033[0;37m ip address \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // ip_search (+)
 		Sleep(1);
-		//printf("phone_search - searching location by entered phone number with country code \033[0;33m(\033[0;37m phone number \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
-		//Sleep(1);
+		printf("phone_search - searching location by entered phone number with country code \033[0;33m(\033[0;37m phone number \033[0;33m)\033[0;37m (for location on google maps use (https://www.maps.ie/coordinates.html)) \n"); // phone_search (+)
+		Sleep(1);
 		printf("mimikatz - using entered mimikatz commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // mimikatz (+)
 		Sleep(1);
 		printf("john - using entered john the ripper commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // john (+)
@@ -149,16 +147,18 @@ void commands_start()
 		Sleep(1);
 		printf("screen_recorder - shows screen video recorder (without recording voice (you can use dictaphone for recording voice)) \n"); // screen_recorder (+)
 		Sleep(1);
-		printf("cur_conv - shows currency converter \n"); // cur_conv (+)
-		Sleep(1);
+		//printf("cur_conv - shows currency converter \n"); // cur_conv (+)
+		//Sleep(1);
+		//printf("crypto_conv - shows crypto converter \n"); // crypto_conv (+)
+		//Sleep(1);
 		printf("notepad - shows notepad \n"); // notepad (+)
 		Sleep(1);
 		printf("translator - shows languages translator \n"); // translator (+)
 		Sleep(1);
 		printf("dictaphone - shows dictaphone \n"); // dictaphone (+)
 		Sleep(1);
-		//printf("chat - shows chat \n"); // chat (+)
-		//Sleep(1);
+		printf("chat - shows chat \n"); // chat (+)
+		Sleep(1);
 		printf("files_convertor - converts file to another file \n"); // files_convertor (+)
 		Sleep(1);
 		printf("3d_price_calc - calculates price for 3d model at Oxdan store \n"); // 3d_price_calc (+)
@@ -217,9 +217,13 @@ void commands_start()
 		Sleep(1);
 		printf("open - opens entered file \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m \n"); // open (+)
 		Sleep(1);
-		printf("shutdown - shutdowns your laptop \n"); // shutdown (+)
+		printf("lock - locks your pc \n"); // lock (+)
 		Sleep(1);
-		printf("restart - restarts your laptop \n"); // restart (+)
+		printf("sleep - sleeps your pc \n"); // sleep (+)
+		Sleep(1);
+		printf("shutdown - shutdowns your pc \n"); // shutdown (+)
+		Sleep(1);
+		printf("restart - restarts your pc \n"); // restart (+)
 		Sleep(1);
 		printf("date - shows real time and date \n"); // date (+)
 		Sleep(1);
@@ -247,10 +251,6 @@ void commands_start()
 		Sleep(1);
 		printf("chan_backg - sets desktop background with entered full path to photo \033[0;33m(\033[0;37m path \033[0;33m)\033[0;37m\n"); // chan_backg (+)
 		Sleep(1);
-		//printf("send_ph_message - send message on entered phone number \n"); // send_ph_message (+)
-		//Sleep(1);
-		//printf("send_em_message - sends message on entered email \n"); // send_em_message (+)
-		//Sleep(1);
 		printf("history - shows all entered commands \n"); // history (+)
 		Sleep(1);
 		printf("cls_history - clear all entered commands \n"); // cls_history (+)
@@ -275,11 +275,17 @@ void commands_start()
 		Sleep(1);
 		printf("ip - shows your ip address \n"); // ip (+)
 		Sleep(1);
+		printf("speedtest - check internet speed, run as admin! \n"); // speedtest (+)
+		Sleep(1);
 		printf("size - set console size with entered parameters \033[0;33m(\033[0;37m x, y \033[0;33m)\033[0;37m\n"); // size (+)
 		Sleep(1);
 		printf("my_location - shows your location \n"); // my_location (+)
 		Sleep(1);
 		printf("system_info - shows info about pc \n"); // system_info (+)
+		Sleep(1);
+		printf("tasklist - shows tasklist \n"); // tasklist (+)
+		Sleep(1);
+		printf("kill - kills proccess by name or PID \n"); // kill (+)
 		Sleep(1);
 		printf("energy \033[0;36mor \033[0;37mpower - shows energy of pc \n"); // energy (+)
 		Sleep(1);

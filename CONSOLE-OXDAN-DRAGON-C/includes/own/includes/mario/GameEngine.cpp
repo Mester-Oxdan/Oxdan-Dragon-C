@@ -846,6 +846,13 @@ void CGame::run()
 {
     m_window = new sf::RenderWindow(sf::VideoMode(m_screen_size.x, m_screen_size.y), m_root_object->getName());
     init();
+    sf::Image icon;
+    if (icon.loadFromFile(oxdan_dragon_c + "\\my_dragon_ico.png")) {
+        m_window->setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+    }
+    else {
+        std::cerr << "Failed to load icon image\n";
+    }
 
     sf::Event event;
     sf::Clock clock;

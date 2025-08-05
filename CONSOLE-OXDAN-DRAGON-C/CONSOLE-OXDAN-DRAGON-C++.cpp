@@ -19,6 +19,7 @@ std::queue<std::string> commandQueue;
 bool autoRunQueuedCommands = false;
 std::queue<std::string> auto_commands;
 bool auto_command_mode = false;
+bool is_glut_initialized = false;
 
 char buf_87[256];
 char buf2[256];

@@ -152,7 +152,7 @@ void Serious()
 
 	}
 
-	else if (x == "cur_conv") // cur_conv (+)
+	/*else if (x == "cur_conv") // cur_conv (+)
 	{
 
 		try
@@ -164,7 +164,7 @@ void Serious()
 		{
 			check_start_start();
 		}
-	}
+	}*/
 
 	else if (x == "calendar") // calendar (+)
 	{

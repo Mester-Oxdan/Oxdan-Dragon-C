@@ -1,0 +1,7 @@
+﻿  commands_start.cpp
+  speedtest_start.cpp
+  Generating Code...
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\speedtest_start.cpp(36,19): warning C4566: character represented by universal-character-name '\U0001F50D' cannot be represented in the current code page (1252)
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\speedtest_start.cpp(42,38): warning C4566: character represented by universal-character-name '\u2B07' cannot be represented in the current code page (1252)
+C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\speedtest_start.cpp(42,38): warning C4566: character represented by universal-character-name '\uFE0F' cannot be represented in the current code page (1252)
+  CONSOLE-OXDAN-DRAGON-C++.vcxproj -> C:\Users\bogda\Downloads\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\x64\Debug\CONSOLE-OXDAN-DRAGON-C++.exe

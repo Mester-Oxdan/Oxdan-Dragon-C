@@ -397,9 +397,6 @@
     <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\screen_recorder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\send_ph_message_start.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\(+)my_goods\(+)Oxdan_Praduction\Oxdan-Dragon-C\CONSOLE-OXDAN-DRAGON-C\includes\own\Serious.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -476,6 +473,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="includes\own\my_accounts_start.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\own\speedtest_start.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

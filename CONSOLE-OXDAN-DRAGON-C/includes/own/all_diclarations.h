@@ -22,6 +22,7 @@ extern std::queue<std::string> commandQueue;
 extern bool autoRunQueuedCommands;
 extern std::queue<std::string> auto_commands;
 extern bool auto_command_mode;
+extern bool is_glut_initialized;
 
 #ifdef OXIDAN_MAIN
 string oxdan_dragon_c;
@@ -72,7 +73,7 @@ void system_info_start();
 void ip_start();
 void memory_start();
 void energy_start();
-void send_ph_message_start();
+void speedtest_start();
 void open_start(string path45);
 void my_volume_level();
 void my_location_start();

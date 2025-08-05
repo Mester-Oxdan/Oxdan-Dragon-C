@@ -5,7 +5,7 @@ import asyncio
 import aiohttp, os
 
 files_dir = os.path.dirname(__file__)
-os.environ["OXDAN-DRAGON-PYTHON"] = files_dir 
+os.environ["OXDAN-DRAGON-C"] = files_dir 
 
 def update_program():
     try:
@@ -20,12 +20,12 @@ def update_program():
                 response = await fetch_data()
                 #print (response)
                 if response != "2.2024\n":
-                    message = Notification(app_id="OXDAN-DRAGON-PYTHON",
+                    message = Notification(app_id="OXDAN-DRAGON-C",
                                    title="New Update!",
                                    msg="New update available. After login use 'update' command.",
                                    duration="short",
-                                   icon=os.path.join(os.environ["OXDAN-DRAGON-PYTHON"],r"my_dragon_ico_transformed.png"))
-                                   #icon=r"C:\Users\bogda\Downloads\Oxdan-Dragon-Python\CONSOLE-OXDAN-DRAGON-PYTHON\imports\own\my_dragon_ico_transformed.png")
+                                   icon=os.path.join(os.environ["OXDAN-DRAGON-C"],r"my_dragon_ico_transformed.png"))
+                                   #icon=r"my_dragon_ico_transformed.png")
                                    
             
                     message.set_audio(audio.Default, loop=False)

@@ -21,6 +21,8 @@ CMarioGame::CMarioGame() : CGame("Mario", { 1280,720 })
     //SDL_Surface* icon = SDL_LoadBMP("my_dragon_ico.ico");
     //SDL_SetWindowIcon(window, icon);
     //SDL_FreeSurface(icon);
+    // Load icon surface
+
 
 	for (auto texture : { "Sky", "Night", "Underground", "Castle", "Water" })
 	{

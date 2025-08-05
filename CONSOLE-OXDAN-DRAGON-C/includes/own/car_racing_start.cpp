@@ -1,6 +1,5 @@
-#include<windows.h>
+﻿#include<windows.h>
 #include <GL/freeglut.h>
-#include <GL/glut.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
@@ -647,25 +646,20 @@ void processKeys(unsigned char key, int x, int y) {
 }
 
 int window;
-void timer23(int) 
+void timer23(int)
 {
-
-    try
+    if (glutGetWindow() != 0) // ✅ Check if window still exists
     {
-        //glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-        glutGetWindow();
         glutPostRedisplay();
+        glutTimerFunc(1000 / FPS, timer23, 0); // Continue timer
     }
-
-    catch (...)
-    { 
-        //glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
-        //glutDestroyWindow(window);
+    else
+    {
+        // ✅ Window is closed — return to your menu or function
         check_start_start();
     }
-
-    glutTimerFunc(1000 / FPS, timer23, 0);
 }
+
 
 // Function to set the window icon
 void setWindowIcon_1(const char* path) {
@@ -685,22 +679,27 @@ void setWindowIcon_1(const char* path) {
 
 void car_racing_start()
 {
-    int argc;
-    char* argv[] = { (char*)"CarRacing" }; // Create a dummy argument
-    //string argv;
-    glutInit(&argc, argv);
+    static int argc = 1;
+    static char* argv[] = { (char*)"CarRacing" };
+
+    if (!is_glut_initialized) {
+        glutInit(&argc, argv);
+        is_glut_initialized = true;
+    }
+
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
     glutInitWindowSize(500, 650);
     glutInitWindowPosition(200, 20);
     glutCreateWindow("Car Racing");
     glutSetWindow(1);
+
     window = glutGetWindow();
-    //printf("Window == " + window);
+
     string text_icon = oxdan_dragon_c + "\\my_dragon_ico.ico";
     setWindowIcon_1(text_icon.c_str());
+
     glutDisplayFunc(display);
     glutSpecialFunc(spe_key);
-    //glutKeyboardFunc(key);
     glutKeyboardFunc(processKeys);
 
     glOrtho(0, 100, 0, 100, -1, 1);
@@ -708,11 +707,15 @@ void car_racing_start()
 
     glutTimerFunc(1000, timer23, 0);
 
-    //glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_GLUTMAINLOOP_RETURNS);
     glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);
-    glutMainLoop();
 
-    //glutDestroyWindow(window);
+    glutMainLoop(); // Will return now after close
+
+    if (window != 0) {
+        glutDestroyWindow(window);
+        window = 0;
+    }
+
     check_start_start();
-
 }
+

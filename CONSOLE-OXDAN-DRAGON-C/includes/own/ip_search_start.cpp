@@ -109,17 +109,19 @@ void ip_search_start()
     double lon_2 = pt_2.get<double>("lon");
 
     // Print the results
-    cout << "\nCOUNTRY: " << country_2 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    cout << "\nCOUNTRY: " << country_2 << endl;
     Sleep(1);
-    cout << "REGION: " << region_2 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    cout << "REGION: " << region_2 << endl;
     Sleep(1);
-    cout << "CITY: " << city_2 << " \033[0;33m(80% right)\033[0;37m" << endl;
+    cout << "CITY: " << city_2 << endl;
     Sleep(1);
-    cout << "ZIP: " << zip_2 << " \033[0;33m(80% right)\033[0;37m" << endl;
+    cout << "ZIP: " << zip_2 << endl;
     Sleep(1);
-    cout << "Y: " << lat_2 + 0.2522987 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    cout << "Y: " << lat_2 + 0.2522987 << endl;
     Sleep(1);
-    cout << "X: " << lon_2 + 0.32427346 << " \033[0;33m(100% right)\033[0;37m" << endl;
+    cout << "X: " << lon_2 + 0.32427346 << endl;
+    Sleep(1);
+    cout << "For Coordinates Use Google Maps Locator: https://www.maps.ie/coordinates.html" << endl;
     Sleep(1);
 
     check_start_start();

@@ -1,4 +1,4 @@
-#include <windows.h>
+﻿#include <windows.h>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -8,12 +8,66 @@
 #include <conio.h>
 #include <mmsystem.h>
 #include <SFML/Audio.hpp>
+#include <powrprof.h>
+#include <tlhelp32.h>
+#include <tchar.h>
 #include "all_diclarations.h"
 
 #pragma warning(disable : 4996).
 #pragma comment(lib, "winmm.lib") // Link with the Windows Multimedia library
+#pragma comment(lib, "PowrProf.lib")
 
 using namespace std;
+
+bool isNumeric(const std::string& str) {
+	return !str.empty() && std::all_of(str.begin(), str.end(), ::isdigit);
+}
+
+bool killProcessByPID(DWORD pid) {
+	HANDLE hProcess = OpenProcess(PROCESS_TERMINATE, FALSE, pid);
+	if (hProcess == NULL) return false;
+
+	bool result = TerminateProcess(hProcess, 0);
+	CloseHandle(hProcess);
+
+	if (result) {
+		//std::cout << "✅ Process with PID " << pid << " terminated.\n";
+		check_start_start();
+	}
+	return result;
+}
+
+bool killProcessByName(const std::wstring& targetName) {
+	HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+	if (hSnapshot == INVALID_HANDLE_VALUE) return false;
+
+	PROCESSENTRY32 pe;
+	pe.dwSize = sizeof(PROCESSENTRY32);
+
+	if (!Process32First(hSnapshot, &pe)) {
+		CloseHandle(hSnapshot);
+		return false;
+	}
+
+	bool found = false;
+
+	do {
+		if (_wcsicmp(pe.szExeFile, targetName.c_str()) == 0) {
+			HANDLE hProcess = OpenProcess(PROCESS_TERMINATE, FALSE, pe.th32ProcessID);
+			if (hProcess != NULL) {
+				if (TerminateProcess(hProcess, 0)) {
+					//std::wcout << L"✅ Killed: " << pe.szExeFile << L" (PID: " << pe.th32ProcessID << L")\n";
+					check_start_start();
+					found = true;
+				}
+				CloseHandle(hProcess);
+			}
+		}
+	} while (Process32Next(hSnapshot, &pe));
+
+	CloseHandle(hSnapshot);
+	return found;
+}
 
 void changeVolumeoff()
 {
@@ -37,11 +91,40 @@ void changeVolumeon()
 
 void Own(bool willstart, clock_t timer, vector<string> &history)
 {
+	if (x == "lock") // lock (+)
+	{
+		try
+		{
+			LockWorkStation();
+			check_start_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+	}
+
+	if (x == "sleep") // sleep (+)
+	{
+		try
+		{
+			SetSuspendState(FALSE, TRUE, FALSE);
+			check_start_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+	}
+
 	if (x == "shutdown") // shutdown (+)
 	{
 		try
 		{
 			system("shutdown /s");
+			check_start_start();
 		}
 
 		catch (...)
@@ -55,6 +138,7 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		try
 		{
 			system("shutdown /r");
+			check_start_start();
 		}
 
 		catch (...)
@@ -62,28 +146,6 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 			check_start_start();
 		}
 	}
-
-	/*else if (x == "send_ph_message") // send_ph_message (+)
-	{
-		try
-		{
-			send_ph_message_start();
-			check_start_start();
-		}
-
-		catch (...)
-		{
-			printf("\033[0;31m");
-			printf("\n");
-			printf("(!ERROR!)");
-			printf("\033[0;37m");
-			printf(" = ");
-			printf("\033[0;32m");
-			printf("(!Enter valid information!)\n");
-			printf("\033[0;37m");
-			check_start_start();
-		}
-	}*/
 
 	/*if (x == "color") // color (+)
 	{
@@ -402,6 +464,85 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		}
 	}
 
+	else if (x == "tasklist") // tasklist (+)
+	{
+		try
+		{
+			system("start taskmgr");
+			check_start_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+	}
+
+	else if (x == "kill") // kill (+)
+	{
+
+		if (tokens.size() < 2)
+		{
+			printf("\033[0;31m");
+			printf("\n");
+			printf("(!ERROR!)");
+			printf("\033[0;37m");
+			printf(" = ");
+			printf("\033[0;32m");
+			printf("(!Enter name or PID!)\n");
+			printf("\033[0;37m");
+		}
+
+		else
+		{
+			try
+			{
+				char buf[256];
+				std::string kill_string = tokens[1];
+				bool success = false;
+
+				if (isNumeric(kill_string)) {
+					DWORD pid = std::stoul(kill_string);
+					success = killProcessByPID(pid);
+				}
+
+				if (!success) {
+					std::wstring winput(kill_string.begin(), kill_string.end());
+					success = killProcessByName(winput);
+				}
+
+				if (!success) {
+					//std::cout << "❌ Could not find or terminate the process.\n";
+					printf("\033[0;31m");
+					printf("\n");
+					printf("(!ERROR!)");
+					printf("\033[0;37m");
+					printf(" = ");
+					printf("\033[0;32m");
+					printf("(!Could not find or terminate the process!)\n");
+					printf("\033[0;37m");
+				}
+				check_start_start();
+			}
+
+			catch (...)
+			{
+				printf("\033[0;31m");
+				printf("\n");
+				printf("(!ERROR!)");
+				printf("\033[0;37m");
+				printf(" = ");
+				printf("\033[0;32m");
+				printf("(!Enter name or PID!)\n");
+				printf("\033[0;37m");
+
+				check_start_start();
+			}
+		}
+
+		check_start_start();
+	}
+
 	else if (x == "set_volume_level") // set_volume_level (+)
 	{
 		try
@@ -430,6 +571,19 @@ void Own(bool willstart, clock_t timer, vector<string> &history)
 		try
 		{
 			ip_start();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+	}
+
+	else if (x == "speedtest") // speedtest (+)
+	{
+		try
+		{
+			speedtest_start();
 		}
 
 		catch (...)

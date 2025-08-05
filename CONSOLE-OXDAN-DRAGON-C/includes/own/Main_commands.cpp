@@ -528,23 +528,23 @@ void Main_Commands()
 				  "search", "--help", "-help", "help", "-h", "--version", "-version", "version", "-v",
 				  "pip", "git", "conda", "cmd", "cls", "clear", "go_to", "cd", "where", "dir", "ls", "mkdir", "create",
 				  "del", "delete", "install", "update",
-				  "dll_injector", "file_injector", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code",
-				  "ip_search", "mimikatz", "john", "nmap", "sqlmap", "hydra", "metasploit", "aircrack-ng",
+				  "dll_injector", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code",
+				  "ip_search", "phone_search", "mimikatz", "john", "nmap", "sqlmap", "hydra", "metasploit", "aircrack-ng",
 				  "con_wifi", "wifi_hack", "get_ip_website", "auto_clicker", "morse_code_cipher", "caesar_cipher",
 				  "ukraine", "author", "matrix",
 				  "login", "registration", "instructions", "del_account", "logout", "my_accounts",
 				  "tim", "time", "stopwatch", "timer", "calculator", "calendar", "webcam_recorder", "screen_recorder",
-				  "cur_conv", "notepad", "translator", "dictaphone", "files_convertor", "3d_price_calc",
+				  "notepad", "translator", "dictaphone", "chat", "files_convertor", "3d_price_calc",
 				  "pacman", "2048", "arkanoid", "flappy_bird", "tetris", "hangman", "car_racing", "guess_number",
 				  "math_game", "typing_tutor", "battle_city", "doom", "mario", "snake", "ping_pong", "tic_tac_toe",
 				  "checkers", "chess", "space_shooter",
-				  "title", "new", "start", "open", "shutdown", "restart", "date", "promo_code", "i_am_here", "&main",
+				  "title", "new", "start", "open", "lock", "sleep", "shutdown", "restart", "date", "promo_code", "i_am_here", "&main",
 				  "donate", "donators", "helpers", "color_back", "i?", "administrator", "admin", "superuser",
 				  "chan_backg", "history", "cls_history", "memory", "rules", "commands", "tips", "links",
 				  "my_volume_level", "set_volume_level", "set_mute", "ip", "size", "my_location",
-				  "system_info", "energy", "power", "prank_button", "melt_screen", "gdi_virus",
+				  "system_info", "tasklist", "kill", "energy", "power", "prank_button", "melt_screen", "gdi_virus",
 				  "exit", "esc", "quit"
-				}; //dragon_helper, color, ai_chat, phone_search,
+				}; //dragon_helper, color, ai_chat, cur_conv, crypto_conv
 
 
 				// Check if the input exists in the list
@@ -920,14 +920,14 @@ void Main_Commands()
 				Sleep(1);
 				std::cout << "Website: https://oxdan.com" << std::endl;
 				Sleep(1);
-				std::cout << "Would you like to update now? y/n ";
+				std::cout << "Would you like to update now? y/n: ";
 				Sleep(1);
 
 				std::string answer;
 				std::cin >> answer;
 				boost::algorithm::to_lower(answer);
 
-				if (answer == "y") {
+				if (answer == "y" || answer == "yes") {
 					// Launch your updater
 					std::system("start ..\\update\\update.exe");
 					std::exit(0);
