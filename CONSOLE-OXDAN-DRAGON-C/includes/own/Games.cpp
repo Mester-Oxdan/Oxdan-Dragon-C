@@ -28,7 +28,7 @@ void Games()
 			try
 			{
 				printf("\n");
-				string filePath = "start " + oxdan_dragon_c + "/includes/own/test_python_py_doom.py";
+				string filePath = "python " + oxdan_dragon_c + "/includes/own/test_python_py_doom.py";
 				system(filePath.c_str());
 				//printf(cmd_io.c_str());
 				check_start_start();

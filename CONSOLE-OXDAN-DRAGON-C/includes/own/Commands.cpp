@@ -80,6 +80,14 @@ void Commands()
 		Sleep(1);
 		printf("hydra - using entered hydra commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // hydra (+)
 		Sleep(1);
+		printf("xsstrike - using entered xsstrike commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // xsstrike (+)
+		Sleep(1);
+		printf("slowloris - using entered slowloris commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // slowloris (+)
+		Sleep(1);
+		printf("tbomb - using entered tbomb commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // tbomb (+)
+		Sleep(1);
+		printf("ihulk - using entered ihulk commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // ihulk (+)
+		Sleep(1);
 		printf("metasploit - using entered metasploit commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // metasploit (+)
 		Sleep(1);
 		printf("aircrack-ng - using entered aircrack-ng commands \033[0;33m(\033[0;37m command \033[0;33m)\033[0;37m \n"); // aircrack-ng (+)
@@ -116,9 +124,11 @@ void Commands()
 		Sleep(1);
 		printf("\n");
 		Sleep(1);
-		printf("\033[0;37mlogin - go to login page \n"); // login (+)
+		printf("\033[0;37mlogin \033[0;36mor \033[0;37msignin - go to login page \n"); // login (+)
 		Sleep(1);
-		printf("registration - go to registration page \n"); // registration (+)
+		printf("registration \033[0;36mor \033[0;37msignup - go to registration page \n"); // registration (+)
+		Sleep(1);
+		printf("change_pass - change password for account \n"); // change_pass (+)
 		Sleep(1);
 		printf("instructions - go to instructions page \n"); // instructions (+)
 		Sleep(1);
@@ -152,8 +162,12 @@ void Commands()
 		//Sleep(1);
 		//printf("crypto_conv - shows crypto converter \n"); // crypto_conv (+)
 		//Sleep(1);
+		//printf("unit_conv - shows unit converter \n"); // unit_conv (+)
+		//Sleep(1);
 		printf("notepad - shows notepad \n"); // notepad (+)
 		Sleep(1);
+		//printf("weather - shows current weather for a city \n"); // weather (+)
+		//Sleep(1);
 		printf("translator - shows languages translator \n"); // translator (+)
 		Sleep(1);
 		printf("dictaphone - shows dictaphone \n"); // dictaphone (+)

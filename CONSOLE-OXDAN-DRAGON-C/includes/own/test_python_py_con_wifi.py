@@ -1,5 +1,4 @@
-﻿from msvcrt import getch
-import pywifi #import
+﻿import pywifi #import
 from pywifi import const # const - это некоторые константы, установленные wifi, например, код состояния соответствует 4, сбой равен 0 и т. д.
 import time
 from colorama import Fore
@@ -47,18 +46,15 @@ def crack_4(password):
                 except:
 
                     print(Fore.RED + "(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi name was not found!)\n" + Fore.WHITE)
-                    getch()
                     exit(0)
 
                 time.sleep(4)
                 if iface.status() == const.IFACE_CONNECTED:
                     #print("\nConnection was " + Fore.GREEN + "successful!" + Fore.WHITE)
-		    print(Fore.GREEN + "\n(!SUCCESS!) " + Fore.WHITE + "=" + Fore.YELLOW + " (!Wifi connection successful!)\n" + Fore.WHITE)
-                    getch()
+                    print(Fore.GREEN + "\n(!SUCCESS!) " + Fore.WHITE + "=" + Fore.YELLOW + " (!Wifi connection successful!)\n" + Fore.WHITE)
                     return True
                 else:
                     print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi password or ssid is incorrect!)\n" + Fore.WHITE)
-                    getch()
                     return False
                          
 
@@ -83,7 +79,6 @@ def con_wifi_start():
     except:
 
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi name was not found!)\n" + Fore.WHITE)
-        getch()
         exit(0)
 
 con_wifi_start()

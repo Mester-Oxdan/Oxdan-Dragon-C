@@ -33,23 +33,23 @@ void perform_speed_test(double& download_speed, double& upload_speed, double& pi
 }
 
 void speedtest_start() {
-    std::wcout << "🔍 Finding best server..." << std::endl;
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    //std::wcout << "🔍 Finding best server..." << std::endl;
+    //std::this_thread::sleep_for(std::chrono::seconds(1));
 
-    double download = 0, upload = 0, ping = 0;
+    //double download = 0, upload = 0, ping = 0;
 
     // Start spinner
-    std::thread spin_thread(spinner, "⬇️  Testing download/upload speed...");
+    //std::thread spin_thread(spinner, "⬇️  Testing download/upload speed...");
 
     // Perform the "test"
-    perform_speed_test(download, upload, ping);
+    //perform_speed_test(download, upload, ping);
 
     // Stop spinner
-    spinner_running = false;
-    spin_thread.join();
+    //spinner_running = false;
+    //spin_thread.join();
 
     // Output results
-    string filePath = "start " + oxdan_dragon_c + "/includes/own/test_python_py_speedtest.py";
+    string filePath = "python " + oxdan_dragon_c + "/includes/own/test_python_py_speedtest.py";
     system(filePath.c_str());
     check_start_start();
     //return 0;

@@ -3,7 +3,6 @@ from phonenumbers import geocoder, carrier, number_type, PhoneNumberType
 from phonenumbers.phonenumberutil import region_code_for_number
 import pycountry
 from colorama import Fore
-import imports.own.will_go_to_start
 from time import sleep
 import msvcrt
 
@@ -62,13 +61,11 @@ def get_location_by_number(number):
         print("X: Unknown")
         sleep(0.01)
 
-        msvcrt.getch()
-	exit(0)
+        exit(0)
 
     except Exception as e:
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + f" (!Error: {e}!)" + Fore.WHITE)
-        msvcrt.getch()
-	exit(0)
+        exit(0)
 
 def remove_098(string):
     return string.replace(" ", "")
@@ -80,3 +77,5 @@ def phone_search():
     if remove_098(input_number.lower()) == "esc":
         exit(0)
     get_location_by_number(input_number)
+
+phone_search()

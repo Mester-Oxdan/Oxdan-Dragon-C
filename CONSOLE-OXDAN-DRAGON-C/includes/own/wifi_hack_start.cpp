@@ -12,7 +12,7 @@ void wifi_hack_start()
 	//string cmd_22 = "start " + oxdan_dragon_c + cmd_2;
 	//system(cmd_22.c_str());
 
-	string filePath = "start " + oxdan_dragon_c + "/includes/own/test_python_py_wifi_hack.py";
+	string filePath = "python " + oxdan_dragon_c + "/includes/own/test_python_py_wifi_hack.py";
 	system(filePath.c_str());
 	check_start_start();
 }

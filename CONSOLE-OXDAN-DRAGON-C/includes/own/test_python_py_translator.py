@@ -1,5 +1,4 @@
-﻿from msvcrt import getch
-from colorama import Fore
+﻿from colorama import Fore
 from googletrans import Translator
 
 def remove_098(string):
@@ -32,14 +31,12 @@ def start():
             result = translator.translate(z, src=x, dest=y).text
 
             print(Fore.YELLOW + "Translated text: " + Fore.WHITE + result)
-            getch()
             exit(0)
             
 
     except:
 
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Enter valid languages!)\n" + Fore.WHITE)
-        getch()
         exit(0)
 
 start()

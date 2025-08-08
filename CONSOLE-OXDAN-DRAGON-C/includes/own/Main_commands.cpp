@@ -529,10 +529,10 @@ void Main_Commands()
 				  "pip", "git", "conda", "cmd", "cls", "clear", "go_to", "cd", "where", "dir", "ls", "mkdir", "create",
 				  "del", "delete", "install", "update",
 				  "dll_injector", "pas_gen", "my_wifi_pas", "cor_desk", "ascii_code",
-				  "ip_search", "phone_search", "mimikatz", "john", "nmap", "sqlmap", "hydra", "metasploit", "aircrack-ng",
+				  "ip_search", "phone_search", "mimikatz", "john", "nmap", "sqlmap", "hydra", "xsstrike", "slowloris", "tbomb", "ihulk", "metasploit", "aircrack-ng",
 				  "con_wifi", "wifi_hack", "get_ip_website", "auto_clicker", "morse_code_cipher", "caesar_cipher",
 				  "ukraine", "author", "matrix",
-				  "login", "registration", "instructions", "del_account", "logout", "my_accounts",
+				  "login", "signin", "registration", "signup", "instructions", "del_account", "logout", "my_accounts",
 				  "tim", "time", "stopwatch", "timer", "calculator", "calendar", "webcam_recorder", "screen_recorder",
 				  "notepad", "translator", "dictaphone", "chat", "files_convertor", "3d_price_calc",
 				  "pacman", "2048", "arkanoid", "flappy_bird", "tetris", "hangman", "car_racing", "guess_number",
@@ -544,7 +544,7 @@ void Main_Commands()
 				  "my_volume_level", "set_volume_level", "set_mute", "ip", "size", "my_location",
 				  "system_info", "tasklist", "kill", "energy", "power", "prank_button", "melt_screen", "gdi_virus",
 				  "exit", "esc", "quit"
-				}; //dragon_helper, color, ai_chat, cur_conv, crypto_conv
+				}; //dragon_helper, color, ai_chat, cur_conv, crypto_conv, unit_conv, weather
 
 
 				// Check if the input exists in the list

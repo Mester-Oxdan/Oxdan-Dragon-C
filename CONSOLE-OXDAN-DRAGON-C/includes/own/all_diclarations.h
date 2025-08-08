@@ -141,6 +141,7 @@ void screen_recorder_start();
 
 void login();
 void registration();
+void change_pass_start();
 void del_account_start();
 void my_accounts_start();
 

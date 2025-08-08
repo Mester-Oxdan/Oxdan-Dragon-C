@@ -9,7 +9,7 @@ using namespace std;
 void con_wifi_start()
 {
 
-	string filePath = oxdan_dragon_c + "/includes/own/test_python_py_con_wifi.py";
+	string filePath = "python " + oxdan_dragon_c + "/includes/own/test_python_py_con_wifi.py";
 	vector<string> directories;
 
 	// Split the path into directories and add them to the list

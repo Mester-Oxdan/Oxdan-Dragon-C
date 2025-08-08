@@ -19,7 +19,7 @@ def update_program():
             async def main():
                 response = await fetch_data()
                 #print (response)
-                if response != "2.2024\n":
+                if response != "3.2025\n":
                     message = Notification(app_id="OXDAN-DRAGON-C",
                                    title="New Update!",
                                    msg="New update available. After login use 'update' command.",

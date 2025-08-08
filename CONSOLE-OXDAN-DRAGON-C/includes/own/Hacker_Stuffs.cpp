@@ -39,32 +39,6 @@ void Hacker_Stuffs()
 
 	}
 
-	/*else if (x == "phone_search") // phone_search (+)
-	{
-		try
-		{
-			string cmd_gh = "start ";
-			cmd_gh += oxdan_dragon_c;
-			cmd_gh += "\\includes\\own\\test_python_phone_number.py"; //test_python_phone_number.py
-			system(cmd_gh.c_str());
-			check_start_start();
-		}
-
-		catch (...)
-		{
-			printf("\033[0;31m");
-			printf("\n");
-			printf("(!ERROR!)");
-			printf("\033[0;37m");
-			printf(" = ");
-			printf("\033[0;32m");
-			printf("(!Enter phone number with country code!)\n");
-			printf("\033[0;37m");
-			check_start_start();
-		}
-
-	}*/
-
 	else if (x == "mimikatz") // mimikatz (+)
 	{
 		try
@@ -393,8 +367,266 @@ void Hacker_Stuffs()
 			for (const std::wstring& cmd : command) {
 				right_command += separator + cmd;
 			}
+			std::wstring right_command_2 = L"python " + right_command;
+			_wsystem(right_command_2.c_str());
+			//cout << " " << endl;
 
-			_wsystem(right_command.c_str());
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
+			check_start_start();
+		}
+	}
+
+	else if (boost::starts_with(writex, "xsstrike")) // xsstrike (+)
+	{
+		try
+		{
+			cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<std::wstring> command;
+			std::wstring word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = L"";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			command.erase(command.begin());
+
+			// Remove "cmd" from the command vector
+//			command.erase(remove(command.begin(), command.end(), "hydra"), command.end());
+
+			wchar_t bufw[256];
+			int nchar = GetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw, 256);
+
+			std::wstring oxdan_dragon_w(bufw);
+
+			std::wstring separator = L" ";
+			std::wstring right_command = L"";
+
+			// std::wstring widestr = std::wstring(oxdan_dragon_c.begin(), oxdan_dragon_c.end());
+			std::wstring widecstr_2(L"\\includes\\own\\includes\\XSStrike\\xsstrike.py");
+			//right_command += L'"' + oxdan_dragon_w + widecstr_2 + L'"';
+			right_command += oxdan_dragon_w + widecstr_2;
+			right_command = L"\"" + right_command + L"\"";
+			right_command = L"\"" + right_command + L"\"";
+
+			for (const std::wstring& cmd : command) {
+				right_command += separator + cmd;
+			}
+			std::wstring right_command_2 = L"python " + right_command;
+			_wsystem(right_command_2.c_str());
+			//cout << " " << endl;
+
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
+			check_start_start();
+		}
+	}
+
+	else if (boost::starts_with(writex, "slowloris")) // slowloris (+)
+	{
+		try
+		{
+			cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<std::wstring> command;
+			std::wstring word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = L"";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			command.erase(command.begin());
+
+			// Remove "cmd" from the command vector
+//			command.erase(remove(command.begin(), command.end(), "hydra"), command.end());
+
+			wchar_t bufw[256];
+			int nchar = GetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw, 256);
+
+			std::wstring oxdan_dragon_w(bufw);
+
+			std::wstring separator = L" ";
+			std::wstring right_command = L"";
+
+			// std::wstring widestr = std::wstring(oxdan_dragon_c.begin(), oxdan_dragon_c.end());
+			std::wstring widecstr_2(L"\\includes\\own\\includes\\slowloris\\slowloris.py");
+			//right_command += L'"' + oxdan_dragon_w + widecstr_2 + L'"';
+			right_command += oxdan_dragon_w + widecstr_2;
+			right_command = L"\"" + right_command + L"\"";
+			right_command = L"\"" + right_command + L"\"";
+
+			for (const std::wstring& cmd : command) {
+				right_command += separator + cmd;
+			}
+			std::wstring right_command_2 = L"python " + right_command;
+			_wsystem(right_command_2.c_str());
+			//cout << " " << endl;
+
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
+			check_start_start();
+		}
+	}
+	else if (boost::starts_with(writex, "tbomb")) // tbomb (+)
+	{
+		try
+		{
+			cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<std::wstring> command;
+			std::wstring word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = L"";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			command.erase(command.begin());
+
+			// Remove "cmd" from the command vector
+//			command.erase(remove(command.begin(), command.end(), "hydra"), command.end());
+
+			wchar_t bufw[256];
+			int nchar = GetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw, 256);
+
+			std::wstring oxdan_dragon_w(bufw);
+
+			std::wstring separator = L" ";
+			std::wstring right_command = L"";
+
+			// std::wstring widestr = std::wstring(oxdan_dragon_c.begin(), oxdan_dragon_c.end());
+			std::wstring widecstr_2(L"\\includes\\own\\includes\\TBomb\\bomber.py");
+			//right_command += L'"' + oxdan_dragon_w + widecstr_2 + L'"';
+			right_command += oxdan_dragon_w + widecstr_2;
+			right_command = L"\"" + right_command + L"\"";
+			right_command = L"\"" + right_command + L"\"";
+
+			for (const std::wstring& cmd : command) {
+				right_command += separator + cmd;
+			}
+			std::wstring right_command_2 = L"python " + right_command;
+			_wsystem(right_command_2.c_str());
+			//cout << " " << endl;
+
+
+			//cout << " " << endl;
+
+
+
+			check_start_start();
+
+		}
+
+		catch (...)
+		{
+
+			check_start_start();
+		}
+	}
+	else if (boost::starts_with(writex, "ihulk")) // ihulk (+)
+	{
+		try
+		{
+			cout << " " << endl;
+			// Split the input into a vector of strings
+
+			vector<std::wstring> command;
+			std::wstring word;
+			for (char c : writex) {
+				if (c == ' ') {
+					command.push_back(word);
+					word = L"";
+				}
+				else {
+					word += c;
+				}
+			}
+			if (!word.empty()) {
+				command.push_back(word);
+			}
+
+			command.erase(command.begin());
+
+			// Remove "cmd" from the command vector
+//			command.erase(remove(command.begin(), command.end(), "hydra"), command.end());
+
+			wchar_t bufw[256];
+			int nchar = GetEnvironmentVariableW(L"OXDAN-DRAGON-C_W", bufw, 256);
+
+			std::wstring oxdan_dragon_w(bufw);
+
+			std::wstring separator = L" ";
+			std::wstring right_command = L"";
+
+			// std::wstring widestr = std::wstring(oxdan_dragon_c.begin(), oxdan_dragon_c.end());
+			std::wstring widecstr_2(L"\\includes\\own\\includes\\ihulk.py\\src\\ihulk.py");
+			//right_command += L'"' + oxdan_dragon_w + widecstr_2 + L'"';
+			right_command += oxdan_dragon_w + widecstr_2;
+			right_command = L"\"" + right_command + L"\"";
+			right_command = L"\"" + right_command + L"\"";
+
+			for (const std::wstring& cmd : command) {
+				right_command += separator + cmd;
+			}
+			std::wstring right_command_2 = L"python " + right_command;
+			_wsystem(right_command_2.c_str());
 			//cout << " " << endl;
 
 
@@ -665,7 +897,7 @@ void Hacker_Stuffs()
 	{
 		try
 		{
-			string filePath = "start " + oxdan_dragon_c + "/includes/own/test_python_py_phone_search.py";
+			string filePath = "python " + oxdan_dragon_c + "\\includes\\own\\test_python_py_phone_search.py";
 			system(filePath.c_str());
 			check_start_start();
 		}

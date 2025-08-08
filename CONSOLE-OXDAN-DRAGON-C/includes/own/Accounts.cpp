@@ -9,7 +9,7 @@ using namespace std;
 void Accounts()
 {
 
-	if (x == "login") // login (+)
+	if (x == "login" || x == "signin") // login (+)
 	{
 		try
 		{
@@ -22,11 +22,24 @@ void Accounts()
 		}
 	}
 
-	else if (x == "registration") // registration (+)
+	else if (x == "registration" || x == "signup") // registration (+)
 	{
 		try
 		{
 			registration();
+		}
+
+		catch (...)
+		{
+			check_start_start();
+		}
+	}
+
+	else if (x == "change_pass") // change_pass (+)
+	{
+		try
+		{
+			change_pass_start();
 		}
 
 		catch (...)

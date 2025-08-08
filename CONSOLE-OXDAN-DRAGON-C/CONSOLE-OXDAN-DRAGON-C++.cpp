@@ -68,7 +68,7 @@ int main(int argc, char* argv[])  // 🆕 added argc/argv
 
     string update_message = "start " + oxdan_dragon_c + "\\includes\\own\\update_message.py";
     system(update_message.c_str());
-
+    
     string filePath = oxdan_dragon_c;
     vector<string> directories;
 

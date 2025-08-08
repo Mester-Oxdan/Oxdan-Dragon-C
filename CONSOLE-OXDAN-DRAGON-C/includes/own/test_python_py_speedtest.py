@@ -2,7 +2,6 @@ import speedtest
 from time import sleep
 import threading
 import sys
-import msvcrt
 
 spinner_running = True
 
@@ -61,5 +60,6 @@ def speedtest_start():
                         print("Upload: ❌ Failed (timeout)")
 
                     sleep(0.01)
-                    msvcrt.getch() 
                     exit(0)
+                    
+speedtest_start()

