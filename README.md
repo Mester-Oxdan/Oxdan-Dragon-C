@@ -79,23 +79,23 @@ little bit more commands than C/C++. This console was made for Windows! Author s
 
 creating this console only because of studying coding in 2023, but then it became a project where Author created his first program. Thanks!
 
-Photos 2024:
+Photos 3.2025:
 
 Console_Start_Menu.
-![Console_Start_Menu](https://github.com/user-attachments/assets/6c976383-159b-44a1-9484-39d853971fcf)
+<img width="1920" height="1080" alt="Console_Start_Menu" src="https://github.com/user-attachments/assets/4af11e81-7ffb-4aa2-94d2-96e8af1899e5" />
 
 Console_Start.
-![Console_Start](https://github.com/user-attachments/assets/97d77794-6c8e-472c-a3f7-05e5f461b8a6)
+<img width="1920" height="1080" alt="Console_Start" src="https://github.com/user-attachments/assets/b04199b6-d948-4732-b800-03645d044cb0" />
 
 Console_Author_Command.
-![Console_Author_Command](https://github.com/user-attachments/assets/231e97c2-68eb-4724-b2c5-695d0d4ecd3e)
+<img width="1920" height="1080" alt="Console_Author_Command" src="https://github.com/user-attachments/assets/1c6a5422-b214-459b-80eb-3fdbef1bf256" />
 
 Console_Rules.
-![Console_Rules](https://github.com/user-attachments/assets/2d5bbec4-2c45-4804-870f-7f11c777ad89)
+<img width="1920" height="1080" alt="Console_Rules" src="https://github.com/user-attachments/assets/5e652c07-98cd-4fc7-aae1-22b159c710db" />
 
 Console_Commands.
-![Console_Commands](https://github.com/user-attachments/assets/a7611f68-d9b6-4177-88db-54d69e47f83b)
+<img width="1920" height="1080" alt="Console_Commands" src="https://github.com/user-attachments/assets/8a121c41-1142-4de5-9f83-b2d0dedd6267" />
 
-Video 2024:
+Video 3.2025:
 
 Comming Soon...
