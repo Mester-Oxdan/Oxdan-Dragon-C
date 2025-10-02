@@ -1,3 +1,4 @@
+# FOLDERS
 # Ignore the entire .vs folder
 .vs/
 
@@ -6,3 +7,14 @@
 
 # Ignore the .x64 folder in the CONSOLE-OXDAN-DRAGON-C directory
 CONSOLE-OXDAN-DRAGON-C/.x64/
+
+CONSOLE-OXDAN-DRAGON-C/.vs/
+
+# FILES
+CONSOLE-OXDAN-DRAGON-C++.sln
+
+CONSOLE-OXDAN-DRAGON-C/CONSOLE-OXDAN-DRAGON-C++.vcxproj
+
+CONSOLE-OXDAN-DRAGON-C/CONSOLE-OXDAN-DRAGON-C++.vcxproj.filters
+
+CONSOLE-OXDAN-DRAGON-C/CONSOLE-OXDAN-DRAGON-C++.vcxproj.user
